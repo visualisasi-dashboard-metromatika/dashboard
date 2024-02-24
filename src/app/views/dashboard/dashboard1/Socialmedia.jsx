@@ -1613,17 +1613,26 @@ const SocialMedia = () => {
       <div className="row">
         <div className="col-lg-4 col-sm-12">
           <div className="card">
-            <p className="card-title mb-2 mt-2" style={{ marginLeft: "20px", fontSize: "10px" }}><b>Title</b></p>
+            <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-50px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
             <ReactEcharts
-              style={{ height: "90px" }}
+              style={{ height: "117px", marginTop: "-27px", marginBottom: "-15px" }}
               option={echartBasicLineOption}
             />
+            </div>
           </div>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <p className="card-title mb-2 mt-2" style={{ marginLeft: "20px", fontSize: "10px" }}><b>Title</b></p>
-            <ul>
+          <div className="card" style={{height:'122px'}}>
+          <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row px-2" style={{marginTop:"-16px"}}>
+            <ul style={{marginLeft:"13px"}}>
               <li style={{ fontSize: "5px", marginTop: "3px" }}>
                 <div className="ul-widget-app__poll-list mb-1">
                   <div className="row">
@@ -1732,36 +1741,54 @@ const SocialMedia = () => {
               </li>
 
             </ul>
+            </div>
           </div>
         </div>
         <div className="col-lg-1 col-sm-12">
-          <div className="card">
-            <p className="card-title mb-2 mt-2" style={{ marginLeft: "20px", fontSize: "10px" }}><b>Title</b></p>
+          <div className="card" style={{height:'122px'}}>
+            <div className="row">
+              <div className="col-12"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+            </div>
+            <div className="row">
+              <div className="col-12"><p className="muted" style={{ marginLeft: "10px", marginTop: "-25px", fontSize: "4px"}}>Last updated : 20/01/2024</p></div>
+            </div>
+            <div className="row" style={{marginTop:"-3px"}}>
             <Chart
               height={100}
               options={options2}
               series={options2.series}
               type={options2.chart.type}
-              style={{ marginTop: "4px", marginBottom: "8px" }}
+              style={{ marginTop: "-7px" }}
             />
+            </div>
           </div>
         </div>
         <div className="col-lg-3 col-sm-12">
           <div className="card">
-            <p className="card-title mb-2 mt-2" style={{ marginLeft: "20px", fontSize: "10px" }}><b>Title</b></p>
+            <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
             <ReactEcharts
-              style={{ height: "85px", marginBottom: "5px" }}
+              style={{ height: "94px", marginTop: "-25px", marginBottom: "5px"}}
               option={echartBasicLineOption6}
             />
+            </div>
           </div>
         </div>
         <div className="col-lg-2 col-sm-12">
           <div className="card">
-            <p className="card-title mb-2 mt-2" style={{ marginLeft: "20px", fontSize: "10px" }}><b>Title</b></p>
+            <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
             <ReactEcharts
-              style={{ height: "90px" }}
+              style={{ height: "90px", marginTop: "-20px", marginBottom: "4px"  }}
               option={echartStackedPieOption}
             />
+            </div>
           </div>
         </div>
 
@@ -1770,16 +1797,27 @@ const SocialMedia = () => {
       <div className="row mt-2">
         <div className="col-lg-4 col-sm-12">
           <div className="card">
-            <p className="card-title mb-2 mt-2" style={{ marginLeft: "20px", fontSize: "10px" }}><b>Title</b></p>
+            <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-50px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
             <ReactEcharts
-              style={{ height: "160px" }}
+              style={{ height: "186px", marginTop: "-27px", marginBottom: "-15px" }}
               option={echartBasicLineOption2}
             />
+            </div>
           </div>
         </div>
         <div className="col-lg-1 col-sm-12">
           <div className="card" style={{height: "93px"}}>
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p>
+            <div className="row">
+              <div className="col-12"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+            </div>
+            <div className="row">
+              <div className="col-12"><p className="muted" style={{ marginLeft: "10px", marginTop: "-25px", fontSize: "4px"}}>Last updated : 20/01/2024</p></div>
+            </div>
+            <div className="row" style={{marginTop:"2px"}}>
             <Chart
               height={100}
               options={options6}
@@ -1787,46 +1825,73 @@ const SocialMedia = () => {
               type={options6.chart.type}
               style={{ marginTop: "-33px" }}
             />
+            </div>
           </div>
           <div className="card" style={{ marginTop: "5px" }}>
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p>
+            <div className="row">
+              <div className="col-12"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+            </div>
+            <div className="row">
+              <div className="col-12"><p className="muted" style={{ marginLeft: "10px", marginTop: "-25px", fontSize: "4px"}}>Last updated : 20/01/2024</p></div>
+            </div>
+            <div className="row" style={{marginTop:"8px"}}>
             <Chart
-              height={100}
+              height={92}
               options={options3}
               series={options3.series}
               type={options3.chart.type}
               style={{ marginTop: "-33px" }}
             />
+            </div>
           </div>
         </div>
         <div className="col-lg-2 col-sm-12">
           <div className="card">
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p>
+          <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
             <ReactEcharts
               style={{ height: "90px", marginTop: "-30px", marginBottom: "-15px" }}
               option={echartBasicLineOption4}
             />
+            </div>
           </div>
           <div className="card" style={{ marginTop: "5px" }}>
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p>
+          <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
             <ReactEcharts
               style={{ height: "90px", marginTop: "-29px", marginBottom: "-15px" }}
               option={echartBasicLineOption5}
             />
+            </div>
           </div>
         </div>
         <div className="col-lg-3 col-sm-12">
           <div className="card">
-            <p className="card-title mb-2 mt-2" style={{ marginLeft: "20px", fontSize: "10px" }}><b>Title</b></p>
+            <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
             <ReactEcharts
-              style={{ height: "160px" }}
+              style={{ height: "187px", marginTop: "-28px", marginBottom: "-15px"}}
               option={echartBasicLineOption1}
             />
+            </div>
           </div>
         </div>
         <div className="col-lg-2 col-sm-12">
           <div className="card">
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p>
+            <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
             <Chart
               height={110}
               options={radar}
@@ -1843,6 +1908,7 @@ const SocialMedia = () => {
               type={options4.chart.type}
               style={{ marginTop: "-62px" }}
             />
+            </div>
           </div>
         </div>
       </div>
@@ -1850,41 +1916,61 @@ const SocialMedia = () => {
       <div className="row mt-2">
         <div className="col-lg-4 col-sm-12">
           <div className="card">
-            <p className="card-title mb-2 mt-2" style={{ marginLeft: "20px", fontSize: "10px" }}><b>Title</b></p>
+          <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-50px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
             <ReactEcharts
-              style={{ height: "90px" }}
+              style={{ height: "117px", marginTop: "-27px", marginBottom: "-15px" }}
               option={echartBasicLineOption3}
             />
+            </div>
           </div>
         </div>
         <div className="col-lg-3 col-sm-12">
           <div className="card">
-            <p className="card-title mb-2 mt-2" style={{ marginLeft: "20px", fontSize: "10px" }}><b>Title</b></p>
+          <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
             <ReactEcharts
-              style={{ height: "80px", marginBottom: "10px" }}
+              style={{ height: "94px", marginTop: "-25px", marginBottom: "5px"}}
               option={echartZoomBarOption}
             />
+            </div>
           </div>
         </div>
         <div className="col-lg-3 col-sm-12">
           <div className="card">
-            <p className="card-title mb-2 mt-2" style={{ marginLeft: "20px", fontSize: "10px" }}><b>Title</b></p>
+            <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
             <ReactEcharts
-              style={{ height: "80px", marginBottom: "10px" }}
+              style={{ height: "94px", marginTop: "-25px", marginBottom: "5px"}}
               option={echartMultipleBarOption}
             />
+            </div>
           </div>
         </div>
         <div className="col-lg-2 col-sm-12">
           <div className="card">
-            <p className="card-title mb-2 mt-2" style={{ marginLeft: "20px", fontSize: "10px" }}><b>Title</b></p>
+            <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
             <Chart
               height={134}
               options={radial}
               series={radial.series}
               type={radial.chart.type}
-              style={{marginTop:"-20px"}}
+              style={{marginTop:"-39px"}}
             />
+            </div>
           </div>
         </div>
       </div>
