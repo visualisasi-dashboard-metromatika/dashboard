@@ -280,9 +280,15 @@ const YourComponent = () => {
         <div className="col-md-3 mb-2">
           <div className="card rounded-3" style={{height:"487px"}}>
             <div className="card-body">
-              <h4 className="card-subtitle text-info mt-0 text-muted mb-3">
+              <div className="row">
+              <div className="col-5">
+                <h4 className="card-subtitle text-info mt-0 text-muted mb-3">
                       <i className="i-Globe"></i> Title
                     </h4>
+                </div>
+                <div className="col-5"><p className="muted" style={{ marginRight: "-40px", marginTop: "16px", fontSize: "8px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+                </div>
+                  
                 <img src="/assets/images/Peta_Lokasi_Kecamatan_Kota_Medan.png"  style={{ objectFit: "cover", width: "100%", height: "92%" }} alt="gambarkotamedan"/>
             </div>
           </div>
@@ -323,9 +329,14 @@ const YourComponent = () => {
             <div className="col-md-12 mb-2">
                 <div className="card mb-2">
                   <div className="card-body text-left">
-                    <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
-                      <i className="i-Pie-Chart-2"></i> Title
-                    </h4>
+                    <div className="row">
+                      <div className="col-5">
+                          <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
+                          <i className="i-Pie-Chart-2"></i> Title
+                        </h4>
+                      </div>
+                      <div className="col-5"><p className="muted" style={{ marginRight: "-40px", marginTop: "2px", fontSize: "5px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+                    </div>
                     <PolarAreaChart height="90px" width="50px" data={data}></PolarAreaChart>
                   </div>
                 </div>
@@ -335,14 +346,19 @@ const YourComponent = () => {
             <div className="col-md-12 mb-2">
                 <div className="card mb-2">
                   <div className="card-body text-left">
-                  <h4 className="card-subtitle text-info mt-0 text-muted">
-                      <i className="i-Bar-Chart-5"></i> Title
-                    </h4>
+                  <div className="row">
+                      <div className="col-5">
+                          <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
+                          <i className="i-Pie-Chart-2"></i> Title
+                        </h4>
+                      </div>
+                      <div className="col-5"><p className="muted" style={{ marginRight: "-40px", marginTop: "2px", fontSize: "5px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+                    </div>
                     <Chart
                     options={options7}
                     series={options7.series}
                     type={options7.chart.type}
-                    height="128px"
+                    height="120px"
                     />
                   </div>
                 </div>
@@ -390,31 +406,46 @@ const YourComponent = () => {
               <div className="col-md-12 mb-2">
                 <div className="card mb-2">
                   <div className="card-body text-left">
-                  <h4 className="card-subtitle text-info mt-0 text-muted">
-                      <i className="i-Pie-Chart-3"></i> Title
-                    </h4>
-                    <PieChartDashboard height="100px" data={data}></PieChartDashboard>
+                  <div className="row">
+                      <div className="col-5">
+                          <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
+                          <i className="i-Pie-Chart-2"></i> Title
+                        </h4>
+                      </div>
+                      <div className="col-5"><p className="muted" style={{ marginRight: "-40px", marginTop: "0px", fontSize: "5px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+                    </div>
+                    <PieChartDashboard height="90px" data={data}></PieChartDashboard>
                   </div>
                 </div>
               </div>
               <div className="col-md-6 mb-2">
                 <div className="card mb-2">
                   <div className="card-body text-left">
-                  <h4 className="card-subtitle text-info mt-0 text-muted">
-                      <i className="i-Bar-Chart-2"></i> Title
-                    </h4>
-                    <BarChart height="140px" data={data}></BarChart>
+                  <div className="row">
+                      <div className="col-8">
+                          <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
+                          <i className="i-Pie-Chart-2"></i> Title
+                        </h4>
+                      </div>
+                      <div className="col-2"><p className="muted" style={{ marginRight: "-40px", marginTop: "0px", fontSize: "5px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+                    </div>
+                    <BarChart height="132px" data={data}></BarChart>
                   </div>
                 </div>
               </div>
               <div className="col-md-6 mb-2">
                 <div className="card mb-2">
                   <div className="card-body text-left">
-                  <h4 className="card-subtitle text-info mt-0 text-muted">
-                      <i className="i-Pie-Chart"></i> Title
-                    </h4>
+                  <div className="row">
+                      <div className="col-8">
+                          <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
+                          <i className="i-Pie-Chart-2"></i> Title
+                        </h4>
+                      </div>
+                      <div className="col-2"><p className="muted" style={{ marginRight: "-40px", marginTop: "0px", fontSize: "5px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+                    </div>
                   <Chart 
-                    height="160px"
+                    height="153px"
                     options={options1Dash}
                     series={options1Dash.series}
                     type={options1Dash.chart.type}
