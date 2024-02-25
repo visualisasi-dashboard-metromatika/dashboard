@@ -1,9 +1,18 @@
 import React from 'react'
 import ReactEcharts from "echarts-for-react";
 import Chart from "react-apexcharts";
+import { useEffect } from "react";
 
 
 export default function dinasPariwisata() {
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      window.location.reload();
+    }, 1000 * 60);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   const options5 = {
     chart: {
       type: "donut",

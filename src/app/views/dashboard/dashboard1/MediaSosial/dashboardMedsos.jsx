@@ -2,8 +2,17 @@ import ReactEcharts from "echarts-for-react";
 import { ProgressBar } from "react-bootstrap";
 import Chart from "react-apexcharts";
 import * as echarts from "echarts";
+import { useEffect } from "react";
 
 const SocialMedia = () => {
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      window.location.reload();
+    }, 1000 * 60);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   const echartStackedPieOption = {
     grid: {
       left: "3%",
