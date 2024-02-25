@@ -1,6 +1,7 @@
 import Chart from "react-apexcharts";
 import ReactEcharts from "echarts-for-react";
 import { ProgressBar } from 'react-bootstrap';
+import { useEffect } from "react";
 
 const PolarAreaChart = ({ height, data }) => {
   const option = {
@@ -272,6 +273,15 @@ export const options1Dash = {
 };
 
 const YourComponent = () => {
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      window.location.reload();
+    }, 1000*30);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   const data = [20,5,10,30,25]
   return (
 
