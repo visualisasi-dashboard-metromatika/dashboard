@@ -1,7 +1,7 @@
 import { GullLayouts } from "./index";
 import { useSelector } from "react-redux";
 import { useEffect, Suspense, Fragment } from "react";
-import Customizer from "./SharedComponents/Customizer";
+// import Customizer from "./SharedComponents/Customizer";
 
 const GullLayout = ({ children }) => {
   const { settings } = useSelector((state) => state.layout);
@@ -17,7 +17,7 @@ const GullLayout = ({ children }) => {
     <Suspense>
       <Fragment>
         <Layout>{children}</Layout>
-        {settings.customizer.show && <Customizer />}
+        {/* {settings.customizer.show && <Customizer />} */}
       </Fragment>
     </Suspense>
   );

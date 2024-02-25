@@ -1015,7 +1015,7 @@ const DashboardSatuData = () => {
       {/* 1 */}
       <div className="row">
         <div className="col-lg-3 col-md-4 col-sm-12 position-relative">
-          <div className="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+          <div className="card card-icon-bg card-icon-bg-primary o-hidden mb-2">
             <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>Title 1</h6>
             <div className="card-body text-center" style={{ height: "100px" }}>
               <i className="i-Calendar-3" style={{ fontSize: '70px', marginTop: '-15px' }}></i>
@@ -1033,19 +1033,33 @@ const DashboardSatuData = () => {
 
         <div className="col-lg-9 col-md-4 col-sm-12">
           <div className="card mb-2">
-            <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>Title 2</h6>
+            <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px", position: "relative" }}>
+              Title 2
+              <span style={{ position: "absolute", top: 10, right: 20, fontSize: "6px" }}>
+                Last updated: 24/02/2024
+              </span>
+            </h6>
             <ReactEcharts
               style={{ height: "100%" }}
               option={echartMultilineOption}
             />
           </div>
         </div>
+
       </div>
 
       {/* 2 */}
       <div className="row">
         <div className="col-lg-2 col-md-4 col-sm-12">
-          <SimpleCard title="Title 3">
+          <SimpleCard title={
+            <div style={{ position: "relative" }}>
+              Title 3
+              <span style={{ position: "absolute", top: 0, right: 0, fontSize: "6px" }}>
+                Last updated: <br />
+                24/02/2024
+              </span>
+            </div>
+          }>
             <ReactEcharts
               style={{ height: "83px" }}
               option={echartBasicBarOption}
@@ -1053,11 +1067,14 @@ const DashboardSatuData = () => {
           </SimpleCard>
         </div>
         <div className="col-lg-3 col-md-4 col-sm-12">
-          {/* <SimpleCard title="Title 4" className="mb-2"> */}
-          <div className="card">
-            <h6 className="card-title mb-2 mt-3" style={{ marginLeft: "20px" }}>Title 4</h6>
+          <div className="card mb-2">
+            <h6 className="card-title mb-2 mt-3 position-relative" style={{ marginLeft: "20px" }}>
+              Title 4
+              <span style={{ position: "absolute", top: 7, right: 20, fontSize: "6px" }}>
+                Last updated: 24/02/2024
+              </span>
+            </h6>
             <div className="table-responsive p-2">
-              {/* <table className="table" style={{ fontSize: '9px', marginLeft: '5px', marginRight: '20px'}}> */}
               <table className="table" style={{ fontSize: '9px' }}>
                 <thead>
                   <tr>
@@ -1081,18 +1098,31 @@ const DashboardSatuData = () => {
               </table>
             </div>
           </div>
-          {/* </SimpleCard> */}
         </div>
         <div className="col-lg-4 col-md-4 col-sm-12">
-          <SimpleCard title="Title 5" className="mb-2 p-2">
+          <SimpleCard title={
+            <div style={{ position: "relative", }}>
+              Title 5
+              <span style={{ position: "absolute", top: 5, right: 0, fontSize: "6px" }}>
+                Last updated: 24/02/2024
+              </span>
+            </div>
+          } className="mb-2">
             <ReactEcharts
-              style={{ height: "70px" }}
+              style={{ height: "85px" }}
               option={echartZoomBarOption}
             />
           </SimpleCard>
         </div>
         <div className="col-lg-3 col-md-4 col-sm-12">
-          <SimpleCard title="Title 6">
+          <SimpleCard title={
+            <div style={{ position: "relative" }}>
+              Title 6
+              <span style={{ position: "absolute", top: 7, right: 0, fontSize: "6px" }}>
+                Last updated: 24/02/2024
+              </span>
+            </div>
+          }>
             <ReactEcharts
               style={{ height: "85px" }}
               option={echartBasicPie} />
@@ -1103,7 +1133,15 @@ const DashboardSatuData = () => {
       {/* 3 */}
       <div className="row">
         <div className="col-lg-2 col-md-4 col-sm-12">
-          <SimpleCard title="Title 7" className="mb-2">
+          <SimpleCard title={
+            <div style={{ position: "relative" }}>
+              Title 7
+              <span style={{ position: "absolute", top: 0, right: 0, fontSize: "6px" }}>
+                Last updated: <br />
+                24/02/2024
+              </span>
+            </div>
+          } className="mb-2">
             <div className="d-flex align-items-center" style={{ marginTop: "-17px" }}>
               <i className="i-Up text-success" style={{ fontSize: '12px', marginRight: '5px' }}></i>
               <p style={{ color: 'green', fontSize: '12px', margin: '0' }}>15%</p>
@@ -1114,16 +1152,25 @@ const DashboardSatuData = () => {
         </div>
         <div className="col-lg-3 col-md-4 col-sm-12">
           <div className="card">
-            <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>Title 8</h6>
-            <ReactEcharts
+            <h6 className="card-title mb-2 mt-2 position-relative" style={{ marginLeft: "20px" }}>
+              Title 8
+              <span style={{ position: "absolute", top: 7, right: 20, fontSize: "6px" }}>
+                Last updated: 24/02/2024
+              </span>
+            </h6>            <ReactEcharts
               style={{ height: "100%" }}
               option={echartMultipleBarOption}
             />
           </div>
         </div>
         <div className="col-lg-3 col-md-4 col-sm-12">
-          <div className="card" style={{ height: "137px" }}>
-            <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>Title 9</h6>
+          <div className="card" style={{ height: "137px", position: "relative" }}>
+            <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>
+              Title 9
+              <span style={{ position: "absolute", top: 15, right: 20, fontSize: "6px" }}>
+                Last updated: 24/02/2024
+              </span>
+            </h6>
             <Chart
               height={110}
               options={BasicRadarChart}
@@ -1135,7 +1182,13 @@ const DashboardSatuData = () => {
         </div>
         <div className="col-lg-2 col-md-4 col-sm-12">
           <div className="card">
-            <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>Title 10</h6>
+            <h6 className="card-title mb-2 mt-2 position-relative" style={{ marginLeft: "20px" }}>
+              Title 10
+              <span style={{ position: "absolute", top: 5, right: 8, fontSize: "6px" }}>
+                Last updated: <br />
+                24/02/2024
+              </span>
+            </h6>
             <ReactEcharts
               style={{ height: "100%" }}
               option={echartBasicLineOption}
@@ -1144,8 +1197,13 @@ const DashboardSatuData = () => {
         </div>
         <div className="col-lg-2 col-md-4 col-sm-12">
           <div className="card">
-            <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>Title 11</h6>
-            <ReactEcharts
+            <h6 className="card-title mb-2 mt-2 position-relative" style={{ marginLeft: "20px" }}>
+              Title 11
+              <span style={{ position: "absolute", top: 5, right: 8, fontSize: "6px" }}>
+                Last updated: <br />
+                24/02/2024
+              </span>
+            </h6>            <ReactEcharts
               style={{ height: "100%" }}
               option={echartMultipleBar2Option}
             />
@@ -1155,7 +1213,6 @@ const DashboardSatuData = () => {
 
     </div>
   )
-
 }
 
 export default DashboardSatuData;

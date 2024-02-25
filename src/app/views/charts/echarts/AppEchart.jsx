@@ -17,7 +17,7 @@ import {
   echartSolidAreaOption,
   echartBasicPie,
   echartBubbleOption
-} from "../../dashboard/dashboard1/echartOptions";
+} from "./echartOptions";
 import { Row, Col } from "react-bootstrap";
 
 const AppEchart = ({ theme }) => {

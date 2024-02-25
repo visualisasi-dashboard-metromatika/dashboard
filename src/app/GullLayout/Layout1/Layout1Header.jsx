@@ -185,24 +185,6 @@ const Layout1Header = () => {
             </Dropdown.Menu>
           </Dropdown>
         </div>
-        <div className="user col px-3">
-          <Dropdown>
-            <Dropdown.Toggle as="span" className="toggle-hidden cursor-pointer">
-              Admin Kota Medan
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Link to="/" className="dropdown-item cursor-pointer">
-              Admin Kota Medan
-              </Link>
-              <Link to="/" className="dropdown-item cursor-pointer">
-                Dinas Pariwisata
-              </Link>
-              <Link to="/" className="dropdown-item cursor-pointer">
-                Badan Sosial
-              </Link>
-            </Dropdown.Menu>
-          </Dropdown>
-        </div>
         <i
           onClick={toggleFullScreen}
           className="i-Full-Screen header-icon d-none d-sm-inline-block"
