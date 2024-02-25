@@ -3,7 +3,7 @@ import ReactEcharts from "echarts-for-react";
 import Chart from "react-apexcharts";
 import { useEffect } from "react";
 
-export default function kecamatanMedanTimur() {
+export default function KecamatanMedanTimur() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       window.location.reload();

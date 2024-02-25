@@ -4,16 +4,16 @@ import ReactEcharts from "echarts-for-react";
 import Chart from "react-apexcharts";
 import React, { useState } from "react";
 import * as echarts from "echarts";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 const DashboardSatuData = () => {
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      window.location.reload();
-    }, 1000 * 60);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     window.location.reload();
+  //   }, 1000 * 60);
 
-    return () => clearInterval(intervalId);
-  }, []);
+  //   return () => clearInterval(intervalId);
+  // }, []);
 
   const [state, setState] = useState({
     newUserList: [

@@ -4,7 +4,7 @@ import Chart from "react-apexcharts";
 import { useEffect } from "react";
 
 
-export default function dinasPariwisata() {
+export default function DinasPariwisata() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       window.location.reload();

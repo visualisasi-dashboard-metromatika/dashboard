@@ -3,7 +3,7 @@ import ReactEcharts from "echarts-for-react";
 import Chart from "react-apexcharts";
 import { useEffect } from "react";
 
-export default function badanKeuangandanAsetDaerah() {
+export default function BadanKeuangandanAsetDaerah() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       window.location.reload();
@@ -11,6 +11,7 @@ export default function badanKeuangandanAsetDaerah() {
 
     return () => clearInterval(intervalId);
   }, []);
+
   const options5 = {
     chart: {
       type: "donut",

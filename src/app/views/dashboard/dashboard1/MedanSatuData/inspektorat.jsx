@@ -3,7 +3,7 @@ import ReactEcharts from "echarts-for-react";
 import Chart from "react-apexcharts";
 import { useEffect } from "react";
 
-export default function inspektorat() {
+export default function Inspektorat() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       window.location.reload();

@@ -3,8 +3,8 @@ import ReactEcharts from "echarts-for-react";
 import Chart from "react-apexcharts";
 import { useEffect } from "react";
 
-export default function dinasKoperasiUsahaKecilMenengahPerindustriandanPerdagangan() {
-  useEffect(() => {
+export default function DinasKoperasiUsahaKecilMenengahPerindustriandanPerdagangan() {
+useEffect(() => {
     const intervalId = setInterval(() => {
       window.location.reload();
     }, 1000 * 60);
