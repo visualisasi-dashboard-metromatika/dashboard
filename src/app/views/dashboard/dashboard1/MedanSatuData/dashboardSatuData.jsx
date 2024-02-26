@@ -4,40 +4,31 @@ import ReactEcharts from "echarts-for-react";
 import Chart from "react-apexcharts";
 import React, { useState, useEffect } from "react";
 import * as echarts from "echarts";
+import FlipCard from 'react-card-flip';
 
 const DashboardSatuData = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   useEffect(() => {
+    const handleBeforeUnload = () => {
+      setIsFlipped(true);
+      // Ensure the flip state is reset after a short delay
+      setTimeout(() => {
+        setIsFlipped(false);
+      }, 2000);
+    };
+
     const intervalId = setInterval(() => {
       window.location.reload();
     }, 1000 * 60);
 
-    return () => clearInterval(intervalId);
-  }, []);
+    window.addEventListener("beforeunload", handleBeforeUnload);
 
-  const [state, setState] = useState({
-    newUserList: [
-      {
-        name: "Smith Doe",
-        post: "5 Nov",
-        engagement: "10",
-        reach: "10",
-        save: "10",
-        engageduser: "10",
-      },
-      {
-        name: "Jhon Doe",
-        post: "5 Nov",
-        engagement: "10",
-        reach: "10",
-        save: "10",
-        engageduser: "10",
-      }
-    ],
-    range: {
-      startDate: new Date(),
-      endDate: new Date(),
-    },
-  });
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      clearInterval(intervalId);
+    };
+  }, []);
 
   // Basic Bar Option
   const echartBasicBarOption = {
@@ -718,95 +709,6 @@ const DashboardSatuData = () => {
     ],
   };
 
-  // Grouped Bar Chart
-  const GroupedBar = {
-    chart: {
-      height: 350,
-      type: 'bar',
-      toolbar: {
-        show: false
-      }
-    },
-    plotOptions: {
-      bar: {
-        horizontal: true,
-        dataLabels: {
-          position: 'top',
-        },
-      }
-    },
-    dataLabels: {
-      enabled: false,
-      offsetX: -6,
-      style: {
-        fontSize: '12px',
-        colors: ['#fff']
-      }
-    },
-    stroke: {
-      show: false,
-      width: 1,
-      colors: ['#fff'],
-      lineCap: 'round',
-      curve: 'smooth',
-    },
-    series: [{
-      data: [44, 55, 41, 64, 22, 43, 21]
-    }, {
-      data: [53, 32, 33, 52, 13, 44, 32]
-    }],
-    xaxis: {
-      categories: [2024, 2023, 2022, 2021, 2020, 2019, 2018],
-    },
-
-  }
-
-  // Multiple Radial Bar
-  const MultipleRadialBar = {
-    chart: {
-      height: 250,
-      type: "radialBar"
-    },
-    plotOptions: {
-      radialBar: {
-        offsetY: 0,
-        startAngle: 0,
-        endAngle: 270,
-        hollow: {
-          margin: 5,
-          size: "28%",
-          background: "transparent",
-          image: undefined
-        },
-        dataLabels: {
-          name: {
-            shows: true,
-          },
-          value: {
-            shows: true,
-            fontSize: "6px",
-            offsetY: -8
-          },
-          total: {
-            show: true,
-            label: "Total",
-            formatter: function (w) {
-              // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-              return 249;
-            },
-            fontSize: "7px",
-          }
-        }
-      }
-    },
-    stroke: {
-      curve: "smooth",
-      lineCap: "round"
-    },
-    series: [44, 55, 67, 83],
-    labels: ["Apples", "Oranges", "Bananas", "Berries"]
-  };
-
   // Echart3
   const option = {
     ...echartOptions.defaultOptions,
@@ -957,268 +859,289 @@ const DashboardSatuData = () => {
     }
   };
 
-  // Donut Chart
-  const DonutChart = {
-    chart: {
-      type: "donut",
-      width: "100%"
-    },
-    series: [44, 55, 41, 17, 15],
-    legend: {
-      position: "bottom"
-    },
-    responsive: [
-      {
-        breakpoint: 480,
-        options: {
-          chart: {
-            width: 310
-          },
-          legend: {
-            position: "bottom"
-          }
-        }
-      }
-    ]
-  };
-
-  // Basic Bar Chart
-  const BasicBarChart = {
-    chart: {
-      height: 350,
-      type: 'bar',
-    },
-    plotOptions: {
-      bar: {
-        horizontal: true,
-        endingShape: 'rounded'
-      }
-    },
-    dataLabels: {
-      enabled: false
-    },
-    series: [{
-      data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
-    }],
-    xaxis: {
-      categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'],
-    }
-  }
-
-  // DataRange
-  const handleDateRangeChange = (range) => {
-    let { startDate, endDate } = range;
-    setState((prevState) => ({
-      ...prevState,
-      range: {
-        startDate: startDate.toDate(),
-        endDate: endDate.toDate(),
-      },
-    }));
-  };
-
   return (
     <div>
 
       {/* 1 */}
       <div className="row">
         <div className="col-lg-3 col-md-6 col-sm-12 position-relative">
-          <div className="card card-icon-bg card-icon-bg-primary o-hidden mb-2">
-            <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>Title 1</h6>
-            <div className="card-body text-center" style={{ height: "100px" }}>
-              <i className="i-Calendar-3" style={{ fontSize: '70px', marginTop: '-15px' }}></i>
-              <div className="text-center mt-2" style={{ marginLeft: "25px" }}>
-                <p className="t-font-boldiest mb-0 text-capitalize" style={{ fontSize: '17px', marginTop: '-15px' }}>
-                  24 Feb 2024
-                </p>
-                <p className="lead text-primary text-24 mb-2 text-capitalize" style={{ fontSize: '18px', marginLeft: '2px' }}>
-                  12.00 WIB
-                </p>
+          {/* Front of the card */}
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card card-icon-bg card-icon-bg-primary o-hidden mb-2" onClick={() => setIsFlipped((prev) => !prev)}>
+              <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>Title 1</h6>
+              <div className="card-body text-center" style={{ height: "100px" }}>
+                <i className="i-Calendar-3" style={{ fontSize: '70px', marginTop: '-15px' }}></i>
+                <div className="text-center mt-2" style={{ marginLeft: "25px" }}>
+                  <p className="t-font-boldiest mb-0 text-capitalize" style={{ fontSize: '17px', marginTop: '-15px' }}>
+                    24 Feb 2024
+                  </p>
+                  <p className="lead text-primary text-24 mb-2 text-capitalize" style={{ fontSize: '18px', marginLeft: '2px' }}>
+                    12.00 WIB
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+
+            {/* Back of the card (empty for now) */}
+            <div onClick={() => setIsFlipped((prev) => !prev)}>
+            </div>
+          </FlipCard>
         </div>
 
         <div className="col-lg-9 col-md-6 col-sm-12">
-          <div className="card mb-2">
-            <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px", position: "relative" }}>
-              Title 2
-              <span style={{ position: "absolute", top: 10, right: 20, fontSize: "6px" }}>
-                Last updated: 24/02/2024
-              </span>
-            </h6>
-            <ReactEcharts
-              style={{ height: "100%" }}
-              option={echartMultilineOption}
-            />
-          </div>
+          {/* Front of the card */}
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card mb-2" onClick={() => setIsFlipped((prev) => !prev)}>
+              <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px", position: "relative" }}>
+                Title 2
+                <span style={{ position: "absolute", top: 10, right: 20, fontSize: "6px" }}>
+                  Last updated: 24/02/2024
+                </span>
+              </h6>
+              <ReactEcharts
+                style={{ height: "100%" }}
+                option={echartMultilineOption}
+              />
+            </div>
+
+            {/* Back of the card (empty for now) */}
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              {/* Add any content for the back of the card if needed */}
+            </div>
+          </FlipCard>
         </div>
       </div>
 
       {/* 2 */}
       <div className="row">
-        <div className="col-lg-2 col-md-6 col-sm-12 mb-2">
-          <SimpleCard title={
-            <div style={{ position: "relative" }}>
-              Title 3
-              <span style={{ position: "absolute", top: 3, right: 0, fontSize: "6px" }}>
-                Last updated: <br />
-                24/02/2024
-              </span>
+        <div className="col-lg-3 col-md-6 col-sm-12 mb-2">
+          {/* Front of the card */}
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <h6 className="card-title mb-2 mt-3" style={{ marginLeft: "20px", position: "relative" }}>
+                Title 3
+                <span style={{ position: "absolute", top: 7, right: 20, fontSize: "6px" }}>
+                  Last updated: 24/02/2024
+                </span>
+              </h6>
+              <ReactEcharts
+                style={{ height: "115px", marginLeft: "20px", marginRight: "20px", marginBottom: "10px" }}
+                option={echartBasicBarOption}
+              />
             </div>
-          }>
-            <ReactEcharts
-              style={{ height: "86px" }}
-              option={echartBasicBarOption}
-            />
-          </SimpleCard>
+
+            {/* Back of the card (empty for now) */}
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              {/* Add any content for the back of the card if needed */}
+            </div>
+          </FlipCard>
         </div>
         <div className="col-lg-3 col-md-6 col-sm-12">
-          <div className="card mb-2">
-            <h6 className="card-title mb-2 mt-3 position-relative" style={{ marginLeft: "20px" }}>
-              Title 4
-              <span style={{ position: "absolute", top: 7, right: 20, fontSize: "6px" }}>
-                Last updated: 24/02/2024
-              </span>
-            </h6>
-            <div className="table-responsive p-2">
-              <table className="table" style={{ fontSize: '9px' }}>
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Kolom 1</th>
-                    <th scope="col">Kolom 2</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="table-success">
-                    <th scope="row">1</th>
-                    <td>Medan</td>
-                    <td>Medan</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Medan</td>
-                    <td>Medan</td>
-                  </tr>
-                </tbody>
-              </table>
+          {/* Front of the card */}
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card mb-2" onClick={() => setIsFlipped((prev) => !prev)}>
+              <h6 className="card-title mb-2 mt-3 position-relative" style={{ marginLeft: "20px" }}>
+                Title 4
+                <span style={{ position: "absolute", top: 7, right: 20, fontSize: "6px" }}>
+                  Last updated: 24/02/2024
+                </span>
+              </h6>
+              <div className="table-responsive p-2">
+                <table className="table" style={{ fontSize: '9px' }}>
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Kolom 1</th>
+                      <th scope="col">Kolom 2</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="table-success">
+                      <th scope="row">1</th>
+                      <td>Medan</td>
+                      <td>Medan</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Medan</td>
+                      <td>Medan</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
+
+            {/* Back of the card (empty for now) */}
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              {/* Add any content for the back of the card if needed */}
+            </div>
+          </FlipCard>
         </div>
-        <div className="col-lg-4 col-md-6 col-sm-12">
-          <SimpleCard title={
-            <div style={{ position: "relative" }}>
-              Title 5
-              <span style={{ position: "absolute", top: 5, right: 0, fontSize: "6px" }}>
-                Last updated: 24/02/2024
-              </span>
+        <div className="col-lg-3 col-md-6 col-sm-12">
+          {/* Front of the card */}
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card mb-2" onClick={() => setIsFlipped((prev) => !prev)}>
+              <SimpleCard title={
+                <div style={{ position: "relative" }}>
+                  Title 5
+                  <span style={{ position: "absolute", top: 5, right: 0, fontSize: "6px" }}>
+                    Last updated: 24/02/2024
+                  </span>
+                </div>
+              } className="mb-2">
+                <ReactEcharts
+                  style={{ height: "85px" }}
+                  option={echartZoomBarOption}
+                />
+              </SimpleCard>
             </div>
-          } className="mb-2">
-            <ReactEcharts
-              style={{ height: "85px" }}
-              option={echartZoomBarOption}
-            />
-          </SimpleCard>
+
+            {/* Back of the card (empty for now) */}
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              {/* Add any content for the back of the card if needed */}
+            </div>
+          </FlipCard>
         </div>
         <div className="col-lg-3 col-md-6 col-sm-12 mb-2">
-          <SimpleCard title={
-            <div style={{ position: "relative" }}>
-              Title 6
-              <span style={{ position: "absolute", top: 7, right: 0, fontSize: "6px" }}>
-                Last updated: 24/02/2024
-              </span>
+          {/* Front of the card */}
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <SimpleCard title={
+                <div style={{ position: "relative" }}>
+                  Title 6
+                  <span style={{ position: "absolute", top: 7, right: 0, fontSize: "6px" }}>
+                    Last updated: 24/02/2024
+                  </span>
+                </div>
+              }>
+                <ReactEcharts
+                  style={{ height: "85px" }}
+                  option={echartBasicPie} />
+              </SimpleCard>
             </div>
-          }>
-            <ReactEcharts
-              style={{ height: "85px" }}
-              option={echartBasicPie} />
-          </SimpleCard>
+
+            {/* Back of the card (empty for now) */}
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              {/* Add any content for the back of the card if needed */}
+            </div>
+          </FlipCard>
         </div>
       </div>
 
       {/* 3 */}
       <div className="row">
         <div className="col-lg-2 col-md-4 col-sm-12">
-          <SimpleCard title={
-            <div style={{ position: "relative" }}>
-              Title 7
-              <span style={{ position: "absolute", top: 3, right: 0, fontSize: "6px" }}>
-                Last updated: <br />
-                24/02/2024
-              </span>
+          <FlipCard isFlipped={isFlipped}>
+            <SimpleCard title={
+              <div style={{ position: "relative" }}>
+                Title 7
+                <span style={{ position: "absolute", top: 3, right: 0, fontSize: "6px" }}>
+                  Last updated: <br />
+                  24/02/2024
+                </span>
+              </div>
+            } className="mb-2">
+              <div className="d-flex align-items-center" style={{ marginTop: "-17px" }}>
+                <i className="i-Up text-success" style={{ fontSize: '12px', marginRight: '5px' }}></i>
+                <p style={{ color: 'green', fontSize: '12px', margin: '0' }}>15%</p>
+              </div>
+              <Echart3 height="25px" />
+              <Echart3 height="25px" />
+            </SimpleCard>
+
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              {/* Add any content for the back of the card if needed */}
             </div>
-          } className="mb-2">
-            <div className="d-flex align-items-center" style={{ marginTop: "-17px" }}>
-              <i className="i-Up text-success" style={{ fontSize: '12px', marginRight: '5px' }}></i>
-              <p style={{ color: 'green', fontSize: '12px', margin: '0' }}>15%</p>
-            </div>
-            <Echart3 height="25px" />
-            <Echart3 height="25px" />
-          </SimpleCard>
+          </FlipCard>
         </div>
         <div className="col-lg-3 col-md-4 col-sm-12 mb-2">
-          <div className="card">
-            <h6 className="card-title mb-2 mt-2 position-relative" style={{ marginLeft: "20px" }}>
-              Title 8
-              <span style={{ position: "absolute", top: 7, right: 20, fontSize: "6px" }}>
-                Last updated: 24/02/2024
-              </span>
-            </h6>            <ReactEcharts
-              style={{ height: "100%" }}
-              option={echartMultipleBarOption}
-            />
-          </div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <h6 className="card-title mb-2 mt-2 position-relative" style={{ marginLeft: "20px" }}>
+                Title 8
+                <span style={{ position: "absolute", top: 7, right: 20, fontSize: "6px" }}>
+                  Last updated: 24/02/2024
+                </span>
+              </h6>
+              <ReactEcharts
+                style={{ height: "100%" }}
+                option={echartMultipleBarOption}
+              />
+            </div>
+
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              {/* Add any content for the back of the card if needed */}
+            </div>
+          </FlipCard>
         </div>
         <div className="col-lg-3 col-md-4 col-sm-12 mb-2">
-          <div className="card" style={{ height: "137px", position: "relative" }}>
-            <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>
-              Title 9
-              <span style={{ position: "absolute", top: 15, right: 20, fontSize: "6px" }}>
-                Last updated: 24/02/2024
-              </span>
-            </h6>
-            <Chart
-              height={110}
-              options={BasicRadarChart}
-              series={BasicRadarChart.series}
-              type={BasicRadarChart.chart.type}
-              style={{ marginTop: "-5px" }}
-            />
-          </div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" style={{ height: "137px", position: "relative" }} onClick={() => setIsFlipped((prev) => !prev)}>
+              <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>
+                Title 9
+                <span style={{ position: "absolute", top: 15, right: 20, fontSize: "6px" }}>
+                  Last updated: 24/02/2024
+                </span>
+              </h6>
+              <Chart
+                height={110}
+                options={BasicRadarChart}
+                series={BasicRadarChart.series}
+                type={BasicRadarChart.chart.type}
+                style={{ marginTop: "-5px" }}
+              />
+            </div>
+
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              {/* Add any content for the back of the card if needed */}
+            </div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-md-6 col-sm-12 mb-2">
-          <div className="card">
-            <h6 className="card-title mb-2 mt-2 position-relative" style={{ marginLeft: "20px" }}>
-              Title 10
-              <span style={{ position: "absolute", top: 3, right: 8, fontSize: "6px" }}>
-                Last updated: <br />
-                24/02/2024
-              </span>
-            </h6>
-            <ReactEcharts
-              style={{ height: "100%" }}
-              option={echartBasicLineOption}
-            />
-          </div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <h6 className="card-title mb-2 mt-2 position-relative" style={{ marginLeft: "20px" }}>
+                Title 10
+                <span style={{ position: "absolute", top: 3, right: 8, fontSize: "6px" }}>
+                  Last updated: <br />
+                  24/02/2024
+                </span>
+              </h6>
+              <ReactEcharts
+                style={{ height: "100%" }}
+                option={echartBasicLineOption}
+              />
+            </div>
+
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              {/* Add any content for the back of the card if needed */}
+            </div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-md-6 col-sm-12 mb-2">
-          <div className="card">
-            <h6 className="card-title mb-2 mt-2 position-relative" style={{ marginLeft: "20px" }}>
-              Title 11
-              <span style={{ position: "absolute", top: 3, right: 8, fontSize: "6px" }}>
-                Last updated: <br />
-                24/02/2024
-              </span>
-            </h6>            <ReactEcharts
-              style={{ height: "100%" }}
-              option={echartMultipleBar2Option}
-            />
-          </div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <h6 className="card-title mb-2 mt-2 position-relative" style={{ marginLeft: "20px" }}>
+                Title 11
+                <span style={{ position: "absolute", top: 3, right: 8, fontSize: "6px" }}>
+                  Last updated: <br />
+                  24/02/2024
+                </span>
+              </h6>
+              <ReactEcharts
+                style={{ height: "100%" }}
+                option={echartMultipleBar2Option}
+              />
+            </div>
+
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              {/* Add any content for the back of the card if needed */}
+            </div>
+          </FlipCard>
         </div>
       </div>
 
-    </div>
+    </div >
   )
 }
 

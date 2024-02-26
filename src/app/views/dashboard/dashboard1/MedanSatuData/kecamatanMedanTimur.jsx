@@ -1,15 +1,30 @@
-import React from 'react'
 import ReactEcharts from "echarts-for-react";
 import Chart from "react-apexcharts";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import FlipCard from 'react-card-flip';
 
 export default function KecamatanMedanTimur() {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   useEffect(() => {
+    const handleBeforeUnload = () => {
+      setIsFlipped(true);
+      // Ensure the flip state is reset after a short delay
+      setTimeout(() => {
+        setIsFlipped(false);
+      }, 2000);
+    };
+
     const intervalId = setInterval(() => {
       window.location.reload();
     }, 1000 * 60);
 
-    return () => clearInterval(intervalId);
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      clearInterval(intervalId);
+    };
   }, []);
 
   const options5 = {
@@ -263,393 +278,468 @@ export default function KecamatanMedanTimur() {
 
   return (
     <div>
+
+      {/* Row 1 */}
       <div className="row">
+        {/* Basic Line 7 */}
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption7}
+                />
+              </div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption7}
-            />
-            </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption7}
+                />
+              </div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption7}
-            />
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
+        </div>
+        {/* Basic Line 8 */}
+        <div className="col-lg-2 col-sm-12">
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption8}
+                />
+              </div>
             </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption8}
+                />
+              </div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption8}
-            />
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
+        </div>
+        {/* Donut */}
+        <div className="col-lg-2 col-sm-12">
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
+                <Chart
+                  height={110}
+                  options={options5}
+                  series={options5.series}
+                  type={options5.chart.type}
+                  style={{ marginTop: "-60px", marginBottom: "-5px" }}
+                />
+              </div>
             </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>            <div className="row">
               <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption8}
-            />
+              <div className="row">
+                <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
+                <Chart
+                  height={110}
+                  options={options5}
+                  series={options5.series}
+                  type={options5.chart.type}
+                  style={{ marginTop: "-60px", marginBottom: "-5px" }}
+                />
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
-            </div>
-            <div className="row">
-
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
-            <Chart
-              height={110}
-              options={options5}
-              series={options5.series}
-              type={options5.chart.type}
-              style={{ marginTop: "-60px", marginBottom: "-5px" }}
-            />
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
-            </div>
-            <div className="row">
-
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
-            <Chart
-              height={110}
-              options={options5}
-              series={options5.series}
-              type={options5.chart.type}
-              style={{ marginTop: "-60px", marginBottom: "-5px" }}
-            />
-            </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
       </div>
 
+      {/* Row 2 */}
       <div className="row mt-3">
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption7}
+                />
+              </div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption7}
-            />
-            </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption7}
+                />
+              </div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption7}
-            />
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
+        </div>
+        {/* Basic Line 8 */}
+        <div className="col-lg-2 col-sm-12">
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption8}
+                />
+              </div>
             </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption8}
+                />
+              </div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption8}
-            />
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
+        </div>
+        {/* Donut */}
+        <div className="col-lg-2 col-sm-12">
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
+                <Chart
+                  height={110}
+                  options={options5}
+                  series={options5.series}
+                  type={options5.chart.type}
+                  style={{ marginTop: "-60px", marginBottom: "-5px" }}
+                />
+              </div>
             </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>            <div className="row">
               <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption8}
-            />
+              <div className="row">
+                <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
+                <Chart
+                  height={110}
+                  options={options5}
+                  series={options5.series}
+                  type={options5.chart.type}
+                  style={{ marginTop: "-60px", marginBottom: "-5px" }}
+                />
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
-            </div>
-            <div className="row">
-
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
-            <Chart
-              height={110}
-              options={options5}
-              series={options5.series}
-              type={options5.chart.type}
-              style={{ marginTop: "-60px", marginBottom: "-5px" }}
-            />
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
-            </div>
-            <div className="row">
-
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
-            <Chart
-              height={110}
-              options={options5}
-              series={options5.series}
-              type={options5.chart.type}
-              style={{ marginTop: "-60px", marginBottom: "-5px" }}
-            />
-            </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
       </div>
 
+      {/* Row 3 */}
       <div className="row mt-3">
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption7}
+                />
+              </div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption7}
-            />
-            </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption7}
+                />
+              </div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption7}
-            />
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
+        </div>
+        {/* Basic Line 8 */}
+        <div className="col-lg-2 col-sm-12">
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption8}
+                />
+              </div>
             </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption8}
+                />
+              </div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption8}
-            />
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
+        </div>
+        {/* Donut */}
+        <div className="col-lg-2 col-sm-12">
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
+                <Chart
+                  height={110}
+                  options={options5}
+                  series={options5.series}
+                  type={options5.chart.type}
+                  style={{ marginTop: "-60px", marginBottom: "-5px" }}
+                />
+              </div>
             </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>            <div className="row">
               <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption8}
-            />
+              <div className="row">
+                <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
+                <Chart
+                  height={110}
+                  options={options5}
+                  series={options5.series}
+                  type={options5.chart.type}
+                  style={{ marginTop: "-60px", marginBottom: "-5px" }}
+                />
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
-            </div>
-            <div className="row">
-
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
-            <Chart
-              height={110}
-              options={options5}
-              series={options5.series}
-              type={options5.chart.type}
-              style={{ marginTop: "-60px", marginBottom: "-5px" }}
-            />
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
-            </div>
-            <div className="row">
-
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
-            <Chart
-              height={110}
-              options={options5}
-              series={options5.series}
-              type={options5.chart.type}
-              style={{ marginTop: "-60px", marginBottom: "-5px" }}
-            />
-            </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
       </div>
-      
+
+      {/* Row 4 */}
       <div className="row mt-3">
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption7}
+                />
+              </div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption7}
-            />
-            </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption7}
+                />
+              </div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption7}
-            />
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
+        </div>
+        {/* Basic Line 8 */}
+        <div className="col-lg-2 col-sm-12">
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption8}
+                />
+              </div>
             </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <ReactEcharts
+                  style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
+                  option={echartBasicLineOption8}
+                />
+              </div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption8}
-            />
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
+        </div>
+        {/* Donut */}
+        <div className="col-lg-2 col-sm-12">
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
+              <div className="row">
+                <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
+                <Chart
+                  height={110}
+                  options={options5}
+                  series={options5.series}
+                  type={options5.chart.type}
+                  style={{ marginTop: "-60px", marginBottom: "-5px" }}
+                />
+              </div>
             </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
+          <FlipCard isFlipped={isFlipped}>
+            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>            <div className="row">
               <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
             </div>
-            <div className="row">
-            <ReactEcharts
-              style={{ height: "100px", marginTop: "-30px", marginBottom: "-15px" }}
-              option={echartBasicLineOption8}
-            />
+              <div className="row">
+                <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
+                <Chart
+                  height={110}
+                  options={options5}
+                  series={options5.series}
+                  type={options5.chart.type}
+                  style={{ marginTop: "-60px", marginBottom: "-5px" }}
+                />
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
-            </div>
-            <div className="row">
-
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
-            <Chart
-              height={110}
-              options={options5}
-              series={options5.series}
-              type={options5.chart.type}
-              style={{ marginTop: "-60px", marginBottom: "-5px" }}
-            />
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-2 col-sm-12">
-          <div className="card">
-            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
-            </div>
-            <div className="row">
-
-            <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
-            <Chart
-              height={110}
-              options={options5}
-              series={options5.series}
-              type={options5.chart.type}
-              style={{ marginTop: "-60px", marginBottom: "-5px" }}
-            />
-            </div>
-          </div>
+            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+          </FlipCard>
         </div>
       </div>
+
     </div>
   )
 }
