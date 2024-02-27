@@ -4,7 +4,6 @@ import Chart from "react-apexcharts";
 import * as echarts from "echarts";
 import { useState, useEffect } from "react";
 import ReactCardFlip from "react-card-flip";
-import { functions } from "lodash";
 
 const SocialMedia = () => {
   const [isFlipped, setIsFlipped] = useState(false);
