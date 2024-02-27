@@ -284,7 +284,7 @@ export default function KecamatanMedanTuntungan() {
         {/* Basic Line 7 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -296,12 +296,12 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -313,13 +313,13 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         {/* Basic Line 8 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -331,12 +331,12 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -348,13 +348,13 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         {/* Donut */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -370,15 +370,16 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
-            </div>
+            <div className="card">
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
               <div className="row">
                 <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
                 <Chart
@@ -390,16 +391,17 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
       </div>
 
       {/* Row 2 */}
-      <div className="row mt-3">
+      <div className="row">
+        {/* Basic Line 7 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -411,12 +413,12 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -428,13 +430,13 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         {/* Basic Line 8 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -446,12 +448,12 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -463,13 +465,13 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         {/* Donut */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -485,15 +487,16 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
-            </div>
+            <div className="card">
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
               <div className="row">
                 <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
                 <Chart
@@ -505,16 +508,17 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
       </div>
 
       {/* Row 3 */}
-      <div className="row mt-3">
+      <div className="row">
+        {/* Basic Line 7 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -526,12 +530,12 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -543,13 +547,13 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         {/* Basic Line 8 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -561,12 +565,12 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -578,13 +582,13 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         {/* Donut */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -600,15 +604,16 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
-            </div>
+            <div className="card">
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
               <div className="row">
                 <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
                 <Chart
@@ -620,16 +625,17 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
       </div>
 
       {/* Row 4 */}
-      <div className="row mt-3">
+      <div className="row">
+        {/* Basic Line 7 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -641,12 +647,12 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -658,13 +664,13 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         {/* Basic Line 8 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -676,12 +682,12 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -693,13 +699,13 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         {/* Donut */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -715,15 +721,16 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>            <div className="row">
-              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
-              <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
-            </div>
+            <div className="card">
+              <div className="row">
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+              </div>
               <div className="row">
                 <p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}></p>
                 <Chart
@@ -735,7 +742,7 @@ export default function KecamatanMedanTuntungan() {
                 />
               </div>
             </div>
-            <div onClick={() => setIsFlipped((prev) => !prev)}></div>
+            <div></div>
           </FlipCard>
         </div>
       </div>

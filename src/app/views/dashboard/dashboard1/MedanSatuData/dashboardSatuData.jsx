@@ -867,7 +867,7 @@ const DashboardSatuData = () => {
         <div className="col-lg-3 col-md-6 col-sm-12 position-relative">
           {/* Front of the card */}
           <FlipCard isFlipped={isFlipped}>
-            <div className="card card-icon-bg card-icon-bg-primary o-hidden mb-2" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card card-icon-bg card-icon-bg-primary o-hidden mb-2">
               <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>Title 1</h6>
               <div className="card-body text-center" style={{ height: "100px" }}>
                 <i className="i-Calendar-3" style={{ fontSize: '70px', marginTop: '-15px' }}></i>
@@ -883,7 +883,7 @@ const DashboardSatuData = () => {
             </div>
 
             {/* Back of the card (empty for now) */}
-            <div onClick={() => setIsFlipped((prev) => !prev)}>
+            <div>
             </div>
           </FlipCard>
         </div>
@@ -891,7 +891,7 @@ const DashboardSatuData = () => {
         <div className="col-lg-9 col-md-6 col-sm-12">
           {/* Front of the card */}
           <FlipCard isFlipped={isFlipped}>
-            <div className="card mb-2" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card mb-2">
               <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px", position: "relative" }}>
                 Title 2
                 <span style={{ position: "absolute", top: 10, right: 20, fontSize: "6px" }}>
@@ -905,8 +905,7 @@ const DashboardSatuData = () => {
             </div>
 
             {/* Back of the card (empty for now) */}
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
-              {/* Add any content for the back of the card if needed */}
+            <div>
             </div>
           </FlipCard>
         </div>
@@ -917,7 +916,7 @@ const DashboardSatuData = () => {
         <div className="col-lg-3 col-md-6 col-sm-12 mb-2">
           {/* Front of the card */}
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <h6 className="card-title mb-2 mt-3" style={{ marginLeft: "20px", position: "relative" }}>
                 Title 3
                 <span style={{ position: "absolute", top: 7, right: 20, fontSize: "6px" }}>
@@ -931,15 +930,14 @@ const DashboardSatuData = () => {
             </div>
 
             {/* Back of the card (empty for now) */}
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
-              {/* Add any content for the back of the card if needed */}
+            <div>
             </div>
           </FlipCard>
         </div>
         <div className="col-lg-3 col-md-6 col-sm-12">
           {/* Front of the card */}
           <FlipCard isFlipped={isFlipped}>
-            <div className="card mb-2" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card mb-2">
               <h6 className="card-title mb-2 mt-3 position-relative" style={{ marginLeft: "20px" }}>
                 Title 4
                 <span style={{ position: "absolute", top: 7, right: 20, fontSize: "6px" }}>
@@ -972,15 +970,13 @@ const DashboardSatuData = () => {
             </div>
 
             {/* Back of the card (empty for now) */}
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
-              {/* Add any content for the back of the card if needed */}
+            <div>
             </div>
           </FlipCard>
         </div>
         <div className="col-lg-3 col-md-6 col-sm-12">
           {/* Front of the card */}
           <FlipCard isFlipped={isFlipped}>
-            <div className="card mb-2" onClick={() => setIsFlipped((prev) => !prev)}>
               <SimpleCard title={
                 <div style={{ position: "relative" }}>
                   Title 5
@@ -994,18 +990,16 @@ const DashboardSatuData = () => {
                   option={echartZoomBarOption}
                 />
               </SimpleCard>
-            </div>
 
             {/* Back of the card (empty for now) */}
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
-              {/* Add any content for the back of the card if needed */}
+            <div>
             </div>
           </FlipCard>
         </div>
         <div className="col-lg-3 col-md-6 col-sm-12 mb-2">
           {/* Front of the card */}
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <SimpleCard title={
                 <div style={{ position: "relative" }}>
                   Title 6
@@ -1019,10 +1013,8 @@ const DashboardSatuData = () => {
                   option={echartBasicPie} />
               </SimpleCard>
             </div>
-
             {/* Back of the card (empty for now) */}
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
-              {/* Add any content for the back of the card if needed */}
+            <div>
             </div>
           </FlipCard>
         </div>
@@ -1049,14 +1041,14 @@ const DashboardSatuData = () => {
               <Echart3 height="25px" />
             </SimpleCard>
 
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
-              {/* Add any content for the back of the card if needed */}
+            {/* Back of the card (empty for now) */}
+            <div>
             </div>
           </FlipCard>
         </div>
         <div className="col-lg-3 col-md-4 col-sm-12 mb-2">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <h6 className="card-title mb-2 mt-2 position-relative" style={{ marginLeft: "20px" }}>
                 Title 8
                 <span style={{ position: "absolute", top: 7, right: 20, fontSize: "6px" }}>
@@ -1068,15 +1060,14 @@ const DashboardSatuData = () => {
                 option={echartMultipleBarOption}
               />
             </div>
-
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
-              {/* Add any content for the back of the card if needed */}
+            {/* Back of the card (empty for now) */}
+            <div>
             </div>
           </FlipCard>
         </div>
         <div className="col-lg-3 col-md-4 col-sm-12 mb-2">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" style={{ height: "137px", position: "relative" }} onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card" style={{ height: "137px", position: "relative" }}>
               <h6 className="card-title mb-2 mt-2" style={{ marginLeft: "20px" }}>
                 Title 9
                 <span style={{ position: "absolute", top: 15, right: 20, fontSize: "6px" }}>
@@ -1092,14 +1083,14 @@ const DashboardSatuData = () => {
               />
             </div>
 
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
-              {/* Add any content for the back of the card if needed */}
+            {/* Back of the card (empty for now) */}
+            <div>
             </div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-md-6 col-sm-12 mb-2">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <h6 className="card-title mb-2 mt-2 position-relative" style={{ marginLeft: "20px" }}>
                 Title 10
                 <span style={{ position: "absolute", top: 3, right: 8, fontSize: "6px" }}>
@@ -1113,14 +1104,14 @@ const DashboardSatuData = () => {
               />
             </div>
 
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
-              {/* Add any content for the back of the card if needed */}
+            {/* Back of the card (empty for now) */}
+            <div>
             </div>
           </FlipCard>
         </div>
         <div className="col-lg-2 col-md-6 col-sm-12 mb-2">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
+            <div className="card">
               <h6 className="card-title mb-2 mt-2 position-relative" style={{ marginLeft: "20px" }}>
                 Title 11
                 <span style={{ position: "absolute", top: 3, right: 8, fontSize: "6px" }}>
@@ -1134,8 +1125,8 @@ const DashboardSatuData = () => {
               />
             </div>
 
-            <div className="card" onClick={() => setIsFlipped((prev) => !prev)}>
-              {/* Add any content for the back of the card if needed */}
+            {/* Back of the card (empty for now) */}
+            <div>
             </div>
           </FlipCard>
         </div>
