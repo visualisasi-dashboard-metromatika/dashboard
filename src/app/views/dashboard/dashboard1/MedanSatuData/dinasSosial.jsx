@@ -284,7 +284,7 @@ export default function DinasSosial() {
         {/* Basic Line 7 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -301,7 +301,7 @@ export default function DinasSosial() {
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -319,7 +319,7 @@ export default function DinasSosial() {
         {/* Basic Line 8 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -336,7 +336,7 @@ export default function DinasSosial() {
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -354,7 +354,7 @@ export default function DinasSosial() {
         {/* Donut */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -375,7 +375,7 @@ export default function DinasSosial() {
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -397,11 +397,11 @@ export default function DinasSosial() {
       </div>
 
       {/* Row 2 */}
-      <div className="row">
+      <div className="row mt-2">
         {/* Basic Line 7 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -418,7 +418,7 @@ export default function DinasSosial() {
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -436,7 +436,7 @@ export default function DinasSosial() {
         {/* Basic Line 8 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -453,7 +453,7 @@ export default function DinasSosial() {
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -471,7 +471,7 @@ export default function DinasSosial() {
         {/* Donut */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -492,7 +492,7 @@ export default function DinasSosial() {
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -514,11 +514,11 @@ export default function DinasSosial() {
       </div>
 
       {/* Row 3 */}
-      <div className="row">
+      <div className="row mt-2">
         {/* Basic Line 7 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -535,7 +535,7 @@ export default function DinasSosial() {
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -553,7 +553,7 @@ export default function DinasSosial() {
         {/* Basic Line 8 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -570,7 +570,7 @@ export default function DinasSosial() {
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -588,7 +588,7 @@ export default function DinasSosial() {
         {/* Donut */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -609,7 +609,7 @@ export default function DinasSosial() {
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -631,11 +631,11 @@ export default function DinasSosial() {
       </div>
 
       {/* Row 4 */}
-      <div className="row">
+      <div className="row mt-2">
         {/* Basic Line 7 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -652,7 +652,7 @@ export default function DinasSosial() {
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -670,7 +670,7 @@ export default function DinasSosial() {
         {/* Basic Line 8 */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -687,7 +687,7 @@ export default function DinasSosial() {
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -705,7 +705,7 @@ export default function DinasSosial() {
         {/* Donut */}
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -726,7 +726,7 @@ export default function DinasSosial() {
         </div>
         <div className="col-lg-2 col-sm-12">
           <FlipCard isFlipped={isFlipped}>
-            <div className="card">
+            <div className="card mb-2">
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
