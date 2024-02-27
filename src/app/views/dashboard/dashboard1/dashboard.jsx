@@ -1,9 +1,11 @@
 import Chart from "react-apexcharts";
 import ReactEcharts from "echarts-for-react";
 import { ProgressBar } from 'react-bootstrap';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import FlipCard from 'react-card-flip';
 
 const PolarAreaChart = ({ height, data }) => {
+
   const option = {
     tooltip: {
       show: true,
@@ -274,12 +276,27 @@ export const options1Dash = {
 
 const YourComponent = () => {
 
+  const [isFlipped, setIsFlipped] = useState(false);
+
   useEffect(() => {
+    const handleBeforeUnload = () => {
+      setIsFlipped(true);
+      // Ensure the flip state is reset after a short delay
+      setTimeout(() => {
+        setIsFlipped(false);
+      }, 2000);
+    };
+
     const intervalId = setInterval(() => {
       window.location.reload();
-    }, 1000*60);
+    }, 1000 * 60);
 
-    return () => clearInterval(intervalId);
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      clearInterval(intervalId);
+    };
   }, []);
 
   const data = [20,5,10,30,25]
@@ -288,6 +305,7 @@ const YourComponent = () => {
       //left
       <div className="row"  style={{marginTop:"-18px"}}>
         <div className="col-md-3 sm-6 mb-2 d-flex flex-column">
+          <FlipCard isFlipped={isFlipped}>
           <div className="card rounded-3" style={{height:"487px"}}>
             <div className="card-body">
               <div className="row">
@@ -302,12 +320,15 @@ const YourComponent = () => {
                 <img src="/assets/images/Peta_Lokasi_Kecamatan_Kota_Medan.png"  style={{ objectFit: "cover", width: "100%", height: "92%" }} alt="gambarkotamedan"/>
             </div>
           </div>
+          <div></div>
+          </FlipCard>
         </div>
 
       {/* left-middle */}
         <div className="col-md-3 sm-6 mb-2 d-flex flex-column">
           <div className="row">
               <div className="col-md-4 mb-2">
+              <FlipCard isFlipped={isFlipped}>
                 <div className="card  mb-2">
                   <div className="card-body text-center">
                     <div className="row" style={{marginTop:"-10px"}}>
@@ -324,8 +345,11 @@ const YourComponent = () => {
                     </div>
                   </div>
                 </div>
+                <div></div>
+              </FlipCard>
               </div>
               <div className="col-md-4 mb-2">
+              <FlipCard isFlipped={isFlipped}>
                 <div className="card mb-2">
                   <div className="card-body text-center">
                   <div className="row" style={{marginTop:"-10px"}}>
@@ -342,8 +366,11 @@ const YourComponent = () => {
                     </div>
                   </div>
                 </div>
+                <div></div>
+                </FlipCard>
               </div>
               <div className="col-md-4 mb-2">
+              <FlipCard isFlipped={isFlipped}>
                 <div className="card mb-2">
                   <div className="card-body text-center">
                   <div className="row" style={{marginTop:"-10px"}}>
@@ -360,10 +387,13 @@ const YourComponent = () => {
                     </div>
                   </div>
                 </div>
+                <div></div>
+                </FlipCard>
               </div>
           </div>
           <div className="row">
             <div className="col-md-12 mb-2">
+              <FlipCard isFlipped={isFlipped}>
                 <div className="card mb-2">
                   <div className="card-body text-left">
                     <div className="row">
@@ -377,10 +407,13 @@ const YourComponent = () => {
                     <PolarAreaChart height="90px" width="50px" data={data}></PolarAreaChart>
                   </div>
                 </div>
+                <div></div>
+                </FlipCard>
               </div>
           </div>
           <div className="row">
             <div className="col-md-12 mb-2">
+              <FlipCard isFlipped={isFlipped}>
                 <div className="card mb-2">
                   <div className="card-body text-left">
                   <div className="row">
@@ -399,6 +432,8 @@ const YourComponent = () => {
                     />
                   </div>
                 </div>
+                <div></div>
+              </FlipCard>
               </div>
           </div>
         </div>
@@ -407,6 +442,7 @@ const YourComponent = () => {
         <div className="col-md-4 sm-6 mb-2">
           <div className="row">
             <div className="col-md-6 mb-2">
+              <FlipCard isFlipped={isFlipped}>
                 <div className="card mb-2">
                   <div className="card-body text-left">
                     <p className="text-18 text-success line-height-1 mb-2">
@@ -422,8 +458,11 @@ const YourComponent = () => {
                     </small>
                   </div>
                 </div>
+                <div></div>
+                </FlipCard>
               </div>
               <div className="col-md-6 mb-2">
+              <FlipCard isFlipped={isFlipped}>
                 <div className="card mb-2">
                   <div className="card-body text-left">
                   <p className="text-18 text-danger line-height-1 mb-2">
@@ -439,8 +478,11 @@ const YourComponent = () => {
                     </small>
                   </div>
                 </div>
+                <div></div>
+                </FlipCard>
               </div>
               <div className="col-md-12 mb-2">
+              <FlipCard isFlipped={isFlipped}>
                 <div className="card mb-2">
                   <div className="card-body text-left">
                   <div className="row">
@@ -454,8 +496,11 @@ const YourComponent = () => {
                     <PieChartDashboard height="90px" data={data}></PieChartDashboard>
                   </div>
                 </div>
+                <div></div>
+                </FlipCard>
               </div>
               <div className="col-md-6 mb-2">
+              <FlipCard isFlipped={isFlipped}>
                 <div className="card mb-2">
                   <div className="card-body text-left">
                   <div className="row">
@@ -469,8 +514,11 @@ const YourComponent = () => {
                     <BarChart height="132px" data={data}></BarChart>
                   </div>
                 </div>
+                <div></div>
+                </FlipCard>
               </div>
               <div className="col-md-6 mb-2">
+              <FlipCard isFlipped={isFlipped}>
                 <div className="card mb-2">
                   <div className="card-body text-left">
                   <div className="row">
@@ -489,6 +537,8 @@ const YourComponent = () => {
                     />
                   </div>
                 </div>
+                <div></div>
+                </FlipCard>
               </div>
           </div>
         </div>
@@ -497,6 +547,7 @@ const YourComponent = () => {
         <div className="col-md-2 sm-6 mb-2">
           <div className="row">
             <div className="col-md-12 mb-2">
+            <FlipCard isFlipped={isFlipped}>
                 <div className="card mb-2">
                   <div className="card-body text-center">
                     <table class="table table-dark table-striped">
@@ -540,8 +591,11 @@ const YourComponent = () => {
                     </table>
                   </div>
                 </div>
+                <div></div>
+                </FlipCard>
               </div>
               <div className="col-md-12 mb-0">
+              <FlipCard isFlipped={isFlipped}>
                 <div className="card mb-0">
                   <div className="card-body text-center">
                     <table class="table table-dark table-striped" style={{marginBottom:"5px"}}>
@@ -570,6 +624,8 @@ const YourComponent = () => {
                       </table>
                   </div>
                 </div>
+                <div></div>
+                </FlipCard>
               </div>
           </div>
         </div>
