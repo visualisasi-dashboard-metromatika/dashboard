@@ -277,7 +277,7 @@ const YourComponent = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       window.location.reload();
-    }, 1000*30);
+    }, 1000*60);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -286,8 +286,8 @@ const YourComponent = () => {
   return (
 
       //left
-      <div className="row" style={{marginTop:"-18px"}}>
-        <div className="col-md-3 mb-2">
+      <div className="row"  style={{marginTop:"-18px"}}>
+        <div className="col-md-3 sm-6 mb-2 d-flex flex-column">
           <div className="card rounded-3" style={{height:"487px"}}>
             <div className="card-body">
               <div className="row">
@@ -305,7 +305,7 @@ const YourComponent = () => {
         </div>
 
       {/* left-middle */}
-        <div className="col-md-3 mb-2 d-flex flex-column">
+        <div className="col-md-3 sm-6 mb-2 d-flex flex-column">
           <div className="row">
               <div className="col-md-4 mb-2">
                 <div className="card  mb-2">
@@ -404,7 +404,7 @@ const YourComponent = () => {
         </div>
 
         {/* right-middle */}
-        <div className="col-md-4 mb-2">
+        <div className="col-md-4 sm-6 mb-2">
           <div className="row">
             <div className="col-md-6 mb-2">
                 <div className="card mb-2">
@@ -494,7 +494,7 @@ const YourComponent = () => {
         </div>
 
         {/* right */}
-        <div className="col-md-2 mb-2">
+        <div className="col-md-2 sm-6 mb-2">
           <div className="row">
             <div className="col-md-12 mb-2">
                 <div className="card mb-2">
