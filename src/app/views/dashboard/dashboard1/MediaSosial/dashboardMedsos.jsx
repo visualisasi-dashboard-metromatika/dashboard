@@ -2,9 +2,19 @@ import ReactEcharts from "echarts-for-react";
 import { ProgressBar } from "react-bootstrap";
 import Chart from "react-apexcharts";
 import * as echarts from "echarts";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import ReactCardFlip from "react-card-flip";
+import { functions } from "lodash";
 
 const SocialMedia = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+  
+  const flipCard = () =>{
+    setIsFlipped(!isFlipped);
+  }
+
+  setInterval(flipCard, 1000);
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       window.location.reload();
@@ -1981,6 +1991,37 @@ const SocialMedia = () => {
               />
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="row mt-2">
+        <div className="col-lg-4 col-sm-12">
+          <ReactCardFlip flipDirection="horizontal" isFlipped={isFlipped}>
+          <div className="card">
+            <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-50px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
+              <ReactEcharts
+                style={{ height: "117px", marginTop: "-27px", marginBottom: "-15px" }}
+                option={echartBasicLineOption}
+              />
+            </div>
+          </div>
+          <div className="card">
+            <div className="row">
+              <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
+              <div className="col-6"><p className="muted" style={{ marginRight: "-50px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+            </div>
+            <div className="row">
+            <ReactEcharts
+                style={{ height: "117px", marginTop: "-27px", marginBottom: "-15px" }}
+                option={echartBasicLineOption3}
+              />
+            </div>
+          </div>
+          </ReactCardFlip>
         </div>
       </div>
     </div>
