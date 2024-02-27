@@ -11,7 +11,7 @@ const PolarAreaChart = ({ height, data }) => {
     },
     angleAxis: {
       type: "category",
-      data: ["Medan Denai", "Medan Kota", "Medan Sunggal", "Medan Baru", "Medan Marelan"],
+      data: ["Medan Denai", "Medan Kota", "Medan Sunggal","Medan Baru", "Medan Marelan"],
       z: 10,
       axisLine: {
         show: false
@@ -77,7 +77,7 @@ const PieChartDashboard = ({ height, color = [] }) => {
           { value: 155, name: "Medan Polonia" },
         ],
         label: {
-          fontSize: 7
+            fontSize:7
         },
         itemStyle: {
           emphasis: {
@@ -114,7 +114,7 @@ const BarChart = ({ height, color = [], data }) => {
     xAxis: [
       {
         type: "category",
-        data: ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
+        data: ['A','B','C','D','E','F','G'],
         axisTick: {
           alignWithLabel: true
         },
@@ -172,10 +172,10 @@ const BarChart = ({ height, color = [], data }) => {
           },
           borderRadius: [5, 5, 0, 0]
         },
-        labels: {
-          style: {
-            fontSize: "7px" // Mengatur ukuran font untuk label series
-          }
+        labels:{
+            style: {
+                fontSize:"7px" // Mengatur ukuran font untuk label series
+            }
         }
       }
     ]
@@ -186,50 +186,50 @@ const BarChart = ({ height, color = [], data }) => {
 
 export const options7 = {
   chart: {
-    toolbar: {
-      show: false
-    },
-    type: 'bar',
+      toolbar:{
+          show:false
+      },
+      type: 'bar',
   },
   plotOptions: {
-    bar: {
-      horizontal: true,
-      endingShape: 'rounded',
-      barHeight: "30px"
-    }
+      bar: {
+          horizontal: true,
+          endingShape: 'rounded',
+          barHeight:"30px"
+      }
   },
   dataLabels: {
-    enabled: true,
-    style: {
-      fontSize: '7px'
-    }
+      enabled: true,
+      style: {
+          fontSize: '7px'
+      }
   },
   series: [{
-    data: [10, 20, 5],
-    dataLabels: {
-      style: {
-        fontSize: '5px',
-        fontWeight: 'bold'
+      data: [ 10, 20, 5],
+      dataLabels: {
+          style: {
+              fontSize: '5px',
+              fontWeight: 'bold'
+          }
       }
-    }
   }],
   xaxis: {
-    categories: ['Medan Kota', 'Medan Denai', 'Medan Marelan'],
-    labels: {
-      style: {
-        fontSize: '7px'
+      categories: ['Medan Kota','Medan Denai','Medan Marelan'],
+      labels: {
+          style: {
+              fontSize: '7px'
+          }
+      },
+      plotOptions: {
+          barHeight: "10px"
       }
-    },
-    plotOptions: {
-      barHeight: "10px"
-    }
   },
   yaxis: {
-    labels: {
-      style: {
-        fontSize: '8px'
+      labels: {
+          style: {
+              fontSize: '8px'
+          }
       }
-    }
   }
 }
 
@@ -239,7 +239,7 @@ export const options1Dash = {
     width: "80%" // Mengatur lebar doughnut chart menjadi 100%
   },
   series: [10, 5, 15, 20],
-  labels: ['Medan Kota', 'Medan Sunggal', 'Medan Baru', 'Medan Denai'],
+  labels: ['Medan Kota','Medan Sunggal', 'Medan Baru', 'Medan Denai'],
   // title: {
   //   text: "Title",
   //   style: {
@@ -253,7 +253,7 @@ export const options1Dash = {
     }
   },
   legend: {
-    show: false,
+    show:false,
     position: "bottom",
     fontSize: "5px" // Mengatur ukuran font legenda
   },
@@ -277,277 +277,304 @@ const YourComponent = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       window.location.reload();
-    }, 1000 * 60);
+    }, 1000*30);
 
     return () => clearInterval(intervalId);
   }, []);
 
-  const data = [20, 5, 10, 30, 25]
+  const data = [20,5,10,30,25]
   return (
 
-    //left
-    <div className="row" style={{ marginTop: "-18px" }}>
-      <div className="col-md-3 mb-2">
-        <div className="card rounded-3" style={{ height: "487px" }}>
-          <div className="card-body">
-            <div className="row">
+      //left
+      <div className="row" style={{marginTop:"-18px"}}>
+        <div className="col-md-3 mb-2">
+          <div className="card rounded-3" style={{height:"487px"}}>
+            <div className="card-body">
+              <div className="row">
               <div className="col-5">
                 <h4 className="card-subtitle text-info mt-0 text-muted mb-3">
-                  <i className="i-Globe"></i> Title
-                </h4>
-              </div>
-              <div className="col-5"><p className="muted" style={{ marginRight: "-40px", marginTop: "16px", fontSize: "8px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+                      <i className="i-Globe"></i> Title
+                    </h4>
+                </div>
+                <div className="col-5"><p className="muted" style={{ marginRight: "-40px", marginTop: "16px", fontSize: "8px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+                </div>
+                  
+                <img src="/assets/images/Peta_Lokasi_Kecamatan_Kota_Medan.png"  style={{ objectFit: "cover", width: "100%", height: "92%" }} alt="gambarkotamedan"/>
             </div>
-
-            <img src="/assets/images/Peta_Lokasi_Kecamatan_Kota_Medan.png" style={{ objectFit: "cover", width: "100%", height: "92%" }} alt="gambarkotamedan" />
           </div>
         </div>
-      </div>
 
       {/* left-middle */}
-      <div className="col-md-3 mb-2 d-flex flex-column">
-        <div className="row">
-          <div className="col-md-4 mb-2">
-            <div className="card  mb-2">
-              <div className="card-body text-center">
-                <i className="i-MaleFemale  text-white teal-500 rounded-circle p-2"></i>
-                <p className="t-font-boldest text-primary mt-2 mb-0 text-capitalize">809
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 mb-2">
-            <div className="card mb-2">
-              <div className="card-body text-center">
-                <i className="i-Male-21 text-white yellow-500 rounded-circle p-2"></i>
-                <p className="t-font-boldest text-primary mt-2 mb-0 text-capitalize">102
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 mb-2">
-            <div className="card mb-2">
-              <div className="card-body text-center">
-                <i className="i-Female-21 text-white blue-500 rounded-circle p-2"></i>
-                <p className="t-font-boldest text-primary mt-2 mb-0 text-capitalize">20
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-12 mb-2">
-            <div className="card mb-2">
-              <div className="card-body text-left">
-                <div className="row">
-                  <div className="col-5">
-                    <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
-                      <i className="i-Pie-Chart-2"></i> Title
-                    </h4>
+        <div className="col-md-3 mb-2 d-flex flex-column">
+          <div className="row">
+              <div className="col-md-4 mb-2">
+                <div className="card  mb-2">
+                  <div className="card-body text-center">
+                    <div className="row" style={{marginTop:"-10px"}}>
+                      <div className="col-12">
+                        <i className="i-MaleFemale  text-danger rounded-circle p-2"></i>
+                      </div>
+                      <div className="col-12">
+                        <small className="text-light" style={{fontSize:"7px"}}>Penduduk</small>
+                      </div>
+                      <div className="col-12" style={{marginTop:"-4px"}}>
+                      <p className="t-font-bold text-primary mt-0 mb-0 text-capitalize">809
+                    </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="col-5"><p className="muted" style={{ marginRight: "-40px", marginTop: "2px", fontSize: "5px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
                 </div>
-                <PolarAreaChart height="90px" width="50px" data={data}></PolarAreaChart>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-12 mb-2">
-            <div className="card mb-2">
-              <div className="card-body text-left">
-                <div className="row">
-                  <div className="col-5">
-                    <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
-                      <i className="i-Pie-Chart-2"></i> Title
-                    </h4>
+              <div className="col-md-4 mb-2">
+                <div className="card mb-2">
+                  <div className="card-body text-center">
+                  <div className="row" style={{marginTop:"-10px"}}>
+                      <div className="col-12">
+                        <i className="i-Male-21  text-success rounded-circle p-2"></i>
+                      </div>
+                      <div className="col-12">
+                        <small className="text-light" style={{fontSize:"7px"}}>Data Pria</small>
+                      </div>
+                      <div className="col-12" style={{marginTop:"-4px"}}>
+                      <p className="t-font-bold text-primary mt-0 mb-0 text-capitalize">502
+                    </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="col-5"><p className="muted" style={{ marginRight: "-40px", marginTop: "2px", fontSize: "5px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
                 </div>
-                <Chart
-                  options={options7}
-                  series={options7.series}
-                  type={options7.chart.type}
-                  height="120px"
-                />
               </div>
-            </div>
+              <div className="col-md-4 mb-2">
+                <div className="card mb-2">
+                  <div className="card-body text-center">
+                  <div className="row" style={{marginTop:"-10px"}}>
+                      <div className="col-12">
+                        <i className="i-Female-21  text-warning rounded-circle p-2"></i>
+                      </div>
+                      <div className="col-12">
+                        <small className="text-light" style={{fontSize:"5px"}}>Data Wanita</small>
+                      </div>
+                      <div className="col-12" style={{marginTop:"-4px"}}>
+                      <p className="t-font-bold text-primary mt-0 mb-0 text-capitalize">307
+                    </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12 mb-2">
+                <div className="card mb-2">
+                  <div className="card-body text-left">
+                    <div className="row">
+                      <div className="col-5">
+                          <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
+                          <i className="i-Pie-Chart-2"></i> Title
+                        </h4>
+                      </div>
+                      <div className="col-5"><p className="muted" style={{ marginRight: "-40px", marginTop: "2px", fontSize: "5px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+                    </div>
+                    <PolarAreaChart height="90px" width="50px" data={data}></PolarAreaChart>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12 mb-2">
+                <div className="card mb-2">
+                  <div className="card-body text-left">
+                  <div className="row">
+                      <div className="col-5">
+                          <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
+                          <i className="i-Pie-Chart-2"></i> Title
+                        </h4>
+                      </div>
+                      <div className="col-5"><p className="muted" style={{ marginRight: "-40px", marginTop: "2px", fontSize: "5px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+                    </div>
+                    <Chart
+                    options={options7}
+                    series={options7.series}
+                    type={options7.chart.type}
+                    height="120px"
+                    />
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
-      </div>
 
-      {/* right-middle */}
-      <div className="col-md-4 mb-2">
-        <div className="row">
-          <div className="col-md-6 mb-2">
-            <div className="card mb-2">
-              <div className="card-body text-left">
-                <p className="text-18 text-success line-height-1 mb-2">
-                  <i className="i-Conference"></i> 85%
-                </p>
-                <ProgressBar
-                  variant="success"
-                  now={50}
-                  style={{ height: "4px" }}
-                ></ProgressBar>
-                <small className="text-light">
-                  Penduduk Bersekolah
-                </small>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6 mb-2">
-            <div className="card mb-2">
-              <div className="card-body text-left">
-                <p className="text-18 text-danger line-height-1 mb-2">
-                  <i className="i-Cool-Guy"></i> 85%
-                </p>
-                <ProgressBar
-                  variant="danger"
-                  now={50}
-                  style={{ height: "4px" }}
-                ></ProgressBar>
-                <small className="text-light">
-                  Belum Bersekolah
-                </small>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-12 mb-2">
-            <div className="card mb-2">
-              <div className="card-body text-left">
-                <div className="row">
-                  <div className="col-5">
-                    <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
-                      <i className="i-Pie-Chart-2"></i> Title
-                    </h4>
+        {/* right-middle */}
+        <div className="col-md-4 mb-2">
+          <div className="row">
+            <div className="col-md-6 mb-2">
+                <div className="card mb-2">
+                  <div className="card-body text-left">
+                    <p className="text-18 text-success line-height-1 mb-2">
+                      <i className="i-Conference"></i> 85%
+                    </p>
+                    <ProgressBar
+                    variant="success"
+                    now={50}
+                    style={{ height: "4px" }}
+                    ></ProgressBar>
+                    <small className="text-light">
+                     Penduduk Bersekolah
+                    </small>
                   </div>
-                  <div className="col-5"><p className="muted" style={{ marginRight: "-40px", marginTop: "0px", fontSize: "5px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
                 </div>
-                <PieChartDashboard height="90px" data={data}></PieChartDashboard>
               </div>
-            </div>
-          </div>
-          <div className="col-md-6 mb-2">
-            <div className="card mb-2">
-              <div className="card-body text-left">
-                <div className="row">
-                  <div className="col-8">
-                    <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
-                      <i className="i-Pie-Chart-2"></i> Title
-                    </h4>
+              <div className="col-md-6 mb-2">
+                <div className="card mb-2">
+                  <div className="card-body text-left">
+                  <p className="text-18 text-danger line-height-1 mb-2">
+                      <i className="i-Cool-Guy"></i> 85%
+                    </p>
+                    <ProgressBar
+                    variant="danger"
+                    now={50}
+                    style={{ height: "4px" }}
+                    ></ProgressBar>
+                    <small className="text-light">
+                     Belum Bersekolah
+                    </small>
                   </div>
-                  <div className="col-2"><p className="muted" style={{ marginRight: "-40px", marginTop: "0px", fontSize: "5px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
                 </div>
-                <BarChart height="132px" data={data}></BarChart>
               </div>
-            </div>
-          </div>
-          <div className="col-md-6 mb-2">
-            <div className="card mb-2">
-              <div className="card-body text-left">
-                <div className="row">
-                  <div className="col-8">
-                    <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
-                      <i className="i-Pie-Chart-2"></i> Title
-                    </h4>
+              <div className="col-md-12 mb-2">
+                <div className="card mb-2">
+                  <div className="card-body text-left">
+                  <div className="row">
+                      <div className="col-5">
+                          <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
+                          <i className="i-Pie-Chart-2"></i> Title
+                        </h4>
+                      </div>
+                      <div className="col-5"><p className="muted" style={{ marginRight: "-40px", marginTop: "0px", fontSize: "5px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+                    </div>
+                    <PieChartDashboard height="90px" data={data}></PieChartDashboard>
                   </div>
-                  <div className="col-2"><p className="muted" style={{ marginRight: "-40px", marginTop: "0px", fontSize: "5px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
                 </div>
-                <Chart
-                  height="153px"
-                  options={options1Dash}
-                  series={options1Dash.series}
-                  type={options1Dash.chart.type}
-                />
               </div>
-            </div>
+              <div className="col-md-6 mb-2">
+                <div className="card mb-2">
+                  <div className="card-body text-left">
+                  <div className="row">
+                      <div className="col-8">
+                          <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
+                          <i className="i-Pie-Chart-2"></i> Title
+                        </h4>
+                      </div>
+                      <div className="col-2"><p className="muted" style={{ marginRight: "-40px", marginTop: "0px", fontSize: "5px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+                    </div>
+                    <BarChart height="132px" data={data}></BarChart>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 mb-2">
+                <div className="card mb-2">
+                  <div className="card-body text-left">
+                  <div className="row">
+                      <div className="col-8">
+                          <h4 className="card-subtitle mb-2 text-info mt-0 text-muted">
+                          <i className="i-Pie-Chart-2"></i> Title
+                        </h4>
+                      </div>
+                      <div className="col-2"><p className="muted" style={{ marginRight: "-40px", marginTop: "0px", fontSize: "5px", textAlign:"right" }}>Last updated on 2 Sep 2021</p></div>
+                    </div>
+                  <Chart 
+                    height="153px"
+                    options={options1Dash}
+                    series={options1Dash.series}
+                    type={options1Dash.chart.type}
+                    />
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
-      </div>
 
-      {/* right */}
-      <div className="col-md-2 mb-2">
-        <div className="row">
-          <div className="col-md-12 mb-2">
-            <div className="card mb-2">
-              <div className="card-body text-center">
-                <table class="table table-dark table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">....</th>
-                    </tr>
-                  </thead>
-                </table>
-                <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <td scope="col">.....</td>
-                      <td scope="col">.....</td>
-                    </tr>
-                  </thead>
-                </table>
-                <br />
-                <table class="table table-dark table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">....</th>
-                    </tr>
-                  </thead>
-                </table>
-                <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <td scope="col">..</td>
-                      <td scope="col">..</td>
-                      <td scope="col">..</td>
-                      <td scope="col">..</td>
-                    </tr>
-                    <tr>
-                      <td scope="col">..</td>
-                      <td scope="col">..</td>
-                      <td scope="col">..</td>
-                      <td scope="col">..</td>
-                    </tr>
-                  </thead>
-                </table>
+        {/* right */}
+        <div className="col-md-2 mb-2">
+          <div className="row">
+            <div className="col-md-12 mb-2">
+                <div className="card mb-2">
+                  <div className="card-body text-center">
+                    <table class="table table-dark table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">....</th>
+                        </tr>
+                      </thead>
+                    </table>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <td scope="col">.....</td>
+                          <td scope="col">.....</td>
+                        </tr>
+                      </thead>
+                    </table>
+                    <br />
+                    <table class="table table-dark table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">....</th>
+                        </tr>
+                      </thead>
+                    </table>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <td scope="col">..</td>
+                          <td scope="col">..</td>
+                          <td scope="col">..</td>
+                          <td scope="col">..</td>
+                        </tr>
+                        <tr>
+                          <td scope="col">..</td>
+                          <td scope="col">..</td>
+                          <td scope="col">..</td>
+                          <td scope="col">..</td>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="col-md-12 mb-0">
-            <div className="card mb-0">
-              <div className="card-body text-center">
-                <table class="table table-dark table-striped" style={{ marginBottom: "5px" }}>
-                  <thead>
-                    <tr>
-                      <th scope="col">....</th>
-                      <th scope="col">....</th>
-                      <th scope="col">....</th>
-                      <th scope="col">....</th>
-                    </tr>
-                  </thead>
-                  <thead>
-                    <tr>
-                      <td scope="col">..</td>
-                      <td scope="col">..</td>
-                      <td scope="col">..</td>
-                      <td scope="col">..</td>
-                    </tr>
-                    <tr>
-                      <td scope="col">..</td>
-                      <td scope="col">..</td>
-                      <td scope="col">..</td>
-                      <td scope="col">..</td>
-                    </tr>
-                  </thead>
-                </table>
+              <div className="col-md-12 mb-0">
+                <div className="card mb-0">
+                  <div className="card-body text-center">
+                    <table class="table table-dark table-striped" style={{marginBottom:"5px"}}>
+                        <thead>
+                          <tr>
+                            <th scope="col">....</th>
+                            <th scope="col">....</th>
+                            <th scope="col">....</th>
+                            <th scope="col">....</th>
+                          </tr>
+                        </thead>
+                        <thead>
+                        <tr>
+                          <td scope="col">..</td>
+                          <td scope="col">..</td>
+                          <td scope="col">..</td>
+                          <td scope="col">..</td>
+                        </tr>
+                        <tr>
+                          <td scope="col">..</td>
+                          <td scope="col">..</td>
+                          <td scope="col">..</td>
+                          <td scope="col">..</td>
+                        </tr>
+                        </thead>
+                      </table>
+                  </div>
+                </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
 };
 
 export default YourComponent;
