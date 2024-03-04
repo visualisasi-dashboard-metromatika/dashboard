@@ -17,6 +17,15 @@ export const navigations = [
 
   },
   {
+    name: "Test",
+    description: "Lorem ipsum dolor sit.",
+    type: "dropDown",
+    icon: "i-Video",
+    path: "/dashboard/v56",
+    type: "link",
+
+  },
+  {
     name: "Medan Satu Data",
     description: "Lorem ipsum dolor sit.",
     type: "dropDown",

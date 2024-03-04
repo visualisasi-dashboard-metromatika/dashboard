@@ -55,6 +55,7 @@ const Dashboard52 = lazy(() => import("./dashboard1/MedanSatuData/kecamatanMedan
 const Dashboard53 = lazy(() => import("./dashboard1/MedanSatuData/kecamatanMedanTimur"));
 const Dashboard54 = lazy(() => import("./dashboard1/MedanSatuData/kecamatanMedanTuntungan"));
 const Dashboard55 = lazy(() => import("./dashboard1/MedanSatuData/kecamatanMedanBelawan"));
+const Dashboard56 = lazy(() => import("./dashboard1/test"));
 
 const dashboardRoutes = [
   {
@@ -330,6 +331,11 @@ const dashboardRoutes = [
   {
     path: "/dashboard/v55",
     element: <Dashboard55 />,
+    // auth: authRoles.admin,
+  },
+  {
+    path: "/dashboard/v56",
+    element: <Dashboard56 />,
     // auth: authRoles.admin,
   },
 ];
