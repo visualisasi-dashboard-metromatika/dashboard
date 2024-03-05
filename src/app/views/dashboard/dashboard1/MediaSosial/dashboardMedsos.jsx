@@ -12,7 +12,11 @@ const SocialMedia = () => {
     setIsFlipped(!isFlipped);
   }
 
-  setInterval(flipCard, 1000);
+  useEffect(() => {
+    const intervalId = setInterval(flipCard, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [isFlipped]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {

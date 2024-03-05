@@ -5,7 +5,7 @@ import * as echarts from "echarts";
 import { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import peta from "./peta.png";
-import "./light.css";
+import "./dark.css";
 
 const Test = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
@@ -87,7 +87,7 @@ const Test = () => {
         label: {
           normal: {
             textStyle: {
-              color: "#333",
+              color: "#fff",
               fontSize: "5px"
             },
           },
@@ -95,7 +95,7 @@ const Test = () => {
         labelLine: {
           normal: {
             lineStyle: {
-              color: "#333",
+              color: "#fff",
             },
             smooth: 0.2,
             length: 2,
@@ -411,7 +411,8 @@ const Test = () => {
       },
       axisLabel: {
         show: true,
-        fontSize: "5"
+        fontSize: "5",
+        color:"#fff"
       },
       axisTick: {
         show: false,
@@ -424,7 +425,8 @@ const Test = () => {
       },
       axisLabel: {
         show: true,
-        fontSize: "5"
+        fontSize: "5",
+        color:"#fff"
       },
       axisTick: {
         show: false,
@@ -945,7 +947,8 @@ const Test = () => {
       },
       axisLabel: {
         show: true,
-        fontSize: "5"
+        fontSize: "5",
+        color: "#fff"
       },
       axisTick: {
         show: false,
@@ -958,7 +961,8 @@ const Test = () => {
       },
       axisLabel: {
         show: true,
-        fontSize: "5"
+        fontSize: "5",
+        color: "#fff"
       },
       axisTick: {
         show: false,
@@ -980,14 +984,14 @@ const Test = () => {
         smooth: false,
         color: "#639",
         lineStyle: {
-          color: "#1B1A55",
+          color: "#6c94bb",
           opacity: 1,
           width: 1.5,
         },
         itemStyle: {
           show: false,
-          color: "#1B1A55",
-          borderColor: "#1B1A55",
+          color: "#6c94bb",
+          borderColor: "#6c94bb",
           borderWidth: 1.5,
         },
       },
@@ -1109,7 +1113,7 @@ const Test = () => {
           value: {
             offsetY: 0,
             fontSize: "5px",
-            color: undefined,
+            color: "#fff",
             formatter: function (val) {
               return val + "%";
             }
@@ -1162,7 +1166,7 @@ const Test = () => {
       radar: {
         size: 61,
         polygons: {
-          strokeColor: "#e9e9e9",
+          strokeColor: "#fff",
           fill: {
             colors: ["#f8f8f8", "#fff"]
           }
@@ -1195,7 +1199,7 @@ const Test = () => {
         },
         show: true,
         style: {
-          colors: ["#a8a8a8"],
+          colors: ["#fff"],
           fontSize: "3px"
         }
       }
@@ -1204,7 +1208,7 @@ const Test = () => {
       labels: {
         show: true,
         style: {
-          colors: ["#a8a8a8"],
+          colors: ["#fff", "#fff", "#fff", "#fff", "#fff", "#fff", "#fff"],
           fontSize: "4px"
         }
       }
@@ -1587,30 +1591,26 @@ const Test = () => {
       <div className="row" style={{ marginTop: "-12px" }}>
         <div className="w-1/6">
           <div className="w-1/6">
-            <div className="card">
-              <Button
-                variant="outline-success"
-                className="btn-icon m-1 text-capitalize justify-content-center"
-                style={{ padding: "0px 0px 0px 0px" }}
-              >
-                <span className="ul-btn__icon">
+            <div className="card" style={{borderRadius:"8px"}}>
+              <button type="button" class="text-white bg-green-700 hover:bg-green-800 col-lg-12 p-0" style={{ height: "30px", fontSize: "10px", borderRadius:"6px" }}>
+              <span className="ul-btn__icon">
                   <i className="i-Telephone"></i>
                 </span>
-              </Button>
+              </button>
             </div>
           </div>
         </div>
         <div className="w-3/6"></div>
         <div className="w-1/6 ">
           <div className="card">
-            <p className="text-muted m-1 text-center" style={{ fontSize: "10" }}>
+            <p className="m-1 text-center" style={{ fontSize: "10" }}>
               {currentTime} WIB
             </p>
           </div>
         </div>
         <div className="w-1/6">
           <div className="card">
-            <p className="text-muted m-1 text-center" style={{ fontSize: "10" }}>
+            <p className="m-1 text-center" style={{ fontSize: "10" }}>
               {currentDayName} / {currentDate}
             </p>
           </div>
@@ -1620,7 +1620,7 @@ const Test = () => {
       <div className="row mt-2">
         <div className="w-1/5 px-3">
           <div className="row">
-            <button type="button" class="btn btn-secondary col-lg-12 p-0" style={{ height: "30px", fontSize: "10px" }}>Inflasi Kota Medan</button>
+            <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 col-lg-12 p-0" style={{ height: "30px", fontSize: "10px" }}>Inflasi Kota Medan</button>
           </div>
           <div className="row mt-2">
             <div className="card">
@@ -1639,7 +1639,7 @@ const Test = () => {
         </div>
         <div className="w-1/5 px-3">
           <div className="row">
-            <button type="button" class="btn btn-secondary col-lg-12 p-0" style={{ height: "30px", fontSize: "10px" }}>Pertumbuhan Ekonomi Kota Medan</button>
+            <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 col-lg-12 p-0" style={{ height: "30px", fontSize: "10px" }}>Pertumbuhan Ekonomi Kota Medan</button>
           </div>
           <div className="row mt-2">
             <div className="card" style={{ height: "93px" }}>
@@ -1681,21 +1681,21 @@ const Test = () => {
         </div>
         <div className="w-1/5 px-3">
           <div className="row">
-            <button type="button" class="btn btn-secondary col-lg-12 p-0" style={{ height: "30px", fontSize: "10px" }}>Indeks Pembangunan Manusia Kota Medan</button>
+            <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 col-lg-12 p-0" style={{ height: "30px", fontSize: "10px" }}>Indeks Pembangunan Manusia Kota Medan</button>
           </div>
           <div className="row mt-2">
             <div className="card" style={{ height: "93px" }}>
               <div className="row">
-                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 2</b></p></div>
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 4</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
               </div>
               <div className="row" style={{ marginTop: "-5px" }}>
                 <Chart
-                  height={107}
+                  height={90}
                   options={options4}
                   series={options4.series}
                   type={options4.chart.type}
-                  style={{ marginTop: "-33px" }}
+                  style={{ marginTop: "-24px" }}
                 />
               </div>
             </div>
@@ -1718,11 +1718,11 @@ const Test = () => {
         </div>
         <div className="w-1/5 px-3">
           <div className="row">
-            <button type="button" class="btn btn-secondary col-lg-12 p-0" style={{ height: "30px", fontSize: "10px" }}>Statistik Kesra Kota Medan</button>
+            <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 col-lg-12 p-0" style={{ height: "30px", fontSize: "10px" }}>Statistik Kesra Kota Medan</button>
           </div>
-          <div className="row">
+          <div className="row mt-2">
 
-            <div className="card">
+            <div className="card" style={{border: "2px solid #324f6b"}}>
               <div className="row">
                 <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
@@ -1733,7 +1733,7 @@ const Test = () => {
                   options={radar}
                   series={radar.series}
                   type={radar.chart.type}
-                  style={{ marginTop: "-12px" }}
+                  style={{ marginTop: "-12px", marginBottom: "-7px" }}
                 />
               </div>
             </div>

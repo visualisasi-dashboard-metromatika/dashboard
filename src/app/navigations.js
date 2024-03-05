@@ -17,13 +17,32 @@ export const navigations = [
 
   },
   {
-    name: "Test",
+    name: "tes",
     description: "Lorem ipsum dolor sit.",
     type: "dropDown",
     icon: "i-Video",
-    path: "/dashboard/v56",
+    sub: [
+      {
+        icon: "i-Clock-3",
+        name: "light",
+        path: "/dashboard/v56",
+        type: "link",
+      },
+      {
+        icon: "i-Clock-3",
+        name: "dark",
+        path: "/dashboard/v57",
+        type: "link",
+      },
+    ],
+  },
+  {
+    name: "Dark",
+    description: "Lorem ipsum dolor sit.",
+    type: "dropDown",
+    icon: "i-Video",
+    path: "/dashboard/v58",
     type: "link",
-
   },
   {
     name: "Medan Satu Data",

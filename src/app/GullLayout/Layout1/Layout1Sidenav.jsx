@@ -113,7 +113,8 @@ const Layout1Sidenav = () => {
         merge({}, settings, {
           layout1Settings: {
             leftSidebar: {
-              open: true,
+              // open: true,
+              open: false,
             },
           },
         })

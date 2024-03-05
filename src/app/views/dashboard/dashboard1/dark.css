@@ -1,0 +1,20 @@
+.main-content-wrap{
+    background-image: url("peta.png");
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: center top;
+    background-color: #13213c;
+}
+
+.card{
+    background-color: #1b2e4e;
+    border: 2px solid #324f6b;
+}
+
+p, b{
+    color: #fff;
+}
+
+.card{
+    background-color: rgba(27, 46, 78, 0.7);
+}
