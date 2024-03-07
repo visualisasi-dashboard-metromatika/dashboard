@@ -1,10 +1,22 @@
 import Chart from "react-apexcharts";
+import { useState, useEffect } from "react";
 
 const MonoPie = (props) => {
     const style = props.style
     const height = props.height
     const data = props.data
     const dataValue = props.dataValue
+    const theme = props.theme
+
+    const [color, setColor] = useState('#fff');
+
+    useEffect(() => {
+        if (theme == "dark") {
+            setColor("#fff");
+        } else {
+            setColor("#fff");
+        }
+    }, []);
 
     const options4 = {
         chart: {
@@ -18,7 +30,10 @@ const MonoPie = (props) => {
           },
           style: {
             fontSize: "3px",
-            fontWeight: "bold"
+            fontWeight: "bold",
+            colors: [color],
+            offsetX: 0, // Adjust this value to move the labels horizontally
+            offsetY: 0
           }
         },
         theme: {

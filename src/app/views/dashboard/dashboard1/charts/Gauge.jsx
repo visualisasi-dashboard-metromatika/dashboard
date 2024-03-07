@@ -1,9 +1,21 @@
 import Chart from "react-apexcharts";
+import { useState, useEffect } from "react";
 
 const Gauge = (props) => {
     const style = props.style
     const height = props.height
     const series = props.series
+    const theme = props.theme
+
+    const [color, setColor] = useState('#fff');
+
+    useEffect(() => {
+        if (theme == "dark") {
+            setColor("#fff");
+        } else {
+            setColor("#2b2b2b");
+        }
+    }, []);
 
     const options6 = {
         chart: {
@@ -22,7 +34,7 @@ const Gauge = (props) => {
               value: {
                 offsetY: 0,
                 fontSize: "5px",
-                color: "#fff",
+                color: color,
                 formatter: function (val) {
                   return val + "%";
                 }

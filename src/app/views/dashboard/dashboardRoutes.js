@@ -55,9 +55,9 @@ const Dashboard52 = lazy(() => import("./dashboard1/MedanSatuData/kecamatanMedan
 const Dashboard53 = lazy(() => import("./dashboard1/MedanSatuData/kecamatanMedanTimur"));
 const Dashboard54 = lazy(() => import("./dashboard1/MedanSatuData/kecamatanMedanTuntungan"));
 const Dashboard55 = lazy(() => import("./dashboard1/MedanSatuData/kecamatanMedanBelawan"));
-const Dashboard56 = lazy(() => import("./dashboard1/test"));
-const Dashboard57 = lazy(() => import("./dashboard1/test2"));
-const Dashboard58 = lazy(() => import("./dashboard1/onlydark"));
+const Dashboard56 = lazy(() => import("./dashboard1/Light"));
+const Dashboard57 = lazy(() => import("./dashboard1/Dark"));
+const Dashboard58 = lazy(() => import("./dashboard1/OnlyDark"));
 
 const dashboardRoutes = [
   {

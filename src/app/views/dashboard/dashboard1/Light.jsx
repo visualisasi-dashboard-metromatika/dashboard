@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./dark.css";
+import "./light.css";
 import { Button } from "react-bootstrap";
 import Line from "./charts/Line";
 import Bar from "./charts/Bar";
@@ -10,7 +10,7 @@ import PieStack from "./charts/PieStack";
 import Donut from "./charts/Donut";
 import Radar from "./charts/Radar";
 
-const Dark = () => {
+const Light = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
   useEffect(() => {
@@ -39,26 +39,30 @@ const Dark = () => {
       <div className="row" style={{ marginTop: "-12px" }}>
         <div className="w-1/6">
           <div className="w-1/6">
-            <div className="card" style={{ borderRadius: "8px" }}>
-              <button type="button" class="text-white bg-green-700 hover:bg-green-800 col-lg-12 p-0" style={{ height: "30px", fontSize: "10px", borderRadius: "6px" }}>
+            <div className="card">
+              <Button
+                variant="outline-success"
+                className="btn-icon m-1 text-capitalize justify-content-center"
+                style={{ padding: "0px 0px 0px 0px" }}
+              >
                 <span className="ul-btn__icon">
                   <i className="i-Telephone"></i>
                 </span>
-              </button>
+              </Button>
             </div>
           </div>
         </div>
         <div className="w-3/6"></div>
         <div className="w-1/6 ">
           <div className="card">
-            <p className="m-1 text-center" style={{ fontSize: "10" }}>
+            <p className="text-muted m-1 text-center" style={{ fontSize: "10" }}>
               {currentTime} WIB
             </p>
           </div>
         </div>
         <div className="w-1/6">
           <div className="card">
-            <p className="m-1 text-center" style={{ fontSize: "10" }}>
+            <p className="text-muted m-1 text-center" style={{ fontSize: "10" }}>
               {currentDayName} / {currentDate}
             </p>
           </div>
@@ -68,14 +72,7 @@ const Dark = () => {
       <div className="row mt-2">
         <div className="w-1/5 px-3">
           <div className="row">
-            <Button
-              key={"dark"}
-              variant={"dark"}
-              className={`btn-raised btn-raised-${"dark"} text-capitalize`}
-              style={{ fontSize: "10px" }}
-            >
-              Inflasi Kota Medan
-            </Button>
+            <button type="button" class="btn btn-secondary col-lg-12 p-0" style={{ height: "30px", fontSize: "10px" }}>Inflasi Kota Medan</button>
           </div>
           <div className="row mt-2">
             <div className="card">
@@ -85,7 +82,7 @@ const Dark = () => {
               </div>
               <div className="row">
                 <Line
-                  theme="dark"
+                  theme="light"
                   data={['jawa', 'padang', 'melayu', 'batak', 'karo']}
                   dataValue={[100, 300, 200, 100, 150]}
                   style={{ height: "190px", marginTop: "-27px", marginBottom: "-15px" }}
@@ -96,14 +93,7 @@ const Dark = () => {
         </div>
         <div className="w-1/5 px-3">
           <div className="row">
-            <Button
-              key={"dark"}
-              variant={"dark"}
-              className={`btn-raised btn-raised-${"dark"} text-capitalize`}
-              style={{ fontSize: "10px" }}
-            >
-              Pertumbuhan Ekonomi Kota Medan
-            </Button>
+            <button type="button" class="btn btn-secondary col-lg-12 p-0" style={{ height: "30px", fontSize: "10px" }}>Pertumbuhan Ekonomi Kota Medan</button>
           </div>
           <div className="row mt-2">
             <div className="card" style={{ height: "93px" }}>
@@ -113,7 +103,7 @@ const Dark = () => {
               </div>
               <div className="row" style={{ marginTop: "-5px" }}>
                 <Gauge
-                  theme="dark"
+                  theme="light"
                   height={107}
                   style={{ marginTop: "-33px" }}
                   series={80}
@@ -127,7 +117,7 @@ const Dark = () => {
               </div>
               <div className="row" style={{ marginTop: "3px" }}>
                 <Pie
-                  theme="dark"
+                  theme="light"
                   height={99}
                   style={{ marginTop: "-33px" }}
                   data={["jawa", "padang", "batak", "melayu"]}
@@ -144,24 +134,17 @@ const Dark = () => {
         </div>
         <div className="w-1/5 px-3">
           <div className="row">
-            <Button
-              key={"dark"}
-              variant={"dark"}
-              className={`btn-raised btn-raised-${"dark"} text-capitalize`}
-              style={{ fontSize: "10px" }}
-            >
-              Indeks Pembangunan Manusia Kota Medan
-            </Button>
+            <button type="button" class="btn btn-secondary col-lg-12 p-0" style={{ height: "30px", fontSize: "10px" }}>Indeks Pembangunan Manusia Kota Medan</button>
           </div>
           <div className="row mt-2">
             <div className="card" style={{ height: "93px" }}>
               <div className="row">
-                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 4</b></p></div>
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 2</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
               </div>
               <div className="row" style={{ marginTop: "-5px" }}>
                 <MonoPie
-                  theme="dark"
+                  theme="light"
                   height={90}
                   style={{ marginTop: "-24px" }}
                   data={["jawa", "padang", "batak", "melayu", "karo"]}
@@ -171,12 +154,12 @@ const Dark = () => {
             </div>
             <div className="card mt-2" style={{ marginTop: "0px" }}>
               <div className="row">
-                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 5</b></p></div>
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 3</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
               </div>
               <div className="row" style={{ marginTop: "3px" }}>
                 <Donut
-                  theme="dark"
+                  theme="light"
                   height={99}
                   style={{ marginTop: "-33px" }}
                   data={["jawa", "padang", "batak", "melayu"]}
@@ -188,25 +171,18 @@ const Dark = () => {
         </div>
         <div className="w-1/5 px-3">
           <div className="row">
-            <Button
-              key={"dark"}
-              variant={"dark"}
-              className={`btn-raised btn-raised-${"dark"} text-capitalize`}
-              style={{ fontSize: "10px" }}
-            >
-              Statistik Kesra Kota Medan
-            </Button>
+            <button type="button" class="btn btn-secondary col-lg-12 p-0" style={{ height: "30px", fontSize: "10px" }}>Statistik Kesra Kota Medan</button>
           </div>
-          <div className="row mt-2">
+          <div className="row">
 
-            <div className="card" style={{ border: "2px solid #324f6b" }}>
+            <div className="card">
               <div className="row">
-                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 6</b></p></div>
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
               </div>
               <div className="row">
                 <Radar
-                  theme="dark"
+                  theme="light"
                   height={158}
                   style={{ marginTop: "0px", marginBottom: "-24px" }}
                   data={["dayak", "jawa", "padang", "batak", "melayu"]}
@@ -223,12 +199,12 @@ const Dark = () => {
           <div className="row">
             <div className="card">
               <div className="row">
-                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 7</b></p></div>
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
               </div>
               <div className="row">
                 <PieStack
-                  theme="dark"
+                  theme="light"
                   series="Suku"
                   data={['jawa', 'padang', 'melayu', 'batak', 'karo']}
                   dataValue={[235, 274, 310, 335, 400]}
@@ -242,12 +218,12 @@ const Dark = () => {
           <div className="row">
             <div className="card">
               <div className="row">
-                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 8</b></p></div>
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 1</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
               </div>
               <div className="row">
                 <Line
-                  theme="dark"
+                  theme="light"
                   data={['jawa', 'padang', 'melayu', 'batak', 'karo']}
                   dataValue={[100, 300, 200, 100, 150]}
                   style={{ height: "190px", marginTop: "-27px", marginBottom: "-15px" }}
@@ -260,12 +236,12 @@ const Dark = () => {
           <div className="row">
             <div className="card">
               <div className="row">
-                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 9</b></p></div>
+                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title</b></p></div>
                 <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
               </div>
               <div className="row">
                 <Bar
-                  theme="dark"
+                  theme="light"
                   data={['jawa', 'padang', 'melayu', 'batak', 'karo', 'dayak']}
                   dataValue={[100, 300, 200, 100, 150, 298]}
                   style={{ height: "193px", marginTop: "-30px", marginBottom: "-15px" }}
@@ -275,9 +251,10 @@ const Dark = () => {
           </div>
         </div>
       </div>
+
     </div>
 
   );
 };
 
-export default Dark;
+export default Light;

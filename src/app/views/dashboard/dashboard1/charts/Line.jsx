@@ -1,9 +1,21 @@
 import ReactEcharts from "echarts-for-react";
+import { useState, useEffect } from "react";
 
 const Line = (props) => {
     const style = props.style
     const data = props.data
     const dataValue = props.dataValue
+    const theme = props.theme
+
+    const [color, setColor] = useState('#fff');
+
+    useEffect(() => {
+        if (theme == "dark") {
+            setColor("#fff");
+        } else {
+            setColor("#2b2b2b");
+        }
+    }, []);
 
     const echartBasicLineOption = {
         tooltip: {
@@ -29,7 +41,7 @@ const Line = (props) => {
             axisLabel: {
                 show: true,
                 fontSize: "5",
-                color: "#fff"
+                color: color
             },
             axisTick: {
                 show: false,
@@ -43,13 +55,18 @@ const Line = (props) => {
             axisLabel: {
                 show: true,
                 fontSize: "5",
-                color: "#fff"
+                color: color
             },
             axisTick: {
                 show: false,
             },
             splitLine: {
                 show: true,
+                lineStyle: {
+                    color: color,
+                    opacity: 0.2,
+                    width: 0.7,
+                },
             },
             ticks: {
                 fontSize: "1px"

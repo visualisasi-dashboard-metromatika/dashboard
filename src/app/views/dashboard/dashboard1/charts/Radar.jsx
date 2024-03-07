@@ -1,10 +1,21 @@
 import Chart from "react-apexcharts";
+import { useState, useEffect } from "react";
 
 const Radar = (props) => {
     const style = props.style
     const height = props.height
     const data = props.data
     const dataValue = props.dataValue
+    const theme = props.theme
+
+    const [colors, setColors] = useState('#fff');
+    
+    useEffect(() => {
+        const newColors = Array.from({ length: 10 }, () => (theme === "dark" ? "#fff" : "#000"));
+        setColors(newColors);
+
+        console.log(colors)
+    }, [theme]);
 
     const radar = {
         chart: {
@@ -67,7 +78,7 @@ const Radar = (props) => {
             labels: {
                 show: true,
                 style: {
-                    colors: ["#fff", "#fff", "#fff", "#fff", "#fff", "#fff", "#fff"],
+                    colors: colors,
                     fontSize: "4px"
                 }
             }

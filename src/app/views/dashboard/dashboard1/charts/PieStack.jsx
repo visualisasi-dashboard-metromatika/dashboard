@@ -1,10 +1,22 @@
 import ReactEcharts from "echarts-for-react";
+import { useState, useEffect } from "react";
 
 const PieStack = (props) => {
     const series = props.series
     const style = props.style
     const data = props.data
     const dataValue = props.dataValue
+    const theme = props.theme
+
+    const [color, setColor] = useState('#fff');
+
+    useEffect(() => {
+        if (theme == "dark") {
+            setColor("#fff");
+        } else {
+            setColor("#2b2b2b");
+        }
+    }, []);
 
     const echartStackedPieOption = {
         grid: {
@@ -47,7 +59,7 @@ const PieStack = (props) => {
             label: {
               normal: {
                 textStyle: {
-                  color: "#fff",
+                  color: color,
                   fontSize: "5px"
                 },
               },
@@ -55,7 +67,7 @@ const PieStack = (props) => {
             labelLine: {
               normal: {
                 lineStyle: {
-                  color: "#fff",
+                  color: color,
                 },
                 smooth: 0.2,
                 length: 2,
