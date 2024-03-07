@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useCallback, useState, useEffect } from "react";
 import "./dark.css";
 import { Button } from "react-bootstrap";
 import Line from "./charts/Line";
@@ -9,13 +9,76 @@ import MonoPie from "./charts/MonoPie";
 import PieStack from "./charts/PieStack";
 import Donut from "./charts/Donut";
 import Radar from "./charts/Radar";
-
+import datas from "../../../../assets/json/satudata_res.json"
 const Dark = () => {
+  const [data, setData] = useState([datas.result[0]]);
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
+  const [currentPage, setCurrentPage]= useState(1);
+  const [totalPage, setTotalPage]= useState();
+
+  const getAllData = useCallback(async ()=> {
+    const api = `https://medansatudata-api.metromatika.com/api/public/data?page=${currentPage}`;
+
+    try {
+      const response = await fetch(api)
+      let data = await response.json()
+      setData(data.result)
+      setTotalPage(data.totalPages)
+    } catch (error) {
+      console.error(error)
+    }
+  },[currentPage])
+
 
   useEffect(() => {
+    getAllData()
+  },[getAllData])
+
+  
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if(currentPage > totalPage){
+        setCurrentPage(1)
+      }else{
+        setCurrentPage(currentPage + 1);
+      }
+
+      getAllData();
+    }, 2000);
+
+    // Cleanup function to clear the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, [currentPage, totalPage, getAllData]);
+
+
+  // const getAllData = () => {
+  //     const api = "https://medansatudata-api.metromatika.com/api/public/data?page=98"
+
+  //     fetch(api,{
+  //       method:"get",
+  //       headers: {"Content-Type": "application/json"},
+  //     })
+  //     .then(result =>{
+  //       setData(result)
+  //       console.log(result)
+  //     })
+  //     .catch(err =>{
+  //       console.error(err);
+  //     });
+  // }
+
+//   const getDataAll = () => {
+//       axios.get(`https://medansatudata-api.metromatika.com/api/public/data?page=1`)
+//       .then((result) => {
+//       setData(result.data);
+//       console.log(result.data);
+//   })
+// }
+  
+  useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentDateTime(new Date());
+      setCurrentDateTime(new Date())
+      console.log(data[0].chartData);
     }, 1000);
 
     return () => clearInterval(timer);
@@ -34,6 +97,7 @@ const Dark = () => {
     hour12: false
   });
 
+// console.log(data.length)
   return (
     <div>
       <div className="row" style={{ marginTop: "-12px" }}>
@@ -80,14 +144,14 @@ const Dark = () => {
           <div className="row mt-2">
             <div className="card">
               <div className="row">
-                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 1</b></p></div>
-                <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
+                <div className="col-6"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "5px" }}><b>{data[0].title}</b></p></div>
+                <div className="col-4"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
               </div>
               <div className="row">
                 <Line
                   theme="dark"
-                  data={['jawa', 'padang', 'melayu', 'batak', 'karo']}
-                  dataValue={[100, 300, 200, 100, 150]}
+                  data=""
+                  dataValue=""
                   style={{ height: "190px", marginTop: "-27px", marginBottom: "-15px" }}
                 />
               </div>

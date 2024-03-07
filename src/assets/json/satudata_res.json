@@ -1,0 +1,755 @@
+{
+  "success": true,
+  "result": [
+      {
+          "id": 920,
+          "user": {
+              "id": 150,
+              "name": "Dinas Komunikasi Dan Informatika",
+              "nik": "1901802102207850",
+              "email": "diskominfo@pemkomedan.go.id",
+              "agencyId": 33,
+              "password": "$2b$10$OoMZYfw1.y9HH7U0wgGdquJUq3g9y3j1vxqoXBCc0XE7fgi18JCuS",
+              "level": 2,
+              "active": true,
+              "address": "Jl. Sidorukun No.35, Pulo Brayan Darat Ii, Kec. Medan Tim., Kota Medan, Sumatera Utara 20239",
+              "contact": "0616611410",
+              "createdAt": "2024-02-19T03:20:03.000Z",
+              "updatedAt": "2024-02-19T03:21:06.000Z",
+              "agency": {
+                  "id": 33,
+                  "name": "Dinas Komunikasi Dan Informatika",
+                  "address": "Jl. Sidorukun No.35, Pulo Brayan Darat II, Kec. Medan Tim., Kota Medan, Sumatera Utara 2023",
+                  "phone": "061-6611410",
+                  "createdAt": "2024-01-15T04:55:16.000Z",
+                  "updatedAt": "2024-01-15T04:55:16.000Z"
+              }
+          },
+          "category": {
+              "id": 20,
+              "name": "Komunikasi dan Informatika",
+              "createdAt": "2024-01-15T07:43:12.000Z",
+              "updatedAt": "2024-01-15T07:43:12.000Z"
+          },
+          "title": "Jumlah Tenaga Ahli Programmer Tahun 2019-2023",
+          "chartType": "bar",
+          "jsonData": {
+              "2019": [
+                  "-"
+              ],
+              "2020": [
+                  "-"
+              ],
+              "2021": [
+                  "-"
+              ],
+              "2022": [
+                  "-"
+              ],
+              "2023": [
+                  6
+              ],
+              "uraian": [
+                  "Jumlah Tenaga Ahli Programmer"
+              ]
+          },
+          "chartData": {
+              "lbl": [
+                  "Jumlah Tenaga Ahli Programmer"
+              ],
+              "chartData": [
+                  {
+                      "label": "uraian",
+                      "data": [
+                          "Jumlah Tenaga Ahli Programmer"
+                      ],
+                      "backgroundColor": "#6630cd",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2022",
+                      "data": [
+                          "-"
+                      ],
+                      "backgroundColor": "#4aa2b9",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2021",
+                      "data": [
+                          "-"
+                      ],
+                      "backgroundColor": "#875f8c",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2020",
+                      "data": [
+                          "-"
+                      ],
+                      "backgroundColor": "#8b3532",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2019",
+                      "data": [
+                          "-"
+                      ],
+                      "backgroundColor": "#b90c22",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2023",
+                      "data": [
+                          6
+                      ],
+                      "backgroundColor": "#f36342",
+                      "borderWidth": 1
+                  }
+              ]
+          },
+          "createdAt": "2024-02-23T03:49:08.000Z",
+          "updatedAt": "2024-02-23T03:49:08.000Z"
+      },
+      {
+          "id": 919,
+          "user": {
+              "id": 21,
+              "name": "M. Irvan Triono Putra",
+              "nik": "1271050709010001",
+              "email": "muhammadirvantrionoputra@gmail.com",
+              "agencyId": 13,
+              "password": "$2b$10$jQz3Po8CGFbYrnd8T4sxyubY.gANmNiP3ZJt.7hhn8jHj5kHnZpKC",
+              "level": 2,
+              "active": false,
+              "address": "Jl. Karya Rakyat No.41",
+              "contact": "081340927128",
+              "createdAt": "2023-05-13T07:34:23.000Z",
+              "updatedAt": "2023-05-13T07:34:23.000Z",
+              "agency": {
+                  "id": 13,
+                  "name": "Dinas Kesehatan",
+                  "address": "Jl. Rotan, Petisah Tengah, Kec. Medan Petisah, Kota Medan, Sumatera Utara 20111",
+                  "phone": "(061) 4520331",
+                  "createdAt": "2023-02-22T04:10:40.000Z",
+                  "updatedAt": "2023-02-22T04:11:02.000Z"
+              }
+          },
+          "category": {
+              "id": 15,
+              "name": "Kesehatan",
+              "createdAt": "2024-01-15T07:40:00.000Z",
+              "updatedAt": "2024-01-15T07:40:00.000Z"
+          },
+          "title": "Jumlah Balita Stunting Yang Ditemukan Dan Ditangani Di Kota Medan Tahun 2016-2023",
+          "chartType": "line",
+          "jsonData": {
+              "INDIKATOR": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+              ],
+              "Jumlah balita stunting yang ditangani": [
+                  "-",
+                  "-",
+                  "-",
+                  491,
+                  393,
+                  368
+              ],
+              "Jumlah balita stunting yang ditemukan": [
+                  "-",
+                  "-",
+                  "-",
+                  491,
+                  393,
+                  368
+              ]
+          },
+          "chartData": {
+              "x": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+              ],
+              "checkedItems": [
+                  {
+                      "label": "Jumlah balita stunting yang ditemukan",
+                      "data": [
+                          "-",
+                          "-",
+                          "-",
+                          491,
+                          393,
+                          368
+                      ],
+                      "backgroundColor": "#40f106",
+                      "borderWidth": 1,
+                      "borderColor": "#40f106",
+                      "pointBackgroundColor": "#40f106",
+                      "pointBorderWidth": 2,
+                      "pointRadius": 5,
+                      "pointHoverRadius": 8,
+                      "pointHitRadius": 10
+                  },
+                  {
+                      "label": "Jumlah balita stunting yang ditangani",
+                      "data": [
+                          "-",
+                          "-",
+                          "-",
+                          491,
+                          393,
+                          368
+                      ],
+                      "backgroundColor": "#4e0678",
+                      "borderWidth": 1,
+                      "borderColor": "#4e0678",
+                      "pointBackgroundColor": "#4e0678",
+                      "pointBorderWidth": 2,
+                      "pointRadius": 5,
+                      "pointHoverRadius": 8,
+                      "pointHitRadius": 10
+                  }
+              ]
+          },
+          "createdAt": "2024-02-23T03:47:59.000Z",
+          "updatedAt": "2024-02-23T03:47:59.000Z"
+      },
+      {
+          "id": 918,
+          "user": {
+              "id": 150,
+              "name": "Dinas Komunikasi Dan Informatika",
+              "nik": "1901802102207850",
+              "email": "diskominfo@pemkomedan.go.id",
+              "agencyId": 33,
+              "password": "$2b$10$OoMZYfw1.y9HH7U0wgGdquJUq3g9y3j1vxqoXBCc0XE7fgi18JCuS",
+              "level": 2,
+              "active": true,
+              "address": "Jl. Sidorukun No.35, Pulo Brayan Darat Ii, Kec. Medan Tim., Kota Medan, Sumatera Utara 20239",
+              "contact": "0616611410",
+              "createdAt": "2024-02-19T03:20:03.000Z",
+              "updatedAt": "2024-02-19T03:21:06.000Z",
+              "agency": {
+                  "id": 33,
+                  "name": "Dinas Komunikasi Dan Informatika",
+                  "address": "Jl. Sidorukun No.35, Pulo Brayan Darat II, Kec. Medan Tim., Kota Medan, Sumatera Utara 2023",
+                  "phone": "061-6611410",
+                  "createdAt": "2024-01-15T04:55:16.000Z",
+                  "updatedAt": "2024-01-15T04:55:16.000Z"
+              }
+          },
+          "category": {
+              "id": 20,
+              "name": "Komunikasi dan Informatika",
+              "createdAt": "2024-01-15T07:43:12.000Z",
+              "updatedAt": "2024-01-15T07:43:12.000Z"
+          },
+          "title": "Jumlah Podcast Yang Ditayangkan Di Media Sosial Youtube",
+          "chartType": "bar",
+          "jsonData": {
+              "2019": [
+                  "-"
+              ],
+              "2020": [
+                  "-"
+              ],
+              "2021": [
+                  "-"
+              ],
+              "2022": [
+                  "-"
+              ],
+              "2023": [
+                  8
+              ],
+              "uraian": [
+                  "Jumlah podcast yang ditayangkan di media sosial youtube"
+              ]
+          },
+          "chartData": {
+              "lbl": [
+                  "Jumlah podcast yang ditayangkan di media sosial youtube"
+              ],
+              "chartData": [
+                  {
+                      "label": "uraian",
+                      "data": [
+                          "Jumlah podcast yang ditayangkan di media sosial youtube"
+                      ],
+                      "backgroundColor": "#ab2d68",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2023",
+                      "data": [
+                          8
+                      ],
+                      "backgroundColor": "#548a88",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2022",
+                      "data": [
+                          "-"
+                      ],
+                      "backgroundColor": "#a18c34",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2021",
+                      "data": [
+                          "-"
+                      ],
+                      "backgroundColor": "#71c61",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2020",
+                      "data": [
+                          "-"
+                      ],
+                      "backgroundColor": "#a4e441",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2019",
+                      "data": [
+                          "-"
+                      ],
+                      "backgroundColor": "#ac9313",
+                      "borderWidth": 1
+                  }
+              ]
+          },
+          "createdAt": "2024-02-23T03:47:49.000Z",
+          "updatedAt": "2024-02-23T03:47:49.000Z"
+      },
+      {
+          "id": 133,
+          "user": {
+              "id": 1,
+              "name": "Shivi Almas",
+              "nik": "1234567890123456",
+              "email": "metromatika@gmail.com",
+              "agencyId": 1,
+              "password": "$2a$10$LF2Pg9RBBxpTl/MrlEtIhOrdTRrq3mIFwzJCNXeMxPixtMvb3HTDu",
+              "level": 1,
+              "active": true,
+              "address": "Jl. Kuali Gg. Tertib",
+              "contact": "081379845674",
+              "createdAt": "2023-02-05T19:55:40.000Z",
+              "updatedAt": "2023-02-05T19:55:40.000Z",
+              "agency": {
+                  "id": 1,
+                  "name": "Admin Kota Medan",
+                  "address": "Jl. Kuali Gg. Tertib",
+                  "phone": "0616842798",
+                  "createdAt": "2021-01-06T00:00:00.000Z",
+                  "updatedAt": "2024-01-19T03:02:47.000Z"
+              }
+          },
+          "category": {
+              "id": 15,
+              "name": "Kesehatan",
+              "createdAt": "2024-01-15T07:40:00.000Z",
+              "updatedAt": "2024-01-15T07:40:00.000Z"
+          },
+          "title": "Jumlah Balita Kelahiran Hidup (berumur Kurang 5 Tahun) di Kota Medan Tahun 2016 - 2021",
+          "chartType": "line",
+          "jsonData": {
+              "INDIKATOR": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+              ],
+              "Jumlah balita kelahiran hidup (berumur kurang 5 tahun)": [
+                  217331,
+                  223905,
+                  193636,
+                  75844,
+                  150593,
+                  168405
+              ]
+          },
+          "chartData": {
+              "x": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+              ],
+              "checkedItems": [
+                  {
+                      "label": "Jumlah balita kelahiran hidup (berumur kurang 5 tahun)",
+                      "data": [
+                          217331,
+                          223905,
+                          193636,
+                          75844,
+                          150593,
+                          168405
+                      ],
+                      "backgroundColor": "#e081cf",
+                      "borderWidth": 1,
+                      "borderColor": "#e081cf",
+                      "pointBackgroundColor": "#e081cf",
+                      "pointBorderWidth": 2,
+                      "pointRadius": 5,
+                      "pointHoverRadius": 8,
+                      "pointHitRadius": 10
+                  }
+              ]
+          },
+          "createdAt": "2024-01-18T07:21:18.000Z",
+          "updatedAt": "2024-02-23T03:46:33.000Z"
+      },
+      {
+          "id": 917,
+          "user": {
+              "id": 21,
+              "name": "M. Irvan Triono Putra",
+              "nik": "1271050709010001",
+              "email": "muhammadirvantrionoputra@gmail.com",
+              "agencyId": 13,
+              "password": "$2b$10$jQz3Po8CGFbYrnd8T4sxyubY.gANmNiP3ZJt.7hhn8jHj5kHnZpKC",
+              "level": 2,
+              "active": false,
+              "address": "Jl. Karya Rakyat No.41",
+              "contact": "081340927128",
+              "createdAt": "2023-05-13T07:34:23.000Z",
+              "updatedAt": "2023-05-13T07:34:23.000Z",
+              "agency": {
+                  "id": 13,
+                  "name": "Dinas Kesehatan",
+                  "address": "Jl. Rotan, Petisah Tengah, Kec. Medan Petisah, Kota Medan, Sumatera Utara 20111",
+                  "phone": "(061) 4520331",
+                  "createdAt": "2023-02-22T04:10:40.000Z",
+                  "updatedAt": "2023-02-22T04:11:02.000Z"
+              }
+          },
+          "category": {
+              "id": 15,
+              "name": "Kesehatan",
+              "createdAt": "2024-01-15T07:40:00.000Z",
+              "updatedAt": "2024-01-15T07:40:00.000Z"
+          },
+          "title": "Jumlah Balita Gizi Buruk Yang Ditemukan Dan Ditangani Di Kota Medan Tahun 2016-2023",
+          "chartType": "line",
+          "jsonData": {
+              "INDIKATOR": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+              ],
+              "Jumlah balita gizi buruk yang ditangani": [
+                  104,
+                  150,
+                  131,
+                  116,
+                  106,
+                  103
+              ],
+              "Jumlah balita gizi buruk yang ditemukan": [
+                  104,
+                  150,
+                  131,
+                  116,
+                  106,
+                  103
+              ]
+          },
+          "chartData": {
+              "x": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+              ],
+              "checkedItems": [
+                  {
+                      "label": "Jumlah balita gizi buruk yang ditangani",
+                      "data": [
+                          104,
+                          150,
+                          131,
+                          116,
+                          106,
+                          103
+                      ],
+                      "backgroundColor": "#139604",
+                      "borderWidth": 1,
+                      "borderColor": "#139604",
+                      "pointBackgroundColor": "#139604",
+                      "pointBorderWidth": 2,
+                      "pointRadius": 5,
+                      "pointHoverRadius": 8,
+                      "pointHitRadius": 10
+                  },
+                  {
+                      "label": "Jumlah balita gizi buruk yang ditemukan",
+                      "data": [
+                          104,
+                          150,
+                          131,
+                          116,
+                          106,
+                          103
+                      ],
+                      "backgroundColor": "#c216d9",
+                      "borderWidth": 1,
+                      "borderColor": "#c216d9",
+                      "pointBackgroundColor": "#c216d9",
+                      "pointBorderWidth": 2,
+                      "pointRadius": 5,
+                      "pointHoverRadius": 8,
+                      "pointHitRadius": 10
+                  }
+              ]
+          },
+          "createdAt": "2024-02-23T03:45:37.000Z",
+          "updatedAt": "2024-02-23T03:45:37.000Z"
+      },
+      {
+          "id": 916,
+          "user": {
+              "id": 150,
+              "name": "Dinas Komunikasi Dan Informatika",
+              "nik": "1901802102207850",
+              "email": "diskominfo@pemkomedan.go.id",
+              "agencyId": 33,
+              "password": "$2b$10$OoMZYfw1.y9HH7U0wgGdquJUq3g9y3j1vxqoXBCc0XE7fgi18JCuS",
+              "level": 2,
+              "active": true,
+              "address": "Jl. Sidorukun No.35, Pulo Brayan Darat Ii, Kec. Medan Tim., Kota Medan, Sumatera Utara 20239",
+              "contact": "0616611410",
+              "createdAt": "2024-02-19T03:20:03.000Z",
+              "updatedAt": "2024-02-19T03:21:06.000Z",
+              "agency": {
+                  "id": 33,
+                  "name": "Dinas Komunikasi Dan Informatika",
+                  "address": "Jl. Sidorukun No.35, Pulo Brayan Darat II, Kec. Medan Tim., Kota Medan, Sumatera Utara 2023",
+                  "phone": "061-6611410",
+                  "createdAt": "2024-01-15T04:55:16.000Z",
+                  "updatedAt": "2024-01-15T04:55:16.000Z"
+              }
+          },
+          "category": {
+              "id": 20,
+              "name": "Komunikasi dan Informatika",
+              "createdAt": "2024-01-15T07:43:12.000Z",
+              "updatedAt": "2024-01-15T07:43:12.000Z"
+          },
+          "title": "Jumlah Perwal Atau Kepwal Terkait Implementasi E-government Tahun 2019-2023",
+          "chartType": "bar",
+          "jsonData": {
+              "2019": [
+                  "-"
+              ],
+              "2020": [
+                  2
+              ],
+              "2021": [
+                  3
+              ],
+              "2022": [
+                  4
+              ],
+              "2023": [
+                  5
+              ],
+              "uraian": [
+                  "Jumlah Perwal atau kepwal terkait implementasi E-Government"
+              ]
+          },
+          "chartData": {
+              "lbl": [
+                  "Jumlah Perwal atau kepwal terkait implementasi E-Government"
+              ],
+              "chartData": [
+                  {
+                      "label": "2019",
+                      "data": [
+                          "-"
+                      ],
+                      "backgroundColor": "#e3a75",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2020",
+                      "data": [
+                          2
+                      ],
+                      "backgroundColor": "#aa81a2",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2021",
+                      "data": [
+                          3
+                      ],
+                      "backgroundColor": "#33ab3e",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2022",
+                      "data": [
+                          4
+                      ],
+                      "backgroundColor": "#e3143a",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "uraian",
+                      "data": [
+                          "Jumlah Perwal atau kepwal terkait implementasi E-Government"
+                      ],
+                      "backgroundColor": "#f08053",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2023",
+                      "data": [
+                          5
+                      ],
+                      "backgroundColor": "#21a06e",
+                      "borderWidth": 1
+                  }
+              ]
+          },
+          "createdAt": "2024-02-23T03:44:59.000Z",
+          "updatedAt": "2024-02-23T03:44:59.000Z"
+      },
+      {
+          "id": 915,
+          "user": {
+              "id": 150,
+              "name": "Dinas Komunikasi Dan Informatika",
+              "nik": "1901802102207850",
+              "email": "diskominfo@pemkomedan.go.id",
+              "agencyId": 33,
+              "password": "$2b$10$OoMZYfw1.y9HH7U0wgGdquJUq3g9y3j1vxqoXBCc0XE7fgi18JCuS",
+              "level": 2,
+              "active": true,
+              "address": "Jl. Sidorukun No.35, Pulo Brayan Darat Ii, Kec. Medan Tim., Kota Medan, Sumatera Utara 20239",
+              "contact": "0616611410",
+              "createdAt": "2024-02-19T03:20:03.000Z",
+              "updatedAt": "2024-02-19T03:21:06.000Z",
+              "agency": {
+                  "id": 33,
+                  "name": "Dinas Komunikasi Dan Informatika",
+                  "address": "Jl. Sidorukun No.35, Pulo Brayan Darat II, Kec. Medan Tim., Kota Medan, Sumatera Utara 2023",
+                  "phone": "061-6611410",
+                  "createdAt": "2024-01-15T04:55:16.000Z",
+                  "updatedAt": "2024-01-15T04:55:16.000Z"
+              }
+          },
+          "category": {
+              "id": 20,
+              "name": "Komunikasi dan Informatika",
+              "createdAt": "2024-01-15T07:43:12.000Z",
+              "updatedAt": "2024-01-15T07:43:12.000Z"
+          },
+          "title": "Jumlah Permohonan Informasi Melalui Ppid 2019-2023",
+          "chartType": "bar",
+          "jsonData": {
+              "2019": [
+                  1
+              ],
+              "2020": [
+                  17
+              ],
+              "2021": [
+                  16
+              ],
+              "2022": [
+                  5
+              ],
+              "2023": [
+                  72
+              ],
+              "uraian": [
+                  "Jumlah Permohonan Informasi melalui PPID"
+              ]
+          },
+          "chartData": {
+              "lbl": [
+                  "Jumlah Permohonan Informasi melalui PPID"
+              ],
+              "chartData": [
+                  {
+                      "label": "2019",
+                      "data": [
+                          1
+                      ],
+                      "backgroundColor": "#a27211",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2020",
+                      "data": [
+                          17
+                      ],
+                      "backgroundColor": "#b90289",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2021",
+                      "data": [
+                          16
+                      ],
+                      "backgroundColor": "#41188e",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2022",
+                      "data": [
+                          5
+                      ],
+                      "backgroundColor": "#66d9a4",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "2023",
+                      "data": [
+                          72
+                      ],
+                      "backgroundColor": "#551096",
+                      "borderWidth": 1
+                  },
+                  {
+                      "label": "uraian",
+                      "data": [
+                          "Jumlah Permohonan Informasi melalui PPID"
+                      ],
+                      "backgroundColor": "#f03900",
+                      "borderWidth": 1
+                  }
+              ]
+          },
+          "createdAt": "2024-02-23T03:43:17.000Z",
+          "updatedAt": "2024-02-23T03:43:17.000Z"
+      }
+  ],
+  "totalPages": 127,
+  "currentPage": "12",
+  "totalCount": 886,
+  "totalData": 886
+}
