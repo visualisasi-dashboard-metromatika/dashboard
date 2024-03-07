@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/app/views/dashboard/dashboard1/test.jsx"],
+  content: [
+    "./src/app/views/dashboard/dashboard1/Dark.jsx",
+    "./src/app/views/dashboard/dashboard1/Light.jsx",
+    "./src/app/views/dashboard/dashboard1/OnlyDark.jsx",],
   theme: {
     extend: {
       width: {
