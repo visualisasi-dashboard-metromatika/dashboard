@@ -11,39 +11,66 @@ import Donut from "./charts/Donut";
 import Radar from "./charts/Radar";
 import datas from "../../../../assets/json/satudata_res.json"
 import axios from "axios";
+import RechartBar from "./charts/RechartBar";
+import RechartLine from "./charts/RechartLine.jsx";
 
 const Dark = () => {
-  const [data, setData] = useState([datas.result[0]]);
+  const [data, setData] = useState(datas.result);
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
-  const [currentPage, setCurrentPage]= useState(145);
-  const [totalPages, setTotalPages]= useState();
+  const [currentPage, setCurrentPage] = useState(36);
+  const [totalPages, setTotalPages] = useState();
 
-  const grtDataCallback = useCallback(async () => {
+  // const grtDataCallback = useCallback(async () => {
+  //   await axios.get(`https://medansatudata-api.metromatika.com/api/public/data?page=${currentPage}`).then((result) => {
+  //     setData(result.data.result);
+  //     setTotalPages(result.data.totalPages);
+  //     console.log(totalPages)
+  //     console.log(currentPage)
+  //     console.log(data)
+  //   });
+  // }, [currentPage]);
+
+  const grtDataCallback = async () => {
     await axios.get(`https://medansatudata-api.metromatika.com/api/public/data?page=${currentPage}`).then((result) => {
       setData(result.data.result);
       setTotalPages(result.data.totalPages);
-      console.log(totalPages)
-      console.log(currentPage)
+      // console.log(totalPages)
+      // console.log(currentPage)
+      // console.log(data)
       console.log(data)
-    });
-  }, [currentPage]);
+    })
+  }
+
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     if (currentPage >= totalPages) {
+  //       setCurrentPage(1)
+  //       grtDataCallback();
+  //     } else {
+  //       setCurrentPage(currentPage + 1);
+  //       grtDataCallback();
+  //     }
+
+  //   }, 2000);
+
+  //   // Cleanup function to clear the interval when the component unmounts
+  //   return () => clearInterval(intervalId);
+  // }, [currentPage, grtDataCallback]);
+
+  // useEffect(() => {
+  //   console.log(data)
+  // }, [data]);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (currentPage >= totalPages) {
-        setCurrentPage(1)
-        grtDataCallback();
-      }else{
-        setCurrentPage(currentPage + 1);
-        grtDataCallback();
-      }
-  
-    }, 2000);
-  
-    // Cleanup function to clear the interval when the component unmounts
-    return () => clearInterval(intervalId);
-  }, [currentPage, grtDataCallback]);
-  
+    if (currentPage >= totalPages) {
+      setCurrentPage(20)
+      grtDataCallback();
+    } else {
+      setCurrentPage(currentPage + 1);
+      grtDataCallback();
+    }
+  }, []);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentDateTime(new Date())
@@ -65,7 +92,7 @@ const Dark = () => {
     hour12: false
   });
 
-// console.log(data.length)
+  // console.log(data.length)
   return (
     <div>
       <div className="row" style={{ marginTop: "-12px" }}>
@@ -110,20 +137,27 @@ const Dark = () => {
             </Button>
           </div>
           <div className="row mt-2">
-            <div className="card">
-              <div className="row">
-                <div className="col-6"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "5px" }}><b>Title 1</b></p></div>
-                <div className="col-4"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
-              </div>
-              <div className="row">
-                <Line
-                  theme="dark"
-                  data=""
-                  dataValue=""
-                  style={{ height: "190px", marginTop: "-27px", marginBottom: "-15px" }}
+            {data[1].chartType === "bar" ?
+              <RechartBar
+                chartData={data[1].chartData}
+                chartTitle={data[1].title}
+                height={156}
+                updated={data[1].updatedAt}
+                style={{ marginLeft: "-35px" }}
+              />
+              : data[1].chartType === "line" ?
+                <RechartLine
+                  x={data[1].chartData.x}
+                  checkedItems={data[1].chartData.checkedItems}
+                  width={250}
+                  height={156}
+                  chartTitle={data[1].title}
+                  updated={data[1].updatedAt}
+                  style={{ marginLeft: "-35px" }}
                 />
-              </div>
-            </div>
+                : 
+                  "data unavailable"
+            }
           </div>
         </div>
         <div className="w-1/5 px-3">
@@ -230,22 +264,27 @@ const Dark = () => {
             </Button>
           </div>
           <div className="row mt-2">
-
-            <div className="card" style={{ border: "2px solid #324f6b" }}>
-              <div className="row">
-                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 6</b></p></div>
-                <div className="col-6"><p className="muted" style={{ marginRight: "-17px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
-              </div>
-              <div className="row">
-                <Radar
-                  theme="dark"
-                  height={158}
-                  style={{ marginTop: "0px", marginBottom: "-24px" }}
-                  data={["dayak", "jawa", "padang", "batak", "melayu"]}
-                  dataValue={[9, 90, 35, 60, 80]}
+          {data[1].chartType === "bar" ?
+              <RechartBar
+                chartData={data[1].chartData}
+                chartTitle={data[1].title}
+                height={156}
+                updated={data[1].updatedAt}
+                style={{ marginLeft: "-35px" }}
+              />
+              : data[1].chartType === "line" ?
+                <RechartLine
+                  x={data[1].chartData.x}
+                  checkedItems={data[1].chartData.checkedItems}
+                  width={250}
+                  height={156}
+                  chartTitle={data[1].title}
+                  updated={data[1].updatedAt}
+                  style={{ marginLeft: "-35px" }}
                 />
-              </div>
-            </div>
+                : 
+                  "data unavailable"
+            }
           </div>
         </div>
       </div>
@@ -253,57 +292,77 @@ const Dark = () => {
       <div className="row mt-2">
         <div className="w-2/7 px-3">
           <div className="row">
-            <div className="card">
-              <div className="row">
-                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 7</b></p></div>
-                <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
-              </div>
-              <div className="row">
-                <PieStack
-                  theme="dark"
-                  series="Suku"
-                  data={['jawa', 'padang', 'melayu', 'batak', 'karo']}
-                  dataValue={[235, 274, 310, 335, 400]}
-                  style={{ height: "164px", marginTop: "-20px", marginBottom: "4px" }}
+          {data[1].chartType === "bar" ?
+              <RechartBar
+                chartData={data[1].chartData}
+                chartTitle={data[1].title}
+                height={156}
+                updated={data[1].updatedAt}
+                style={{ marginLeft: "-35px" }}
+              />
+              : data[1].chartType === "line" ?
+                <RechartLine
+                  x={data[1].chartData.x}
+                  checkedItems={data[1].chartData.checkedItems}
+                  width={370}
+                  height={156}
+                  chartTitle={data[1].title}
+                  updated={data[1].updatedAt}
+                  style={{ marginLeft: "-35px" }}
                 />
-              </div>
-            </div>
+                : 
+                  "data unavailable"
+            }
           </div>
         </div>
         <div className="w-3/7 px-3">
           <div className="row">
-            <div className="card">
-              <div className="row">
-                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 8</b></p></div>
-                <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
-              </div>
-              <div className="row">
-                <Line
-                  theme="dark"
-                  data={['jawa', 'padang', 'melayu', 'batak', 'karo']}
-                  dataValue={[100, 300, 200, 100, 150]}
-                  style={{ height: "190px", marginTop: "-27px", marginBottom: "-15px" }}
+          {data[1].chartType === "bar" ?
+              <RechartBar
+                chartData={data[1].chartData}
+                chartTitle={data[1].title}
+                height={156}
+                updated={data[1].updatedAt}
+                style={{ marginLeft: "-35px" }}
+              />
+              : data[1].chartType === "line" ?
+                <RechartLine
+                  x={data[1].chartData.x}
+                  checkedItems={data[1].chartData.checkedItems}
+                  width={550}
+                  height={156}
+                  chartTitle={data[1].title}
+                  updated={data[1].updatedAt}
+                  style={{ marginLeft: "-35px" }}
                 />
-              </div>
-            </div>
+                : 
+                  "data unavailable"
+            }
           </div>
         </div>
         <div className="w-2/7 px-3">
           <div className="row">
-            <div className="card">
-              <div className="row">
-                <div className="col-4"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "10px" }}><b>Title 9</b></p></div>
-                <div className="col-6"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
-              </div>
-              <div className="row">
-                <Bar
-                  theme="dark"
-                  data={['jawa', 'padang', 'melayu', 'batak', 'karo', 'dayak']}
-                  dataValue={[100, 300, 200, 100, 150, 298]}
-                  style={{ height: "193px", marginTop: "-30px", marginBottom: "-15px" }}
+          {data[1].chartType === "bar" ?
+              <RechartBar
+                chartData={data[1].chartData}
+                chartTitle={data[1].title}
+                height={156}
+                updated={data[1].updatedAt}
+                style={{ marginLeft: "-35px" }}
+              />
+              : data[1].chartType === "line" ?
+                <RechartLine
+                  x={data[1].chartData.x}
+                  checkedItems={data[1].chartData.checkedItems}
+                  width={370}
+                  height={156}
+                  chartTitle={data[1].title}
+                  updated={data[1].updatedAt}
+                  style={{ marginLeft: "-35px" }}
                 />
-              </div>
-            </div>
+                :
+                  "data unavailable"
+            }
           </div>
         </div>
       </div>
