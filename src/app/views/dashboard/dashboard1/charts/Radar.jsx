@@ -13,8 +13,6 @@ const Radar = (props) => {
     useEffect(() => {
         const newColors = Array.from({ length: 10 }, () => (theme === "dark" ? "#fff" : "#000"));
         setColors(newColors);
-
-        console.log(colors)
     }, [theme]);
 
     const radar = {

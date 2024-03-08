@@ -10,75 +10,43 @@ import PieStack from "./charts/PieStack";
 import Donut from "./charts/Donut";
 import Radar from "./charts/Radar";
 import datas from "../../../../assets/json/satudata_res.json"
+import axios from "axios";
+
 const Dark = () => {
   const [data, setData] = useState([datas.result[0]]);
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
-  const [currentPage, setCurrentPage]= useState(1);
-  const [totalPage, setTotalPage]= useState();
+  const [currentPage, setCurrentPage]= useState(145);
+  const [totalPages, setTotalPages]= useState();
 
-  const getAllData = useCallback(async ()=> {
-    const api = `https://medansatudata-api.metromatika.com/api/public/data?page=${currentPage}`;
+  const grtDataCallback = useCallback(async () => {
+    await axios.get(`https://medansatudata-api.metromatika.com/api/public/data?page=${currentPage}`).then((result) => {
+      setData(result.data.result);
+      setTotalPages(result.data.totalPages);
+      console.log(totalPages)
+      console.log(currentPage)
+      console.log(data)
+    });
+  }, [currentPage]);
 
-    try {
-      const response = await fetch(api)
-      let data = await response.json()
-      setData(data.result)
-      setTotalPage(data.totalPages)
-    } catch (error) {
-      console.error(error)
-    }
-  },[currentPage])
-
-
-  useEffect(() => {
-    getAllData()
-  },[getAllData])
-
-  
   useEffect(() => {
     const intervalId = setInterval(() => {
-      if(currentPage > totalPage){
+      if (currentPage >= totalPages) {
         setCurrentPage(1)
+        grtDataCallback();
       }else{
         setCurrentPage(currentPage + 1);
+        grtDataCallback();
       }
-
-      getAllData();
+  
     }, 2000);
-
+  
     // Cleanup function to clear the interval when the component unmounts
     return () => clearInterval(intervalId);
-  }, [currentPage, totalPage, getAllData]);
-
-
-  // const getAllData = () => {
-  //     const api = "https://medansatudata-api.metromatika.com/api/public/data?page=98"
-
-  //     fetch(api,{
-  //       method:"get",
-  //       headers: {"Content-Type": "application/json"},
-  //     })
-  //     .then(result =>{
-  //       setData(result)
-  //       console.log(result)
-  //     })
-  //     .catch(err =>{
-  //       console.error(err);
-  //     });
-  // }
-
-//   const getDataAll = () => {
-//       axios.get(`https://medansatudata-api.metromatika.com/api/public/data?page=1`)
-//       .then((result) => {
-//       setData(result.data);
-//       console.log(result.data);
-//   })
-// }
+  }, [currentPage, grtDataCallback]);
   
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentDateTime(new Date())
-      console.log(data[0].chartData);
     }, 1000);
 
     return () => clearInterval(timer);
@@ -144,7 +112,7 @@ const Dark = () => {
           <div className="row mt-2">
             <div className="card">
               <div className="row">
-                <div className="col-6"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "5px" }}><b>{data[0].title}</b></p></div>
+                <div className="col-6"><p className="card-title mt-2" style={{ marginLeft: "10px", fontSize: "5px" }}><b>Title 1</b></p></div>
                 <div className="col-4"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>Last updated on 2 Sep 2021</p></div>
               </div>
               <div className="row">
