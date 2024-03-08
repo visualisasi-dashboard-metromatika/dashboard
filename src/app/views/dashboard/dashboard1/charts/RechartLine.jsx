@@ -68,7 +68,7 @@ const RechartLine = ({ x, chartTitle, checkedItems, width, height, updated, styl
   const day = date.getDate().toString().padStart(2, "0");
   const month = (date.getMonth() + 1).toString().padStart(2, "0");
   const formattedDate = `${day}-${month}-${date.getFullYear()}`;
-  const truncatedTitle = chartTitle.length > 25 ? chartTitle.slice(0, 25) + "..." : chartTitle;
+  const truncatedTitle = chartTitle.length > 15 ? chartTitle.slice(0, 15) + "..." : chartTitle;
 
   const lineColors = ["#00aaff", "#0077cc", "#004488", "#001155", "#66b3ff", "#3385cc"];
 

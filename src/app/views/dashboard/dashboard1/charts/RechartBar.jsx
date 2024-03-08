@@ -28,7 +28,7 @@ const RechartBar = ({ chartData, chartTitle, height, width, updated, style }) =>
     const year = date.getFullYear();
 
     const formattedDate = `${day}-${month}-${year}`;
-    const truncatedTitle = chartTitle.length > 25 ? chartTitle.slice(0, 25) + "..." : chartTitle;
+    const truncatedTitle = chartTitle.length > 15 ? chartTitle.slice(0, 15) + "..." : chartTitle;
 
     return (
         <div className="card">

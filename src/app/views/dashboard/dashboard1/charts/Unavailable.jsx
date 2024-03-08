@@ -3,7 +3,7 @@ const Unavailable = ({ style, title, updated }) => {
     const day = date.getDate().toString().padStart(2, "0");
     const month = (date.getMonth() + 1).toString().padStart(2, "0");
     const formattedDate = `${day}-${month}-${date.getFullYear()}`;
-    const truncatedTitle = chartTitle.length > 25 ? chartTitle.slice(0, 25) + "..." : chartTitle;
+    const truncatedTitle = title.length > 15 ? title.slice(0, 15) + "..." : title;
 
     return (
 
