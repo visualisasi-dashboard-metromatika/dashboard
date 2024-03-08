@@ -68,6 +68,7 @@ const RechartLine = ({ x, chartTitle, checkedItems, width, height, updated, styl
   const day = date.getDate().toString().padStart(2, "0");
   const month = (date.getMonth() + 1).toString().padStart(2, "0");
   const formattedDate = `${day}-${month}-${date.getFullYear()}`;
+  const truncatedTitle = chartTitle.length > 25 ? chartTitle.slice(0, 25) + "..." : chartTitle;
 
   const lineColors = ["#00aaff", "#0077cc", "#004488", "#001155", "#66b3ff", "#3385cc"];
 
@@ -75,9 +76,9 @@ const RechartLine = ({ x, chartTitle, checkedItems, width, height, updated, styl
     <div className="card">
       <div className="row">
         <div className="col-6">
-          <p className="card-title mt-2 truncate" style={{ marginLeft: "10px", fontSize: "5px", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis"  }}>
-            <b>{chartTitle}</b>
-          </p>
+        <p className="card-title mt-2 text-white" style={{ marginLeft: "10px", fontSize: "5px" }}>
+                        <b>{truncatedTitle}</b>
+                    </p>
         </div>
         <div className="col-4">
           <p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>

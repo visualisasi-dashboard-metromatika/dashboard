@@ -3,14 +3,15 @@ const Unavailable = ({ style, title, updated }) => {
     const day = date.getDate().toString().padStart(2, "0");
     const month = (date.getMonth() + 1).toString().padStart(2, "0");
     const formattedDate = `${day}-${month}-${date.getFullYear()}`;
-    
+    const truncatedTitle = chartTitle.length > 25 ? chartTitle.slice(0, 25) + "..." : chartTitle;
+
     return (
 
         <div className="card">
             <div className="row">
                 <div className="col-6">
-                    <p className="card-title mt-2 truncate" style={{ marginLeft: "10px", fontSize: "5px", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                        <b>{title}</b>
+                <p className="card-title mt-2 text-white" style={{ marginLeft: "10px", fontSize: "5px" }}>
+                        <b>{truncatedTitle}</b>
                     </p>
                 </div>
                 <div className="col-4">

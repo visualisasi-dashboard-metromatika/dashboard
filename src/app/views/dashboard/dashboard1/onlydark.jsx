@@ -35,8 +35,6 @@ const Dark = () => {
     const result = await axios.get(`https://medansatudata-api.metromatika.com/api/public/data?page=${currentPage}`);
       setData(result.data.result);
       setTotalPages(result.data.totalPages);
-      console.log(result.data.totalPages);
-      console.log(totalPages);
   };
 
   useEffect(() => {

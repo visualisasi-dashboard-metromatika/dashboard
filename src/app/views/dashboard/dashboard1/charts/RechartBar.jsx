@@ -28,11 +28,16 @@ const RechartBar = ({ chartData, chartTitle, height, width, updated, style }) =>
     const year = date.getFullYear();
 
     const formattedDate = `${day}-${month}-${year}`;
+    const truncatedTitle = chartTitle.length > 25 ? chartTitle.slice(0, 25) + "..." : chartTitle;
 
     return (
         <div className="card">
             <div className="row">
-                <div className="col-6"><p className="card-title mt-2 truncate" style={{ marginLeft: "10px", fontSize: "5px", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}><b>{chartTitle}</b></p></div>
+                <div className="col-6">
+                <p className="card-title mt-2 text-white" style={{ marginLeft: "10px", fontSize: "5px" }}>
+                        <b>{truncatedTitle}</b>
+                    </p>
+                </div>
                 <div className="col-4"><p className="muted" style={{ marginRight: "-34px", marginTop: "16px", fontSize: "4px", textAlign: "right" }}>{formattedDate}</p></div>
             </div>
             <div style={style}>
@@ -42,7 +47,7 @@ const RechartBar = ({ chartData, chartTitle, height, width, updated, style }) =>
                         <XAxis dataKey="name" fontSize={8} />
                         <YAxis fontSize={8} />
                         <Tooltip />
-                        <Legend wrapperStyle={{ fontSize: '6px', marginLeft:"20px" }} />
+                        <Legend wrapperStyle={{ fontSize: '6px', marginLeft: "20px" }} />
                         {chartDataItems?.map((dataItem) => (
                             <Bar
                                 key={dataItem.label}
