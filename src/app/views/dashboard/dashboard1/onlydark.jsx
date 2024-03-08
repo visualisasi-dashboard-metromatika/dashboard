@@ -17,7 +17,7 @@ import RechartLine from "./charts/RechartLine.jsx";
 const Dark = () => {
   const [data, setData] = useState(datas.result);
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
-  const [currentPage, setCurrentPage] = useState(36);
+  const [currentPage, setCurrentPage] = useState(63);
   const [totalPages, setTotalPages] = useState();
 
   // const grtDataCallback = useCallback(async () => {
@@ -34,9 +34,6 @@ const Dark = () => {
     await axios.get(`https://medansatudata-api.metromatika.com/api/public/data?page=${currentPage}`).then((result) => {
       setData(result.data.result);
       setTotalPages(result.data.totalPages);
-      // console.log(totalPages)
-      // console.log(currentPage)
-      // console.log(data)
       console.log(data)
     })
   }
@@ -137,22 +134,22 @@ const Dark = () => {
             </Button>
           </div>
           <div className="row mt-2">
-            {data[1].chartType === "bar" ?
+            {data[0].chartType === "bar" ?
               <RechartBar
-                chartData={data[1].chartData}
-                chartTitle={data[1].title}
+                chartData={data[0].chartData}
+                chartTitle={data[0].title}
                 height={156}
-                updated={data[1].updatedAt}
+                updated={data[0].updatedAt}
                 style={{ marginLeft: "-35px" }}
               />
-              : data[1].chartType === "line" ?
+              : data[0].chartType === "line" ?
                 <RechartLine
-                  x={data[1].chartData.x}
-                  checkedItems={data[1].chartData.checkedItems}
+                  x={data[0].chartData.x}
+                  checkedItems={data[0].chartData.checkedItems}
                   width={250}
                   height={156}
-                  chartTitle={data[1].title}
-                  updated={data[1].updatedAt}
+                  chartTitle={data[0].title}
+                  updated={data[0].updatedAt}
                   style={{ marginLeft: "-35px" }}
                 />
                 : 
@@ -264,7 +261,7 @@ const Dark = () => {
             </Button>
           </div>
           <div className="row mt-2">
-          {data[1].chartType === "bar" ?
+            {data[1].chartType === "bar" ?
               <RechartBar
                 chartData={data[1].chartData}
                 chartTitle={data[1].title}
@@ -292,22 +289,22 @@ const Dark = () => {
       <div className="row mt-2">
         <div className="w-2/7 px-3">
           <div className="row">
-          {data[1].chartType === "bar" ?
+          {data[2].chartType === "bar" ?
               <RechartBar
-                chartData={data[1].chartData}
-                chartTitle={data[1].title}
+                chartData={data[2].chartData}
+                chartTitle={data[2].title}
                 height={156}
-                updated={data[1].updatedAt}
+                updated={data[2].updatedAt}
                 style={{ marginLeft: "-35px" }}
               />
-              : data[1].chartType === "line" ?
+              : data[2].chartType === "line" ?
                 <RechartLine
-                  x={data[1].chartData.x}
-                  checkedItems={data[1].chartData.checkedItems}
+                  x={data[2].chartData.x}
+                  checkedItems={data[2].chartData.checkedItems}
                   width={370}
                   height={156}
-                  chartTitle={data[1].title}
-                  updated={data[1].updatedAt}
+                  chartTitle={data[2].title}
+                  updated={data[2].updatedAt}
                   style={{ marginLeft: "-35px" }}
                 />
                 : 
@@ -317,22 +314,22 @@ const Dark = () => {
         </div>
         <div className="w-3/7 px-3">
           <div className="row">
-          {data[1].chartType === "bar" ?
+          {data[3].chartType === "bar" ?
               <RechartBar
-                chartData={data[1].chartData}
-                chartTitle={data[1].title}
+                chartData={data[3].chartData}
+                chartTitle={data[3].title}
                 height={156}
-                updated={data[1].updatedAt}
+                updated={data[3].updatedAt}
                 style={{ marginLeft: "-35px" }}
               />
-              : data[1].chartType === "line" ?
+              : data[3].chartType === "line" ?
                 <RechartLine
-                  x={data[1].chartData.x}
-                  checkedItems={data[1].chartData.checkedItems}
+                  x={data[3].chartData.x}
+                  checkedItems={data[3].chartData.checkedItems}
                   width={550}
                   height={156}
-                  chartTitle={data[1].title}
-                  updated={data[1].updatedAt}
+                  chartTitle={data[3].title}
+                  updated={data[3].updatedAt}
                   style={{ marginLeft: "-35px" }}
                 />
                 : 
@@ -342,22 +339,22 @@ const Dark = () => {
         </div>
         <div className="w-2/7 px-3">
           <div className="row">
-          {data[1].chartType === "bar" ?
+          {data[4].chartType === "bar" ?
               <RechartBar
-                chartData={data[1].chartData}
-                chartTitle={data[1].title}
+                chartData={data[4].chartData}
+                chartTitle={data[4].title}
                 height={156}
-                updated={data[1].updatedAt}
+                updated={data[4].updatedAt}
                 style={{ marginLeft: "-35px" }}
               />
-              : data[1].chartType === "line" ?
+              : data[4].chartType === "line" ?
                 <RechartLine
-                  x={data[1].chartData.x}
-                  checkedItems={data[1].chartData.checkedItems}
+                  x={data[4].chartData.x}
+                  checkedItems={data[4].chartData.checkedItems}
                   width={370}
                   height={156}
-                  chartTitle={data[1].title}
-                  updated={data[1].updatedAt}
+                  chartTitle={data[4].title}
+                  updated={data[4].updatedAt}
                   style={{ marginLeft: "-35px" }}
                 />
                 :

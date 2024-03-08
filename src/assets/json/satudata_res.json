@@ -1,755 +1,894 @@
 {
-  "success": true,
-  "result": [
-      {
-          "id": 920,
-          "user": {
-              "id": 150,
-              "name": "Dinas Komunikasi Dan Informatika",
-              "nik": "1901802102207850",
-              "email": "diskominfo@pemkomedan.go.id",
-              "agencyId": 33,
-              "password": "$2b$10$OoMZYfw1.y9HH7U0wgGdquJUq3g9y3j1vxqoXBCc0XE7fgi18JCuS",
-              "level": 2,
-              "active": true,
-              "address": "Jl. Sidorukun No.35, Pulo Brayan Darat Ii, Kec. Medan Tim., Kota Medan, Sumatera Utara 20239",
-              "contact": "0616611410",
-              "createdAt": "2024-02-19T03:20:03.000Z",
-              "updatedAt": "2024-02-19T03:21:06.000Z",
-              "agency": {
-                  "id": 33,
-                  "name": "Dinas Komunikasi Dan Informatika",
-                  "address": "Jl. Sidorukun No.35, Pulo Brayan Darat II, Kec. Medan Tim., Kota Medan, Sumatera Utara 2023",
-                  "phone": "061-6611410",
-                  "createdAt": "2024-01-15T04:55:16.000Z",
-                  "updatedAt": "2024-01-15T04:55:16.000Z"
-              }
-          },
-          "category": {
-              "id": 20,
-              "name": "Komunikasi dan Informatika",
-              "createdAt": "2024-01-15T07:43:12.000Z",
-              "updatedAt": "2024-01-15T07:43:12.000Z"
-          },
-          "title": "Jumlah Tenaga Ahli Programmer Tahun 2019-2023",
-          "chartType": "bar",
-          "jsonData": {
-              "2019": [
-                  "-"
-              ],
-              "2020": [
-                  "-"
-              ],
-              "2021": [
-                  "-"
-              ],
-              "2022": [
-                  "-"
-              ],
-              "2023": [
-                  6
-              ],
-              "uraian": [
-                  "Jumlah Tenaga Ahli Programmer"
-              ]
-          },
-          "chartData": {
-              "lbl": [
-                  "Jumlah Tenaga Ahli Programmer"
-              ],
-              "chartData": [
-                  {
-                      "label": "uraian",
-                      "data": [
-                          "Jumlah Tenaga Ahli Programmer"
-                      ],
-                      "backgroundColor": "#6630cd",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2022",
-                      "data": [
-                          "-"
-                      ],
-                      "backgroundColor": "#4aa2b9",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2021",
-                      "data": [
-                          "-"
-                      ],
-                      "backgroundColor": "#875f8c",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2020",
-                      "data": [
-                          "-"
-                      ],
-                      "backgroundColor": "#8b3532",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2019",
-                      "data": [
-                          "-"
-                      ],
-                      "backgroundColor": "#b90c22",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2023",
-                      "data": [
-                          6
-                      ],
-                      "backgroundColor": "#f36342",
-                      "borderWidth": 1
-                  }
-              ]
-          },
-          "createdAt": "2024-02-23T03:49:08.000Z",
-          "updatedAt": "2024-02-23T03:49:08.000Z"
-      },
-      {
-          "id": 919,
-          "user": {
-              "id": 21,
-              "name": "M. Irvan Triono Putra",
-              "nik": "1271050709010001",
-              "email": "muhammadirvantrionoputra@gmail.com",
-              "agencyId": 13,
-              "password": "$2b$10$jQz3Po8CGFbYrnd8T4sxyubY.gANmNiP3ZJt.7hhn8jHj5kHnZpKC",
-              "level": 2,
-              "active": false,
-              "address": "Jl. Karya Rakyat No.41",
-              "contact": "081340927128",
-              "createdAt": "2023-05-13T07:34:23.000Z",
-              "updatedAt": "2023-05-13T07:34:23.000Z",
-              "agency": {
-                  "id": 13,
-                  "name": "Dinas Kesehatan",
-                  "address": "Jl. Rotan, Petisah Tengah, Kec. Medan Petisah, Kota Medan, Sumatera Utara 20111",
-                  "phone": "(061) 4520331",
-                  "createdAt": "2023-02-22T04:10:40.000Z",
-                  "updatedAt": "2023-02-22T04:11:02.000Z"
-              }
-          },
-          "category": {
-              "id": 15,
-              "name": "Kesehatan",
-              "createdAt": "2024-01-15T07:40:00.000Z",
-              "updatedAt": "2024-01-15T07:40:00.000Z"
-          },
-          "title": "Jumlah Balita Stunting Yang Ditemukan Dan Ditangani Di Kota Medan Tahun 2016-2023",
-          "chartType": "line",
-          "jsonData": {
-              "INDIKATOR": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-              ],
-              "Jumlah balita stunting yang ditangani": [
-                  "-",
-                  "-",
-                  "-",
-                  491,
-                  393,
-                  368
-              ],
-              "Jumlah balita stunting yang ditemukan": [
-                  "-",
-                  "-",
-                  "-",
-                  491,
-                  393,
-                  368
-              ]
-          },
-          "chartData": {
-              "x": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-              ],
-              "checkedItems": [
-                  {
-                      "label": "Jumlah balita stunting yang ditemukan",
-                      "data": [
-                          "-",
-                          "-",
-                          "-",
-                          491,
-                          393,
-                          368
-                      ],
-                      "backgroundColor": "#40f106",
-                      "borderWidth": 1,
-                      "borderColor": "#40f106",
-                      "pointBackgroundColor": "#40f106",
-                      "pointBorderWidth": 2,
-                      "pointRadius": 5,
-                      "pointHoverRadius": 8,
-                      "pointHitRadius": 10
-                  },
-                  {
-                      "label": "Jumlah balita stunting yang ditangani",
-                      "data": [
-                          "-",
-                          "-",
-                          "-",
-                          491,
-                          393,
-                          368
-                      ],
-                      "backgroundColor": "#4e0678",
-                      "borderWidth": 1,
-                      "borderColor": "#4e0678",
-                      "pointBackgroundColor": "#4e0678",
-                      "pointBorderWidth": 2,
-                      "pointRadius": 5,
-                      "pointHoverRadius": 8,
-                      "pointHitRadius": 10
-                  }
-              ]
-          },
-          "createdAt": "2024-02-23T03:47:59.000Z",
-          "updatedAt": "2024-02-23T03:47:59.000Z"
-      },
-      {
-          "id": 918,
-          "user": {
-              "id": 150,
-              "name": "Dinas Komunikasi Dan Informatika",
-              "nik": "1901802102207850",
-              "email": "diskominfo@pemkomedan.go.id",
-              "agencyId": 33,
-              "password": "$2b$10$OoMZYfw1.y9HH7U0wgGdquJUq3g9y3j1vxqoXBCc0XE7fgi18JCuS",
-              "level": 2,
-              "active": true,
-              "address": "Jl. Sidorukun No.35, Pulo Brayan Darat Ii, Kec. Medan Tim., Kota Medan, Sumatera Utara 20239",
-              "contact": "0616611410",
-              "createdAt": "2024-02-19T03:20:03.000Z",
-              "updatedAt": "2024-02-19T03:21:06.000Z",
-              "agency": {
-                  "id": 33,
-                  "name": "Dinas Komunikasi Dan Informatika",
-                  "address": "Jl. Sidorukun No.35, Pulo Brayan Darat II, Kec. Medan Tim., Kota Medan, Sumatera Utara 2023",
-                  "phone": "061-6611410",
-                  "createdAt": "2024-01-15T04:55:16.000Z",
-                  "updatedAt": "2024-01-15T04:55:16.000Z"
-              }
-          },
-          "category": {
-              "id": 20,
-              "name": "Komunikasi dan Informatika",
-              "createdAt": "2024-01-15T07:43:12.000Z",
-              "updatedAt": "2024-01-15T07:43:12.000Z"
-          },
-          "title": "Jumlah Podcast Yang Ditayangkan Di Media Sosial Youtube",
-          "chartType": "bar",
-          "jsonData": {
-              "2019": [
-                  "-"
-              ],
-              "2020": [
-                  "-"
-              ],
-              "2021": [
-                  "-"
-              ],
-              "2022": [
-                  "-"
-              ],
-              "2023": [
-                  8
-              ],
-              "uraian": [
-                  "Jumlah podcast yang ditayangkan di media sosial youtube"
-              ]
-          },
-          "chartData": {
-              "lbl": [
-                  "Jumlah podcast yang ditayangkan di media sosial youtube"
-              ],
-              "chartData": [
-                  {
-                      "label": "uraian",
-                      "data": [
-                          "Jumlah podcast yang ditayangkan di media sosial youtube"
-                      ],
-                      "backgroundColor": "#ab2d68",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2023",
-                      "data": [
-                          8
-                      ],
-                      "backgroundColor": "#548a88",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2022",
-                      "data": [
-                          "-"
-                      ],
-                      "backgroundColor": "#a18c34",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2021",
-                      "data": [
-                          "-"
-                      ],
-                      "backgroundColor": "#71c61",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2020",
-                      "data": [
-                          "-"
-                      ],
-                      "backgroundColor": "#a4e441",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2019",
-                      "data": [
-                          "-"
-                      ],
-                      "backgroundColor": "#ac9313",
-                      "borderWidth": 1
-                  }
-              ]
-          },
-          "createdAt": "2024-02-23T03:47:49.000Z",
-          "updatedAt": "2024-02-23T03:47:49.000Z"
-      },
-      {
-          "id": 133,
-          "user": {
-              "id": 1,
-              "name": "Shivi Almas",
-              "nik": "1234567890123456",
-              "email": "metromatika@gmail.com",
-              "agencyId": 1,
-              "password": "$2a$10$LF2Pg9RBBxpTl/MrlEtIhOrdTRrq3mIFwzJCNXeMxPixtMvb3HTDu",
-              "level": 1,
-              "active": true,
-              "address": "Jl. Kuali Gg. Tertib",
-              "contact": "081379845674",
-              "createdAt": "2023-02-05T19:55:40.000Z",
-              "updatedAt": "2023-02-05T19:55:40.000Z",
-              "agency": {
-                  "id": 1,
-                  "name": "Admin Kota Medan",
-                  "address": "Jl. Kuali Gg. Tertib",
-                  "phone": "0616842798",
-                  "createdAt": "2021-01-06T00:00:00.000Z",
-                  "updatedAt": "2024-01-19T03:02:47.000Z"
-              }
-          },
-          "category": {
-              "id": 15,
-              "name": "Kesehatan",
-              "createdAt": "2024-01-15T07:40:00.000Z",
-              "updatedAt": "2024-01-15T07:40:00.000Z"
-          },
-          "title": "Jumlah Balita Kelahiran Hidup (berumur Kurang 5 Tahun) di Kota Medan Tahun 2016 - 2021",
-          "chartType": "line",
-          "jsonData": {
-              "INDIKATOR": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-              ],
-              "Jumlah balita kelahiran hidup (berumur kurang 5 tahun)": [
-                  217331,
-                  223905,
-                  193636,
-                  75844,
-                  150593,
-                  168405
-              ]
-          },
-          "chartData": {
-              "x": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-              ],
-              "checkedItems": [
-                  {
-                      "label": "Jumlah balita kelahiran hidup (berumur kurang 5 tahun)",
-                      "data": [
-                          217331,
-                          223905,
-                          193636,
-                          75844,
-                          150593,
-                          168405
-                      ],
-                      "backgroundColor": "#e081cf",
-                      "borderWidth": 1,
-                      "borderColor": "#e081cf",
-                      "pointBackgroundColor": "#e081cf",
-                      "pointBorderWidth": 2,
-                      "pointRadius": 5,
-                      "pointHoverRadius": 8,
-                      "pointHitRadius": 10
-                  }
-              ]
-          },
-          "createdAt": "2024-01-18T07:21:18.000Z",
-          "updatedAt": "2024-02-23T03:46:33.000Z"
-      },
-      {
-          "id": 917,
-          "user": {
-              "id": 21,
-              "name": "M. Irvan Triono Putra",
-              "nik": "1271050709010001",
-              "email": "muhammadirvantrionoputra@gmail.com",
-              "agencyId": 13,
-              "password": "$2b$10$jQz3Po8CGFbYrnd8T4sxyubY.gANmNiP3ZJt.7hhn8jHj5kHnZpKC",
-              "level": 2,
-              "active": false,
-              "address": "Jl. Karya Rakyat No.41",
-              "contact": "081340927128",
-              "createdAt": "2023-05-13T07:34:23.000Z",
-              "updatedAt": "2023-05-13T07:34:23.000Z",
-              "agency": {
-                  "id": 13,
-                  "name": "Dinas Kesehatan",
-                  "address": "Jl. Rotan, Petisah Tengah, Kec. Medan Petisah, Kota Medan, Sumatera Utara 20111",
-                  "phone": "(061) 4520331",
-                  "createdAt": "2023-02-22T04:10:40.000Z",
-                  "updatedAt": "2023-02-22T04:11:02.000Z"
-              }
-          },
-          "category": {
-              "id": 15,
-              "name": "Kesehatan",
-              "createdAt": "2024-01-15T07:40:00.000Z",
-              "updatedAt": "2024-01-15T07:40:00.000Z"
-          },
-          "title": "Jumlah Balita Gizi Buruk Yang Ditemukan Dan Ditangani Di Kota Medan Tahun 2016-2023",
-          "chartType": "line",
-          "jsonData": {
-              "INDIKATOR": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-              ],
-              "Jumlah balita gizi buruk yang ditangani": [
-                  104,
-                  150,
-                  131,
-                  116,
-                  106,
-                  103
-              ],
-              "Jumlah balita gizi buruk yang ditemukan": [
-                  104,
-                  150,
-                  131,
-                  116,
-                  106,
-                  103
-              ]
-          },
-          "chartData": {
-              "x": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-              ],
-              "checkedItems": [
-                  {
-                      "label": "Jumlah balita gizi buruk yang ditangani",
-                      "data": [
-                          104,
-                          150,
-                          131,
-                          116,
-                          106,
-                          103
-                      ],
-                      "backgroundColor": "#139604",
-                      "borderWidth": 1,
-                      "borderColor": "#139604",
-                      "pointBackgroundColor": "#139604",
-                      "pointBorderWidth": 2,
-                      "pointRadius": 5,
-                      "pointHoverRadius": 8,
-                      "pointHitRadius": 10
-                  },
-                  {
-                      "label": "Jumlah balita gizi buruk yang ditemukan",
-                      "data": [
-                          104,
-                          150,
-                          131,
-                          116,
-                          106,
-                          103
-                      ],
-                      "backgroundColor": "#c216d9",
-                      "borderWidth": 1,
-                      "borderColor": "#c216d9",
-                      "pointBackgroundColor": "#c216d9",
-                      "pointBorderWidth": 2,
-                      "pointRadius": 5,
-                      "pointHoverRadius": 8,
-                      "pointHitRadius": 10
-                  }
-              ]
-          },
-          "createdAt": "2024-02-23T03:45:37.000Z",
-          "updatedAt": "2024-02-23T03:45:37.000Z"
-      },
-      {
-          "id": 916,
-          "user": {
-              "id": 150,
-              "name": "Dinas Komunikasi Dan Informatika",
-              "nik": "1901802102207850",
-              "email": "diskominfo@pemkomedan.go.id",
-              "agencyId": 33,
-              "password": "$2b$10$OoMZYfw1.y9HH7U0wgGdquJUq3g9y3j1vxqoXBCc0XE7fgi18JCuS",
-              "level": 2,
-              "active": true,
-              "address": "Jl. Sidorukun No.35, Pulo Brayan Darat Ii, Kec. Medan Tim., Kota Medan, Sumatera Utara 20239",
-              "contact": "0616611410",
-              "createdAt": "2024-02-19T03:20:03.000Z",
-              "updatedAt": "2024-02-19T03:21:06.000Z",
-              "agency": {
-                  "id": 33,
-                  "name": "Dinas Komunikasi Dan Informatika",
-                  "address": "Jl. Sidorukun No.35, Pulo Brayan Darat II, Kec. Medan Tim., Kota Medan, Sumatera Utara 2023",
-                  "phone": "061-6611410",
-                  "createdAt": "2024-01-15T04:55:16.000Z",
-                  "updatedAt": "2024-01-15T04:55:16.000Z"
-              }
-          },
-          "category": {
-              "id": 20,
-              "name": "Komunikasi dan Informatika",
-              "createdAt": "2024-01-15T07:43:12.000Z",
-              "updatedAt": "2024-01-15T07:43:12.000Z"
-          },
-          "title": "Jumlah Perwal Atau Kepwal Terkait Implementasi E-government Tahun 2019-2023",
-          "chartType": "bar",
-          "jsonData": {
-              "2019": [
-                  "-"
-              ],
-              "2020": [
-                  2
-              ],
-              "2021": [
-                  3
-              ],
-              "2022": [
-                  4
-              ],
-              "2023": [
-                  5
-              ],
-              "uraian": [
-                  "Jumlah Perwal atau kepwal terkait implementasi E-Government"
-              ]
-          },
-          "chartData": {
-              "lbl": [
-                  "Jumlah Perwal atau kepwal terkait implementasi E-Government"
-              ],
-              "chartData": [
-                  {
-                      "label": "2019",
-                      "data": [
-                          "-"
-                      ],
-                      "backgroundColor": "#e3a75",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2020",
-                      "data": [
-                          2
-                      ],
-                      "backgroundColor": "#aa81a2",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2021",
-                      "data": [
-                          3
-                      ],
-                      "backgroundColor": "#33ab3e",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2022",
-                      "data": [
-                          4
-                      ],
-                      "backgroundColor": "#e3143a",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "uraian",
-                      "data": [
-                          "Jumlah Perwal atau kepwal terkait implementasi E-Government"
-                      ],
-                      "backgroundColor": "#f08053",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2023",
-                      "data": [
-                          5
-                      ],
-                      "backgroundColor": "#21a06e",
-                      "borderWidth": 1
-                  }
-              ]
-          },
-          "createdAt": "2024-02-23T03:44:59.000Z",
-          "updatedAt": "2024-02-23T03:44:59.000Z"
-      },
-      {
-          "id": 915,
-          "user": {
-              "id": 150,
-              "name": "Dinas Komunikasi Dan Informatika",
-              "nik": "1901802102207850",
-              "email": "diskominfo@pemkomedan.go.id",
-              "agencyId": 33,
-              "password": "$2b$10$OoMZYfw1.y9HH7U0wgGdquJUq3g9y3j1vxqoXBCc0XE7fgi18JCuS",
-              "level": 2,
-              "active": true,
-              "address": "Jl. Sidorukun No.35, Pulo Brayan Darat Ii, Kec. Medan Tim., Kota Medan, Sumatera Utara 20239",
-              "contact": "0616611410",
-              "createdAt": "2024-02-19T03:20:03.000Z",
-              "updatedAt": "2024-02-19T03:21:06.000Z",
-              "agency": {
-                  "id": 33,
-                  "name": "Dinas Komunikasi Dan Informatika",
-                  "address": "Jl. Sidorukun No.35, Pulo Brayan Darat II, Kec. Medan Tim., Kota Medan, Sumatera Utara 2023",
-                  "phone": "061-6611410",
-                  "createdAt": "2024-01-15T04:55:16.000Z",
-                  "updatedAt": "2024-01-15T04:55:16.000Z"
-              }
-          },
-          "category": {
-              "id": 20,
-              "name": "Komunikasi dan Informatika",
-              "createdAt": "2024-01-15T07:43:12.000Z",
-              "updatedAt": "2024-01-15T07:43:12.000Z"
-          },
-          "title": "Jumlah Permohonan Informasi Melalui Ppid 2019-2023",
-          "chartType": "bar",
-          "jsonData": {
-              "2019": [
-                  1
-              ],
-              "2020": [
-                  17
-              ],
-              "2021": [
-                  16
-              ],
-              "2022": [
-                  5
-              ],
-              "2023": [
-                  72
-              ],
-              "uraian": [
-                  "Jumlah Permohonan Informasi melalui PPID"
-              ]
-          },
-          "chartData": {
-              "lbl": [
-                  "Jumlah Permohonan Informasi melalui PPID"
-              ],
-              "chartData": [
-                  {
-                      "label": "2019",
-                      "data": [
-                          1
-                      ],
-                      "backgroundColor": "#a27211",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2020",
-                      "data": [
-                          17
-                      ],
-                      "backgroundColor": "#b90289",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2021",
-                      "data": [
-                          16
-                      ],
-                      "backgroundColor": "#41188e",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2022",
-                      "data": [
-                          5
-                      ],
-                      "backgroundColor": "#66d9a4",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "2023",
-                      "data": [
-                          72
-                      ],
-                      "backgroundColor": "#551096",
-                      "borderWidth": 1
-                  },
-                  {
-                      "label": "uraian",
-                      "data": [
-                          "Jumlah Permohonan Informasi melalui PPID"
-                      ],
-                      "backgroundColor": "#f03900",
-                      "borderWidth": 1
-                  }
-              ]
-          },
-          "createdAt": "2024-02-23T03:43:17.000Z",
-          "updatedAt": "2024-02-23T03:43:17.000Z"
-      }
-  ],
-  "totalPages": 127,
-  "currentPage": "12",
-  "totalCount": 886,
-  "totalData": 886
+    "success": true,
+    "result": [
+        {
+            "id": 966,
+            "user": {
+                "id": 13,
+                "name": "Satria Mandala Putra",
+                "nik": "1271111405910004",
+                "email": "satriamandalaputra50@gmail.com",
+                "agencyId": 23,
+                "password": "$2b$10$4X2DQ0gnTdScfk7nlmaLUuiEo5CY9dSA.0nn0pymcRG6TqKyU9302",
+                "level": 2,
+                "active": true,
+                "address": "Jl. Pinang Baris No. 114 C",
+                "contact": "082165158214",
+                "createdAt": "2023-02-28T04:41:16.000Z",
+                "updatedAt": "2023-02-28T04:41:42.000Z",
+                "agency": {
+                    "id": 23,
+                    "name": "Dinas Sumber Daya Air Bina Marga dan Bina Konstruksi",
+                    "address": "Jalan Pinang Baris No 114c",
+                    "phone": "061-8451766",
+                    "createdAt": "2023-02-28T04:24:34.000Z",
+                    "updatedAt": "2023-02-28T04:24:34.000Z"
+                }
+            },
+            "category": {
+                "id": 44,
+                "name": "Infrastruktur",
+                "createdAt": "2024-01-22T07:37:40.000Z",
+                "updatedAt": "2024-01-22T07:37:40.000Z"
+            },
+            "title": "Laporan Pekerjaan Patching Jalan Upt Selatan Januari - Desember Tahun 2023",
+            "chartType": "bar",
+            "jsonData": {
+                "Bulan": [
+                    "JANUARI",
+                    "FEBRUARI",
+                    "MARET",
+                    "APRIL",
+                    "MEI",
+                    "JUNI",
+                    "JULI",
+                    "AGUSTUS",
+                    "SEPTEMBER",
+                    "OKTOBER",
+                    "NOVEMBER",
+                    "DESEMBER"
+                ],
+                "Panjang Patching (M) 2023": [
+                    "-",
+                    "-",
+                    2308.09,
+                    574,
+                    1084.3999999999999,
+                    362.20000000000005,
+                    565.4,
+                    1006.46,
+                    722.7,
+                    691.7999999999998,
+                    539.6999999999999,
+                    402.95
+                ]
+            },
+            "chartData": {
+                "lbl": [
+                    "-",
+                    "-",
+                    2308.09,
+                    574,
+                    1084.3999999999999,
+                    362.20000000000005,
+                    565.4,
+                    1006.46,
+                    722.7,
+                    691.7999999999998,
+                    539.6999999999999,
+                    402.95
+                ],
+                "chartData": [
+                    {
+                        "label": "Panjang Patching (M) 2023",
+                        "data": [
+                            "-",
+                            "-",
+                            2308.09,
+                            574,
+                            1084.3999999999999,
+                            362.20000000000005,
+                            565.4,
+                            1006.46,
+                            722.7,
+                            691.7999999999998,
+                            539.6999999999999,
+                            402.95
+                        ],
+                        "backgroundColor": "#e05e65",
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "createdAt": "2024-02-26T03:14:50.000Z",
+            "updatedAt": "2024-02-26T03:14:50.000Z"
+        },
+        {
+            "id": 965,
+            "user": {
+                "id": 13,
+                "name": "Satria Mandala Putra",
+                "nik": "1271111405910004",
+                "email": "satriamandalaputra50@gmail.com",
+                "agencyId": 23,
+                "password": "$2b$10$4X2DQ0gnTdScfk7nlmaLUuiEo5CY9dSA.0nn0pymcRG6TqKyU9302",
+                "level": 2,
+                "active": true,
+                "address": "Jl. Pinang Baris No. 114 C",
+                "contact": "082165158214",
+                "createdAt": "2023-02-28T04:41:16.000Z",
+                "updatedAt": "2023-02-28T04:41:42.000Z",
+                "agency": {
+                    "id": 23,
+                    "name": "Dinas Sumber Daya Air Bina Marga dan Bina Konstruksi",
+                    "address": "Jalan Pinang Baris No 114c",
+                    "phone": "061-8451766",
+                    "createdAt": "2023-02-28T04:24:34.000Z",
+                    "updatedAt": "2023-02-28T04:24:34.000Z"
+                }
+            },
+            "category": {
+                "id": 44,
+                "name": "Infrastruktur",
+                "createdAt": "2024-01-22T07:37:40.000Z",
+                "updatedAt": "2024-01-22T07:37:40.000Z"
+            },
+            "title": "Laporan Pekerjaan Patching Jalan Upt Kota Januari - Desember Tahun 2023",
+            "chartType": "bar",
+            "jsonData": {
+                "Bulan": [
+                    "JANUARI",
+                    "FEBRUARI",
+                    "MARET",
+                    "APRIL",
+                    "MEI",
+                    "JUNI",
+                    "JULI",
+                    "AGUSTUS",
+                    "SEPTEMBER",
+                    "OKTOBER",
+                    "NOVEMBER",
+                    "DESEMBER"
+                ],
+                "Panjang Patching (M) 2023": [
+                    "-",
+                    "-",
+                    987.2479999999999,
+                    687.8,
+                    347.55,
+                    845.9500000000002,
+                    668.7499999999999,
+                    284.5,
+                    821.98,
+                    429.21999999999997,
+                    359.13,
+                    342.2
+                ]
+            },
+            "chartData": {
+                "lbl": [
+                    "-",
+                    "-",
+                    987.2479999999999,
+                    687.8,
+                    347.55,
+                    845.9500000000002,
+                    668.7499999999999,
+                    284.5,
+                    821.98,
+                    429.21999999999997,
+                    359.13,
+                    342.2
+                ],
+                "chartData": [
+                    {
+                        "label": "Panjang Patching (M) 2023",
+                        "data": [
+                            "-",
+                            "-",
+                            987.2479999999999,
+                            687.8,
+                            347.55,
+                            845.9500000000002,
+                            668.7499999999999,
+                            284.5,
+                            821.98,
+                            429.21999999999997,
+                            359.13,
+                            342.2
+                        ],
+                        "backgroundColor": "#f608db",
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "createdAt": "2024-02-26T03:13:15.000Z",
+            "updatedAt": "2024-02-26T03:13:15.000Z"
+        },
+        {
+            "id": 964,
+            "user": {
+                "id": 13,
+                "name": "Satria Mandala Putra",
+                "nik": "1271111405910004",
+                "email": "satriamandalaputra50@gmail.com",
+                "agencyId": 23,
+                "password": "$2b$10$4X2DQ0gnTdScfk7nlmaLUuiEo5CY9dSA.0nn0pymcRG6TqKyU9302",
+                "level": 2,
+                "active": true,
+                "address": "Jl. Pinang Baris No. 114 C",
+                "contact": "082165158214",
+                "createdAt": "2023-02-28T04:41:16.000Z",
+                "updatedAt": "2023-02-28T04:41:42.000Z",
+                "agency": {
+                    "id": 23,
+                    "name": "Dinas Sumber Daya Air Bina Marga dan Bina Konstruksi",
+                    "address": "Jalan Pinang Baris No 114c",
+                    "phone": "061-8451766",
+                    "createdAt": "2023-02-28T04:24:34.000Z",
+                    "updatedAt": "2023-02-28T04:24:34.000Z"
+                }
+            },
+            "category": {
+                "id": 44,
+                "name": "Infrastruktur",
+                "createdAt": "2024-01-22T07:37:40.000Z",
+                "updatedAt": "2024-01-22T07:37:40.000Z"
+            },
+            "title": "Laporan Pekerjaan Patching Jalan Upt Barat Januari - Desember Tahun 2023",
+            "chartType": "bar",
+            "jsonData": {
+                "Bulan": [
+                    "JANUARI",
+                    "FEBRUARI",
+                    "MARET",
+                    "APRIL",
+                    "MEI",
+                    "JUNI",
+                    "JULI",
+                    "AGUSTUS",
+                    "SEPTEMBER",
+                    "OKTOBER",
+                    "NOVEMBER",
+                    "DESEMBER"
+                ],
+                "Panjang Patching (M) 2023": [
+                    "-",
+                    "-",
+                    1459,
+                    706,
+                    308.4,
+                    274.4,
+                    335.2,
+                    411.2,
+                    711.4,
+                    859.3000000000002,
+                    874.1199999999999,
+                    613.11
+                ]
+            },
+            "chartData": {
+                "lbl": [
+                    "-",
+                    "-",
+                    1459,
+                    706,
+                    308.4,
+                    274.4,
+                    335.2,
+                    411.2,
+                    711.4,
+                    859.3000000000002,
+                    874.1199999999999,
+                    613.11
+                ],
+                "chartData": [
+                    {
+                        "label": "Panjang Patching (M) 2023",
+                        "data": [
+                            "-",
+                            "-",
+                            1459,
+                            706,
+                            308.4,
+                            274.4,
+                            335.2,
+                            411.2,
+                            711.4,
+                            859.3000000000002,
+                            874.1199999999999,
+                            613.11
+                        ],
+                        "backgroundColor": "#eaf11a",
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "createdAt": "2024-02-26T03:11:52.000Z",
+            "updatedAt": "2024-02-26T03:11:52.000Z"
+        },
+        {
+            "id": 962,
+            "user": {
+                "id": 13,
+                "name": "Satria Mandala Putra",
+                "nik": "1271111405910004",
+                "email": "satriamandalaputra50@gmail.com",
+                "agencyId": 23,
+                "password": "$2b$10$4X2DQ0gnTdScfk7nlmaLUuiEo5CY9dSA.0nn0pymcRG6TqKyU9302",
+                "level": 2,
+                "active": true,
+                "address": "Jl. Pinang Baris No. 114 C",
+                "contact": "082165158214",
+                "createdAt": "2023-02-28T04:41:16.000Z",
+                "updatedAt": "2023-02-28T04:41:42.000Z",
+                "agency": {
+                    "id": 23,
+                    "name": "Dinas Sumber Daya Air Bina Marga dan Bina Konstruksi",
+                    "address": "Jalan Pinang Baris No 114c",
+                    "phone": "061-8451766",
+                    "createdAt": "2023-02-28T04:24:34.000Z",
+                    "updatedAt": "2023-02-28T04:24:34.000Z"
+                }
+            },
+            "category": {
+                "id": 44,
+                "name": "Infrastruktur",
+                "createdAt": "2024-01-22T07:37:40.000Z",
+                "updatedAt": "2024-01-22T07:37:40.000Z"
+            },
+            "title": "Laporan Pekerjaan Patching Jalan Upt Timur Januari - Desember Tahun 2022",
+            "chartType": "bar",
+            "jsonData": {
+                "Bulan": [
+                    "JANUARI",
+                    "FEBRUARI",
+                    "MARET",
+                    "APRIL",
+                    "MEI",
+                    "JUNI",
+                    "JULI",
+                    "AGUSTUS",
+                    "SEPTEMBER",
+                    "OKTOBER",
+                    "NOVEMBER",
+                    "DESEMBER"
+                ],
+                "Panjang Patching (M) 2022": [
+                    981.05,
+                    808.8499999999999,
+                    712.7799999999999,
+                    552.54,
+                    512.1400000000001,
+                    1058.91,
+                    866.0200000000002,
+                    873.1200000000001,
+                    519.16,
+                    568.96,
+                    935.8900000000001,
+                    342.38
+                ]
+            },
+            "chartData": {
+                "lbl": [
+                    981.05,
+                    808.8499999999999,
+                    712.7799999999999,
+                    552.54,
+                    512.1400000000001,
+                    1058.91,
+                    866.0200000000002,
+                    873.1200000000001,
+                    519.16,
+                    568.96,
+                    935.8900000000001,
+                    342.38
+                ],
+                "chartData": [
+                    {
+                        "label": "Panjang Patching (M) 2022",
+                        "data": [
+                            981.05,
+                            808.8499999999999,
+                            712.7799999999999,
+                            552.54,
+                            512.1400000000001,
+                            1058.91,
+                            866.0200000000002,
+                            873.1200000000001,
+                            519.16,
+                            568.96,
+                            935.8900000000001,
+                            342.38
+                        ],
+                        "backgroundColor": "#8c9d94",
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "createdAt": "2024-02-26T02:52:47.000Z",
+            "updatedAt": "2024-02-26T02:52:47.000Z"
+        },
+        {
+            "id": 960,
+            "user": {
+                "id": 13,
+                "name": "Satria Mandala Putra",
+                "nik": "1271111405910004",
+                "email": "satriamandalaputra50@gmail.com",
+                "agencyId": 23,
+                "password": "$2b$10$4X2DQ0gnTdScfk7nlmaLUuiEo5CY9dSA.0nn0pymcRG6TqKyU9302",
+                "level": 2,
+                "active": true,
+                "address": "Jl. Pinang Baris No. 114 C",
+                "contact": "082165158214",
+                "createdAt": "2023-02-28T04:41:16.000Z",
+                "updatedAt": "2023-02-28T04:41:42.000Z",
+                "agency": {
+                    "id": 23,
+                    "name": "Dinas Sumber Daya Air Bina Marga dan Bina Konstruksi",
+                    "address": "Jalan Pinang Baris No 114c",
+                    "phone": "061-8451766",
+                    "createdAt": "2023-02-28T04:24:34.000Z",
+                    "updatedAt": "2023-02-28T04:24:34.000Z"
+                }
+            },
+            "category": {
+                "id": 44,
+                "name": "Infrastruktur",
+                "createdAt": "2024-01-22T07:37:40.000Z",
+                "updatedAt": "2024-01-22T07:37:40.000Z"
+            },
+            "title": "Laporan Pekerjaan Patching Jalan Upt Selatan Januari - Desember Tahun 2022",
+            "chartType": "bar",
+            "jsonData": {
+                "Bulan": [
+                    "JANUARI",
+                    "FEBRUARI",
+                    "MARET",
+                    "APRIL",
+                    "MEI",
+                    "JUNI",
+                    "JULI",
+                    "AGUSTUS",
+                    "SEPTEMBER",
+                    "OKTOBER",
+                    "NOVEMBER",
+                    "DESEMBER"
+                ],
+                "Panjang Patching (M) 2022": [
+                    1391,
+                    845.57,
+                    1210.05,
+                    1080.5,
+                    333,
+                    1543.74,
+                    859.2799999999999,
+                    1036.31,
+                    2310.84,
+                    1366.2800000000002,
+                    1103.6399999999999,
+                    597.53
+                ]
+            },
+            "chartData": {
+                "lbl": [
+                    1391,
+                    845.57,
+                    1210.05,
+                    1080.5,
+                    333,
+                    1543.74,
+                    859.2799999999999,
+                    1036.31,
+                    2310.84,
+                    1366.2800000000002,
+                    1103.6399999999999,
+                    597.53
+                ],
+                "chartData": [
+                    {
+                        "label": "Panjang Patching (M) 2022",
+                        "data": [
+                            1391,
+                            845.57,
+                            1210.05,
+                            1080.5,
+                            333,
+                            1543.74,
+                            859.2799999999999,
+                            1036.31,
+                            2310.84,
+                            1366.2800000000002,
+                            1103.6399999999999,
+                            597.53
+                        ],
+                        "backgroundColor": "#d72e06",
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "createdAt": "2024-02-26T02:49:49.000Z",
+            "updatedAt": "2024-02-26T02:49:49.000Z"
+        },
+        {
+            "id": 959,
+            "user": {
+                "id": 13,
+                "name": "Satria Mandala Putra",
+                "nik": "1271111405910004",
+                "email": "satriamandalaputra50@gmail.com",
+                "agencyId": 23,
+                "password": "$2b$10$4X2DQ0gnTdScfk7nlmaLUuiEo5CY9dSA.0nn0pymcRG6TqKyU9302",
+                "level": 2,
+                "active": true,
+                "address": "Jl. Pinang Baris No. 114 C",
+                "contact": "082165158214",
+                "createdAt": "2023-02-28T04:41:16.000Z",
+                "updatedAt": "2023-02-28T04:41:42.000Z",
+                "agency": {
+                    "id": 23,
+                    "name": "Dinas Sumber Daya Air Bina Marga dan Bina Konstruksi",
+                    "address": "Jalan Pinang Baris No 114c",
+                    "phone": "061-8451766",
+                    "createdAt": "2023-02-28T04:24:34.000Z",
+                    "updatedAt": "2023-02-28T04:24:34.000Z"
+                }
+            },
+            "category": {
+                "id": 44,
+                "name": "Infrastruktur",
+                "createdAt": "2024-01-22T07:37:40.000Z",
+                "updatedAt": "2024-01-22T07:37:40.000Z"
+            },
+            "title": "Laporan Pekerjaan Patching Jalan Upt Kota Januari - Desember Tahun 2022",
+            "chartType": "bar",
+            "jsonData": {
+                "Bulan": [
+                    "JANUARI",
+                    "FEBRUARI",
+                    "MARET",
+                    "APRIL",
+                    "MEI",
+                    "JUNI",
+                    "JULI",
+                    "AGUSTUS",
+                    "SEPTEMBER",
+                    "OKTOBER",
+                    "NOVEMBER",
+                    "DESEMBER"
+                ],
+                "Panjang Patching (M) 2022": [
+                    817.5300000000001,
+                    524.2800000000001,
+                    1118.2900000000002,
+                    481.83,
+                    523.06,
+                    1282.8099999999997,
+                    1191.6200000000001,
+                    883.94,
+                    831.5500000000001,
+                    512.51,
+                    319.39000000000004,
+                    220.05
+                ]
+            },
+            "chartData": {
+                "lbl": [
+                    817.5300000000001,
+                    524.2800000000001,
+                    1118.2900000000002,
+                    481.83,
+                    523.06,
+                    1282.8099999999997,
+                    1191.6200000000001,
+                    883.94,
+                    831.5500000000001,
+                    512.51,
+                    319.39000000000004,
+                    220.05
+                ],
+                "chartData": [
+                    {
+                        "label": "Panjang Patching (M) 2022",
+                        "data": [
+                            817.5300000000001,
+                            524.2800000000001,
+                            1118.2900000000002,
+                            481.83,
+                            523.06,
+                            1282.8099999999997,
+                            1191.6200000000001,
+                            883.94,
+                            831.5500000000001,
+                            512.51,
+                            319.39000000000004,
+                            220.05
+                        ],
+                        "backgroundColor": "#11653f",
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "createdAt": "2024-02-26T02:46:46.000Z",
+            "updatedAt": "2024-02-26T02:46:46.000Z"
+        },
+        {
+            "id": 958,
+            "user": {
+                "id": 13,
+                "name": "Satria Mandala Putra",
+                "nik": "1271111405910004",
+                "email": "satriamandalaputra50@gmail.com",
+                "agencyId": 23,
+                "password": "$2b$10$4X2DQ0gnTdScfk7nlmaLUuiEo5CY9dSA.0nn0pymcRG6TqKyU9302",
+                "level": 2,
+                "active": true,
+                "address": "Jl. Pinang Baris No. 114 C",
+                "contact": "082165158214",
+                "createdAt": "2023-02-28T04:41:16.000Z",
+                "updatedAt": "2023-02-28T04:41:42.000Z",
+                "agency": {
+                    "id": 23,
+                    "name": "Dinas Sumber Daya Air Bina Marga dan Bina Konstruksi",
+                    "address": "Jalan Pinang Baris No 114c",
+                    "phone": "061-8451766",
+                    "createdAt": "2023-02-28T04:24:34.000Z",
+                    "updatedAt": "2023-02-28T04:24:34.000Z"
+                }
+            },
+            "category": {
+                "id": 44,
+                "name": "Infrastruktur",
+                "createdAt": "2024-01-22T07:37:40.000Z",
+                "updatedAt": "2024-01-22T07:37:40.000Z"
+            },
+            "title": "Laporan Pekerjaan Patching Jalan Upt Barat Januari - Desember Tahun 2022",
+            "chartType": "bar",
+            "jsonData": {
+                "Bulan": [
+                    "JANUARI",
+                    "FEBRUARI",
+                    "MARET",
+                    "APRIL",
+                    "MEI",
+                    "JUNI",
+                    "JULI",
+                    "AGUSTUS",
+                    "SEPTEMBER",
+                    "OKTOBER",
+                    "NOVEMBER",
+                    "DESEMBER"
+                ],
+                "Panjang Patching (M) 2022": [
+                    2149.2,
+                    1278,
+                    1795,
+                    1464.25,
+                    1262.1,
+                    2526.23,
+                    2333.4100000000003,
+                    2579.39,
+                    2078.86,
+                    1780.5,
+                    1086.54,
+                    537.5
+                ]
+            },
+            "chartData": {
+                "lbl": [
+                    "JANUARI",
+                    "FEBRUARI",
+                    "MARET",
+                    "APRIL",
+                    "MEI",
+                    "JUNI",
+                    "JULI",
+                    "AGUSTUS",
+                    "SEPTEMBER",
+                    "OKTOBER",
+                    "NOVEMBER",
+                    "DESEMBER"
+                ],
+                "chartData": [
+                    {
+                        "label": "Panjang Patching (M) 2022",
+                        "data": [
+                            2149.2,
+                            1278,
+                            1795,
+                            1464.25,
+                            1262.1,
+                            2526.23,
+                            2333.4100000000003,
+                            2579.39,
+                            2078.86,
+                            1780.5,
+                            1086.54,
+                            537.5
+                        ],
+                        "backgroundColor": "#b2f02d",
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "createdAt": "2024-02-23T08:50:44.000Z",
+            "updatedAt": "2024-02-23T08:50:44.000Z"
+        },
+        {
+            "id": 957,
+            "user": {
+                "id": 13,
+                "name": "Satria Mandala Putra",
+                "nik": "1271111405910004",
+                "email": "satriamandalaputra50@gmail.com",
+                "agencyId": 23,
+                "password": "$2b$10$4X2DQ0gnTdScfk7nlmaLUuiEo5CY9dSA.0nn0pymcRG6TqKyU9302",
+                "level": 2,
+                "active": true,
+                "address": "Jl. Pinang Baris No. 114 C",
+                "contact": "082165158214",
+                "createdAt": "2023-02-28T04:41:16.000Z",
+                "updatedAt": "2023-02-28T04:41:42.000Z",
+                "agency": {
+                    "id": 23,
+                    "name": "Dinas Sumber Daya Air Bina Marga dan Bina Konstruksi",
+                    "address": "Jalan Pinang Baris No 114c",
+                    "phone": "061-8451766",
+                    "createdAt": "2023-02-28T04:24:34.000Z",
+                    "updatedAt": "2023-02-28T04:24:34.000Z"
+                }
+            },
+            "category": {
+                "id": 44,
+                "name": "Infrastruktur",
+                "createdAt": "2024-01-22T07:37:40.000Z",
+                "updatedAt": "2024-01-22T07:37:40.000Z"
+            },
+            "title": "Laporan Pekerjaan Pemeliharaan Drainase Di Kota Medan Tahun 2022 - 2023",
+            "chartType": "bar",
+            "jsonData": {
+                "Uraian": [
+                    "Laporan Pekerjaan Pemeliharaan Drainase (M)"
+                ],
+                "Tahun 2022": [
+                    223744.35
+                ],
+                "Tahun 2023": [
+                    164902.15
+                ]
+            },
+            "chartData": {
+                "lbl": [
+                    "Laporan Pekerjaan Pemeliharaan Drainase (M)"
+                ],
+                "chartData": [
+                    {
+                        "label": "Tahun 2022",
+                        "data": [
+                            223744.35
+                        ],
+                        "backgroundColor": "#64e40d",
+                        "borderWidth": 1
+                    },
+                    {
+                        "label": "Tahun 2023",
+                        "data": [
+                            164902.15
+                        ],
+                        "backgroundColor": "#be607d",
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "createdAt": "2024-02-23T08:37:25.000Z",
+            "updatedAt": "2024-02-23T08:37:25.000Z"
+        },
+        {
+            "id": 956,
+            "user": {
+                "id": 13,
+                "name": "Satria Mandala Putra",
+                "nik": "1271111405910004",
+                "email": "satriamandalaputra50@gmail.com",
+                "agencyId": 23,
+                "password": "$2b$10$4X2DQ0gnTdScfk7nlmaLUuiEo5CY9dSA.0nn0pymcRG6TqKyU9302",
+                "level": 2,
+                "active": true,
+                "address": "Jl. Pinang Baris No. 114 C",
+                "contact": "082165158214",
+                "createdAt": "2023-02-28T04:41:16.000Z",
+                "updatedAt": "2023-02-28T04:41:42.000Z",
+                "agency": {
+                    "id": 23,
+                    "name": "Dinas Sumber Daya Air Bina Marga dan Bina Konstruksi",
+                    "address": "Jalan Pinang Baris No 114c",
+                    "phone": "061-8451766",
+                    "createdAt": "2023-02-28T04:24:34.000Z",
+                    "updatedAt": "2023-02-28T04:24:34.000Z"
+                }
+            },
+            "category": {
+                "id": 44,
+                "name": "Infrastruktur",
+                "createdAt": "2024-01-22T07:37:40.000Z",
+                "updatedAt": "2024-01-22T07:37:40.000Z"
+            },
+            "title": "Laporan Pekerjaan Pemeliharaan Drainase Upt Utara Januari - Desember Tahun 2023",
+            "chartType": "bar",
+            "jsonData": {
+                "Bulan": [
+                    "JANUARI",
+                    "FEBRUARI",
+                    "MARET",
+                    "APRIL",
+                    "MEI",
+                    "JUNI",
+                    "JULI",
+                    "AGUSTUS",
+                    "SEPTEMBER",
+                    "OKTOBER",
+                    "NOVEMBER",
+                    "DESEMBER"
+                ],
+                "Panjang Penanganan (M) 2023": [
+                    3090,
+                    3527.6,
+                    2812,
+                    4615,
+                    8576,
+                    4520,
+                    4695,
+                    8965,
+                    5605,
+                    4255,
+                    3770,
+                    3150
+                ]
+            },
+            "chartData": {
+                "lbl": [
+                    "JANUARI",
+                    "FEBRUARI",
+                    "MARET",
+                    "APRIL",
+                    "MEI",
+                    "JUNI",
+                    "JULI",
+                    "AGUSTUS",
+                    "SEPTEMBER",
+                    "OKTOBER",
+                    "NOVEMBER",
+                    "DESEMBER"
+                ],
+                "chartData": [
+                    {
+                        "label": "Panjang Penanganan (M) 2023",
+                        "data": [
+                            3090,
+                            3527.6,
+                            2812,
+                            4615,
+                            8576,
+                            4520,
+                            4695,
+                            8965,
+                            5605,
+                            4255,
+                            3770,
+                            3150
+                        ],
+                        "backgroundColor": "#d05e23",
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "createdAt": "2024-02-23T08:36:22.000Z",
+            "updatedAt": "2024-02-23T08:36:22.000Z"
+        }
+    ],
+    "totalPages": 118,
+    "currentPage": "22",
+    "totalCount": 1055,
+    "totalData": 1055
 }
